@@ -1,0 +1,1180 @@
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Emul_EEPROM.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Emul_EEPROM_Start,"ax",%progbits
+  20              		.align	2
+  21              		.global	Emul_EEPROM_Start
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	Emul_EEPROM_Start, %function
+  25              	Emul_EEPROM_Start:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC5\\Emul_EEPROM.c"
+   1:Generated_Source\PSoC5/Emul_EEPROM.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/Emul_EEPROM.c **** * File Name: Emul_EEPROM.c
+   3:Generated_Source\PSoC5/Emul_EEPROM.c **** * Version 1.20
+   4:Generated_Source\PSoC5/Emul_EEPROM.c **** *
+   5:Generated_Source\PSoC5/Emul_EEPROM.c **** * Description:
+   6:Generated_Source\PSoC5/Emul_EEPROM.c **** *  This file provides the source code to API for the Emulated EEPROM Component.
+   7:Generated_Source\PSoC5/Emul_EEPROM.c **** *
+   8:Generated_Source\PSoC5/Emul_EEPROM.c **** ********************************************************************************
+   9:Generated_Source\PSoC5/Emul_EEPROM.c **** * Copyright 2013-2016, Cypress Semiconductor Corporation.  All rights reserved.
+  10:Generated_Source\PSoC5/Emul_EEPROM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  11:Generated_Source\PSoC5/Emul_EEPROM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  12:Generated_Source\PSoC5/Emul_EEPROM.c **** * the software package with which this file was provided.
+  13:Generated_Source\PSoC5/Emul_EEPROM.c **** *******************************************************************************/
+  14:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+  15:Generated_Source\PSoC5/Emul_EEPROM.c **** #include "Emul_EEPROM.h"
+  16:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+  17:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+  18:Generated_Source\PSoC5/Emul_EEPROM.c **** /*******************************************************************************
+  19:Generated_Source\PSoC5/Emul_EEPROM.c **** * Function Name: Emul_EEPROM_Start
+  20:Generated_Source\PSoC5/Emul_EEPROM.c **** ********************************************************************************
+  21:Generated_Source\PSoC5/Emul_EEPROM.c **** *
+  22:Generated_Source\PSoC5/Emul_EEPROM.c **** * Summary:
+  23:Generated_Source\PSoC5/Emul_EEPROM.c **** *  Empty function. Included for consistency with other
+  24:Generated_Source\PSoC5/Emul_EEPROM.c **** *  components.
+  25:Generated_Source\PSoC5/Emul_EEPROM.c **** *
+  26:Generated_Source\PSoC5/Emul_EEPROM.c **** * Parameters:
+  27:Generated_Source\PSoC5/Emul_EEPROM.c **** *  None
+  28:Generated_Source\PSoC5/Emul_EEPROM.c **** *
+  29:Generated_Source\PSoC5/Emul_EEPROM.c **** * Return:
+  30:Generated_Source\PSoC5/Emul_EEPROM.c **** *  None
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 2
+
+
+  31:Generated_Source\PSoC5/Emul_EEPROM.c **** *
+  32:Generated_Source\PSoC5/Emul_EEPROM.c **** *******************************************************************************/
+  33:Generated_Source\PSoC5/Emul_EEPROM.c **** void Emul_EEPROM_Start(void) 
+  34:Generated_Source\PSoC5/Emul_EEPROM.c **** {
+  28              		.loc 1 34 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 1, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33 0000 80B4     		push	{r7}
+  34              		.cfi_def_cfa_offset 4
+  35              		.cfi_offset 7, -4
+  36 0002 00AF     		add	r7, sp, #0
+  37              		.cfi_def_cfa_register 7
+  35:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+  36:Generated_Source\PSoC5/Emul_EEPROM.c **** }
+  38              		.loc 1 36 0
+  39 0004 00BF     		nop
+  40 0006 BD46     		mov	sp, r7
+  41              		.cfi_def_cfa_register 13
+  42              		@ sp needed
+  43 0008 80BC     		pop	{r7}
+  44              		.cfi_restore 7
+  45              		.cfi_def_cfa_offset 0
+  46 000a 7047     		bx	lr
+  47              		.cfi_endproc
+  48              	.LFE0:
+  49              		.size	Emul_EEPROM_Start, .-Emul_EEPROM_Start
+  50              		.section	.text.Emul_EEPROM_Stop,"ax",%progbits
+  51              		.align	2
+  52              		.global	Emul_EEPROM_Stop
+  53              		.thumb
+  54              		.thumb_func
+  55              		.type	Emul_EEPROM_Stop, %function
+  56              	Emul_EEPROM_Stop:
+  57              	.LFB1:
+  37:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+  38:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+  39:Generated_Source\PSoC5/Emul_EEPROM.c **** /*******************************************************************************
+  40:Generated_Source\PSoC5/Emul_EEPROM.c **** * Function Name: Emul_EEPROM_Stop
+  41:Generated_Source\PSoC5/Emul_EEPROM.c **** ********************************************************************************
+  42:Generated_Source\PSoC5/Emul_EEPROM.c **** *
+  43:Generated_Source\PSoC5/Emul_EEPROM.c **** * Summary:
+  44:Generated_Source\PSoC5/Emul_EEPROM.c **** *  Empty function. Included for consistency with other
+  45:Generated_Source\PSoC5/Emul_EEPROM.c **** *  components.
+  46:Generated_Source\PSoC5/Emul_EEPROM.c **** *
+  47:Generated_Source\PSoC5/Emul_EEPROM.c **** * Parameters:
+  48:Generated_Source\PSoC5/Emul_EEPROM.c **** *  None
+  49:Generated_Source\PSoC5/Emul_EEPROM.c **** *
+  50:Generated_Source\PSoC5/Emul_EEPROM.c **** * Return:
+  51:Generated_Source\PSoC5/Emul_EEPROM.c **** *  None
+  52:Generated_Source\PSoC5/Emul_EEPROM.c **** *
+  53:Generated_Source\PSoC5/Emul_EEPROM.c **** *******************************************************************************/
+  54:Generated_Source\PSoC5/Emul_EEPROM.c **** void Emul_EEPROM_Stop(void) 
+  55:Generated_Source\PSoC5/Emul_EEPROM.c **** {
+  58              		.loc 1 55 0
+  59              		.cfi_startproc
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 3
+
+
+  60              		@ args = 0, pretend = 0, frame = 0
+  61              		@ frame_needed = 1, uses_anonymous_args = 0
+  62              		@ link register save eliminated.
+  63 0000 80B4     		push	{r7}
+  64              		.cfi_def_cfa_offset 4
+  65              		.cfi_offset 7, -4
+  66 0002 00AF     		add	r7, sp, #0
+  67              		.cfi_def_cfa_register 7
+  56:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+  57:Generated_Source\PSoC5/Emul_EEPROM.c **** }
+  68              		.loc 1 57 0
+  69 0004 00BF     		nop
+  70 0006 BD46     		mov	sp, r7
+  71              		.cfi_def_cfa_register 13
+  72              		@ sp needed
+  73 0008 80BC     		pop	{r7}
+  74              		.cfi_restore 7
+  75              		.cfi_def_cfa_offset 0
+  76 000a 7047     		bx	lr
+  77              		.cfi_endproc
+  78              	.LFE1:
+  79              		.size	Emul_EEPROM_Stop, .-Emul_EEPROM_Stop
+  80              		.section	.text.Emul_EEPROM_Write,"ax",%progbits
+  81              		.align	2
+  82              		.global	Emul_EEPROM_Write
+  83              		.thumb
+  84              		.thumb_func
+  85              		.type	Emul_EEPROM_Write, %function
+  86              	Emul_EEPROM_Write:
+  87              	.LFB2:
+  58:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+  59:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+  60:Generated_Source\PSoC5/Emul_EEPROM.c **** /*******************************************************************************
+  61:Generated_Source\PSoC5/Emul_EEPROM.c **** * Function Name: Emul_EEPROM_Write
+  62:Generated_Source\PSoC5/Emul_EEPROM.c **** ********************************************************************************
+  63:Generated_Source\PSoC5/Emul_EEPROM.c **** *
+  64:Generated_Source\PSoC5/Emul_EEPROM.c **** * Summary:
+  65:Generated_Source\PSoC5/Emul_EEPROM.c **** *  Writes the specified number of bytes from the source buffer in SRAM to the
+  66:Generated_Source\PSoC5/Emul_EEPROM.c **** *  emulated EEPROM array in flash, without modifying other data in flash.
+  67:Generated_Source\PSoC5/Emul_EEPROM.c **** *
+  68:Generated_Source\PSoC5/Emul_EEPROM.c **** * Parameters:
+  69:Generated_Source\PSoC5/Emul_EEPROM.c **** *  srcBuf:    Pointer to the SRAM buffer holding the data to write.
+  70:Generated_Source\PSoC5/Emul_EEPROM.c **** *  eepromPtr: Pointer to the array or variable in flash representing
+  71:Generated_Source\PSoC5/Emul_EEPROM.c **** *             the emulated EEPROM.
+  72:Generated_Source\PSoC5/Emul_EEPROM.c **** *  byteCount: Number of bytes to write from srcBuf to eepromPtr.
+  73:Generated_Source\PSoC5/Emul_EEPROM.c **** *
+  74:Generated_Source\PSoC5/Emul_EEPROM.c **** * Return:
+  75:Generated_Source\PSoC5/Emul_EEPROM.c **** *    CYRET_SUCCESS     Successful write.
+  76:Generated_Source\PSoC5/Emul_EEPROM.c **** *    CYRET_BAD_PARAM   eepromPtr is out of range of flash memory.
+  77:Generated_Source\PSoC5/Emul_EEPROM.c **** *    CYRET_UNKNOWN     Other error in writing flash.
+  78:Generated_Source\PSoC5/Emul_EEPROM.c **** *
+  79:Generated_Source\PSoC5/Emul_EEPROM.c **** *******************************************************************************/
+  80:Generated_Source\PSoC5/Emul_EEPROM.c **** #if (CY_PSOC3)
+  81:Generated_Source\PSoC5/Emul_EEPROM.c ****     cystatus Emul_EEPROM_Write(const uint8 srcBuf[], const uint8 eepromPtr[], uint16 byteCount)
+  82:Generated_Source\PSoC5/Emul_EEPROM.c ****                                                                             
+  83:Generated_Source\PSoC5/Emul_EEPROM.c **** #else
+  84:Generated_Source\PSoC5/Emul_EEPROM.c ****     cystatus Emul_EEPROM_Write(const uint8 srcBuf[], const uint8 eepromPtr[], uint32 byteCount)
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 4
+
+
+  85:Generated_Source\PSoC5/Emul_EEPROM.c **** #endif /* (!CY_PSOC3) */
+  86:Generated_Source\PSoC5/Emul_EEPROM.c **** {
+  88              		.loc 1 86 0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 592
+  91              		@ frame_needed = 1, uses_anonymous_args = 0
+  92 0000 80B5     		push	{r7, lr}
+  93              		.cfi_def_cfa_offset 8
+  94              		.cfi_offset 7, -8
+  95              		.cfi_offset 14, -4
+  96 0002 ADF5147D 		sub	sp, sp, #592
+  97              		.cfi_def_cfa_offset 600
+  98 0006 00AF     		add	r7, sp, #0
+  99              		.cfi_def_cfa_register 7
+ 100 0008 07F10C03 		add	r3, r7, #12
+ 101 000c 1860     		str	r0, [r3]
+ 102 000e 07F10803 		add	r3, r7, #8
+ 103 0012 1960     		str	r1, [r3]
+ 104 0014 3B1D     		adds	r3, r7, #4
+ 105 0016 1A60     		str	r2, [r3]
+  87:Generated_Source\PSoC5/Emul_EEPROM.c ****     uint8 writeBuffer[CY_FLASH_SIZEOF_ROW];
+  88:Generated_Source\PSoC5/Emul_EEPROM.c ****     uint32 arrayId;
+  89:Generated_Source\PSoC5/Emul_EEPROM.c ****     uint32 rowId;
+  90:Generated_Source\PSoC5/Emul_EEPROM.c ****     uint32 dstIndex;
+  91:Generated_Source\PSoC5/Emul_EEPROM.c ****     uint32 srcIndex;
+  92:Generated_Source\PSoC5/Emul_EEPROM.c ****     cystatus rc;
+  93:Generated_Source\PSoC5/Emul_EEPROM.c ****     uint32 eeOffset;
+  94:Generated_Source\PSoC5/Emul_EEPROM.c ****     uint32 byteOffset;
+  95:Generated_Source\PSoC5/Emul_EEPROM.c ****     
+  96:Generated_Source\PSoC5/Emul_EEPROM.c ****     #if (!CY_PSOC4)
+  97:Generated_Source\PSoC5/Emul_EEPROM.c ****         #if (CYDEV_ECC_ENABLE == 0)
+  98:Generated_Source\PSoC5/Emul_EEPROM.c ****             uint8 rowBuffer[CY_FLASH_SIZEOF_ROW + CY_FLASH_SIZEOF_ECC_ROW];
+  99:Generated_Source\PSoC5/Emul_EEPROM.c ****         #endif /* CYDEV_ECC_ENABLE == 0) */
+ 100:Generated_Source\PSoC5/Emul_EEPROM.c ****     #endif /* (!CY_PSOC4) */
+ 101:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+ 102:Generated_Source\PSoC5/Emul_EEPROM.c ****     eeOffset = (uint32)eepromPtr;
+ 106              		.loc 1 102 0
+ 107 0018 07F10803 		add	r3, r7, #8
+ 108 001c 1B68     		ldr	r3, [r3]
+ 109 001e C7F83432 		str	r3, [r7, #564]
+ 103:Generated_Source\PSoC5/Emul_EEPROM.c ****     #if (CY_PSOC3)
+ 104:Generated_Source\PSoC5/Emul_EEPROM.c ****         eeOffset &= Emul_EEPROM_CODE_ADDR_MASK;
+ 105:Generated_Source\PSoC5/Emul_EEPROM.c ****     #endif /* (CY_PSOC3) */
+ 106:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+ 107:Generated_Source\PSoC5/Emul_EEPROM.c ****     /* Make sure, that eepromPtr[] points to ROM */
+ 108:Generated_Source\PSoC5/Emul_EEPROM.c ****     #if (CY_PSOC3)
+ 109:Generated_Source\PSoC5/Emul_EEPROM.c ****         if (((uint32)eepromPtr >= Emul_EEPROM_CODE_ADDR_OFFSET) &&
+ 110:Generated_Source\PSoC5/Emul_EEPROM.c ****             (((uint32)eepromPtr + byteCount) <= Emul_EEPROM_CODE_ADDR_END))
+ 111:Generated_Source\PSoC5/Emul_EEPROM.c ****     #else
+ 112:Generated_Source\PSoC5/Emul_EEPROM.c ****         if (((uint32)eepromPtr + byteCount) <= Emul_EEPROM_FLASH_END_ADDR)
+ 110              		.loc 1 112 0
+ 111 0022 07F10803 		add	r3, r7, #8
+ 112 0026 1A68     		ldr	r2, [r3]
+ 113 0028 3B1D     		adds	r3, r7, #4
+ 114 002a 1B68     		ldr	r3, [r3]
+ 115 002c 1344     		add	r3, r3, r2
+ 116 002e B3F5802F 		cmp	r3, #262144
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 5
+
+
+ 117 0032 00F28A80 		bhi	.L4
+ 113:Generated_Source\PSoC5/Emul_EEPROM.c ****     #endif /* (CY_PSOC3) */
+ 114:Generated_Source\PSoC5/Emul_EEPROM.c ****     {
+ 115:Generated_Source\PSoC5/Emul_EEPROM.c ****         #if (!CY_PSOC4)
+ 116:Generated_Source\PSoC5/Emul_EEPROM.c ****             (void)CySetTemp();
+ 118              		.loc 1 116 0
+ 119 0036 FFF7FEFF 		bl	CySetTemp
+ 117:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+ 118:Generated_Source\PSoC5/Emul_EEPROM.c ****             #if(CYDEV_ECC_ENABLE == 0)
+ 119:Generated_Source\PSoC5/Emul_EEPROM.c ****                 (void)CySetFlashEEBuffer(rowBuffer);
+ 120              		.loc 1 119 0
+ 121 003a 07F11403 		add	r3, r7, #20
+ 122 003e 1846     		mov	r0, r3
+ 123 0040 FFF7FEFF 		bl	CySetFlashEEBuffer
+ 120:Generated_Source\PSoC5/Emul_EEPROM.c ****             #endif
+ 121:Generated_Source\PSoC5/Emul_EEPROM.c ****         #endif /* (!CY_PSOC4) */
+ 122:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+ 123:Generated_Source\PSoC5/Emul_EEPROM.c ****         arrayId = eeOffset / CY_FLASH_SIZEOF_ARRAY;
+ 124              		.loc 1 123 0
+ 125 0044 D7F83432 		ldr	r3, [r7, #564]
+ 126 0048 1B0C     		lsrs	r3, r3, #16
+ 127 004a C7F84C32 		str	r3, [r7, #588]
+ 124:Generated_Source\PSoC5/Emul_EEPROM.c ****         rowId = (eeOffset / CY_FLASH_SIZEOF_ROW) % Emul_EEPROM_ROWS_IN_ARRAY;
+ 128              		.loc 1 124 0
+ 129 004e D7F83432 		ldr	r3, [r7, #564]
+ 130 0052 1B0A     		lsrs	r3, r3, #8
+ 131 0054 DBB2     		uxtb	r3, r3
+ 132 0056 C7F84832 		str	r3, [r7, #584]
+ 125:Generated_Source\PSoC5/Emul_EEPROM.c ****         byteOffset = (CY_FLASH_SIZEOF_ARRAY * arrayId) + (CY_FLASH_SIZEOF_ROW * rowId);
+ 133              		.loc 1 125 0
+ 134 005a D7F84C32 		ldr	r3, [r7, #588]
+ 135 005e 1A02     		lsls	r2, r3, #8
+ 136 0060 D7F84832 		ldr	r3, [r7, #584]
+ 137 0064 1344     		add	r3, r3, r2
+ 138 0066 1B02     		lsls	r3, r3, #8
+ 139 0068 C7F83832 		str	r3, [r7, #568]
+ 126:Generated_Source\PSoC5/Emul_EEPROM.c ****         srcIndex = 0u;
+ 140              		.loc 1 126 0
+ 141 006c 0023     		movs	r3, #0
+ 142 006e C7F84032 		str	r3, [r7, #576]
+ 127:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+ 128:Generated_Source\PSoC5/Emul_EEPROM.c ****         rc = CYRET_SUCCESS;
+ 143              		.loc 1 128 0
+ 144 0072 0023     		movs	r3, #0
+ 145 0074 C7F83C32 		str	r3, [r7, #572]
+ 129:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+ 130:Generated_Source\PSoC5/Emul_EEPROM.c ****         while ((srcIndex < byteCount) && (CYRET_SUCCESS == rc))
+ 146              		.loc 1 130 0
+ 147 0078 5AE0     		b	.L5
+ 148              	.L11:
+ 131:Generated_Source\PSoC5/Emul_EEPROM.c ****         {
+ 132:Generated_Source\PSoC5/Emul_EEPROM.c ****             /* Copy data to the write buffer either from the source buffer or from the flash */
+ 133:Generated_Source\PSoC5/Emul_EEPROM.c ****             for (dstIndex = 0u; dstIndex < CY_FLASH_SIZEOF_ROW; dstIndex++)
+ 149              		.loc 1 133 0
+ 150 007a 0023     		movs	r3, #0
+ 151 007c C7F84432 		str	r3, [r7, #580]
+ 152 0080 34E0     		b	.L6
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 6
+
+
+ 153              	.L9:
+ 134:Generated_Source\PSoC5/Emul_EEPROM.c ****             {
+ 135:Generated_Source\PSoC5/Emul_EEPROM.c ****                 if ((byteOffset >= eeOffset) && (srcIndex < byteCount))
+ 154              		.loc 1 135 0
+ 155 0082 D7F83822 		ldr	r2, [r7, #568]
+ 156 0086 D7F83432 		ldr	r3, [r7, #564]
+ 157 008a 9A42     		cmp	r2, r3
+ 158 008c 19D3     		bcc	.L7
+ 159              		.loc 1 135 0 is_stmt 0 discriminator 1
+ 160 008e 3B1D     		adds	r3, r7, #4
+ 161 0090 D7F84022 		ldr	r2, [r7, #576]
+ 162 0094 1B68     		ldr	r3, [r3]
+ 163 0096 9A42     		cmp	r2, r3
+ 164 0098 13D2     		bcs	.L7
+ 136:Generated_Source\PSoC5/Emul_EEPROM.c ****                 {
+ 137:Generated_Source\PSoC5/Emul_EEPROM.c ****                     writeBuffer[dstIndex] = srcBuf[srcIndex];
+ 165              		.loc 1 137 0 is_stmt 1
+ 166 009a 07F10C03 		add	r3, r7, #12
+ 167 009e 1A68     		ldr	r2, [r3]
+ 168 00a0 D7F84032 		ldr	r3, [r7, #576]
+ 169 00a4 1344     		add	r3, r3, r2
+ 170 00a6 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+ 171 00a8 07F59A72 		add	r2, r7, #308
+ 172 00ac D7F84432 		ldr	r3, [r7, #580]
+ 173 00b0 1344     		add	r3, r3, r2
+ 174 00b2 0A46     		mov	r2, r1
+ 175 00b4 1A70     		strb	r2, [r3]
+ 138:Generated_Source\PSoC5/Emul_EEPROM.c ****                     srcIndex++;
+ 176              		.loc 1 138 0
+ 177 00b6 D7F84032 		ldr	r3, [r7, #576]
+ 178 00ba 0133     		adds	r3, r3, #1
+ 179 00bc C7F84032 		str	r3, [r7, #576]
+ 180 00c0 0AE0     		b	.L8
+ 181              	.L7:
+ 139:Generated_Source\PSoC5/Emul_EEPROM.c ****                 }
+ 140:Generated_Source\PSoC5/Emul_EEPROM.c ****                 else
+ 141:Generated_Source\PSoC5/Emul_EEPROM.c ****                 {
+ 142:Generated_Source\PSoC5/Emul_EEPROM.c ****                     writeBuffer[dstIndex] = CY_GET_XTND_REG8(CYDEV_FLASH_BASE + byteOffset);
+ 182              		.loc 1 142 0
+ 183 00c2 D7F83832 		ldr	r3, [r7, #568]
+ 184 00c6 1B78     		ldrb	r3, [r3]
+ 185 00c8 D9B2     		uxtb	r1, r3
+ 186 00ca 07F59A72 		add	r2, r7, #308
+ 187 00ce D7F84432 		ldr	r3, [r7, #580]
+ 188 00d2 1344     		add	r3, r3, r2
+ 189 00d4 0A46     		mov	r2, r1
+ 190 00d6 1A70     		strb	r2, [r3]
+ 191              	.L8:
+ 143:Generated_Source\PSoC5/Emul_EEPROM.c ****                 }
+ 144:Generated_Source\PSoC5/Emul_EEPROM.c ****                 byteOffset++;
+ 192              		.loc 1 144 0 discriminator 2
+ 193 00d8 D7F83832 		ldr	r3, [r7, #568]
+ 194 00dc 0133     		adds	r3, r3, #1
+ 195 00de C7F83832 		str	r3, [r7, #568]
+ 133:Generated_Source\PSoC5/Emul_EEPROM.c ****             {
+ 196              		.loc 1 133 0 discriminator 2
+ 197 00e2 D7F84432 		ldr	r3, [r7, #580]
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 7
+
+
+ 198 00e6 0133     		adds	r3, r3, #1
+ 199 00e8 C7F84432 		str	r3, [r7, #580]
+ 200              	.L6:
+ 133:Generated_Source\PSoC5/Emul_EEPROM.c ****             {
+ 201              		.loc 1 133 0 is_stmt 0 discriminator 1
+ 202 00ec D7F84432 		ldr	r3, [r7, #580]
+ 203 00f0 FF2B     		cmp	r3, #255
+ 204 00f2 C6D9     		bls	.L9
+ 145:Generated_Source\PSoC5/Emul_EEPROM.c ****             }
+ 146:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+ 147:Generated_Source\PSoC5/Emul_EEPROM.c ****             /* Write flash row */
+ 148:Generated_Source\PSoC5/Emul_EEPROM.c ****             #if (CY_PSOC4)
+ 149:Generated_Source\PSoC5/Emul_EEPROM.c ****                 rc = CySysFlashWriteRow(rowId, writeBuffer);
+ 150:Generated_Source\PSoC5/Emul_EEPROM.c ****             #else
+ 151:Generated_Source\PSoC5/Emul_EEPROM.c ****                 rc = CyWriteRowData((uint8)arrayId, (uint16)rowId, writeBuffer);
+ 205              		.loc 1 151 0 is_stmt 1
+ 206 00f4 D7F84C32 		ldr	r3, [r7, #588]
+ 207 00f8 DBB2     		uxtb	r3, r3
+ 208 00fa D7F84822 		ldr	r2, [r7, #584]
+ 209 00fe 91B2     		uxth	r1, r2
+ 210 0100 07F59A72 		add	r2, r7, #308
+ 211 0104 1846     		mov	r0, r3
+ 212 0106 FFF7FEFF 		bl	CyWriteRowData
+ 213 010a C7F83C02 		str	r0, [r7, #572]
+ 152:Generated_Source\PSoC5/Emul_EEPROM.c ****             #endif /* (CY_PSOC4) */
+ 153:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+ 154:Generated_Source\PSoC5/Emul_EEPROM.c ****             /* Go to the next row */
+ 155:Generated_Source\PSoC5/Emul_EEPROM.c ****             rowId++;
+ 214              		.loc 1 155 0
+ 215 010e D7F84832 		ldr	r3, [r7, #584]
+ 216 0112 0133     		adds	r3, r3, #1
+ 217 0114 C7F84832 		str	r3, [r7, #584]
+ 156:Generated_Source\PSoC5/Emul_EEPROM.c ****             #if (CY_FLASH_NUMBER_ARRAYS > 1)
+ 157:Generated_Source\PSoC5/Emul_EEPROM.c ****                 if (rowId >= Emul_EEPROM_ROWS_IN_ARRAY)
+ 218              		.loc 1 157 0
+ 219 0118 D7F84832 		ldr	r3, [r7, #584]
+ 220 011c FF2B     		cmp	r3, #255
+ 221 011e 07D9     		bls	.L5
+ 158:Generated_Source\PSoC5/Emul_EEPROM.c ****                 {
+ 159:Generated_Source\PSoC5/Emul_EEPROM.c ****                     arrayId++;
+ 222              		.loc 1 159 0
+ 223 0120 D7F84C32 		ldr	r3, [r7, #588]
+ 224 0124 0133     		adds	r3, r3, #1
+ 225 0126 C7F84C32 		str	r3, [r7, #588]
+ 160:Generated_Source\PSoC5/Emul_EEPROM.c ****                     rowId = 0u;
+ 226              		.loc 1 160 0
+ 227 012a 0023     		movs	r3, #0
+ 228 012c C7F84832 		str	r3, [r7, #584]
+ 229              	.L5:
+ 130:Generated_Source\PSoC5/Emul_EEPROM.c ****         {
+ 230              		.loc 1 130 0
+ 231 0130 3B1D     		adds	r3, r7, #4
+ 232 0132 D7F84022 		ldr	r2, [r7, #576]
+ 233 0136 1B68     		ldr	r3, [r3]
+ 234 0138 9A42     		cmp	r2, r3
+ 235 013a 03D2     		bcs	.L10
+ 130:Generated_Source\PSoC5/Emul_EEPROM.c ****         {
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 8
+
+
+ 236              		.loc 1 130 0 is_stmt 0 discriminator 1
+ 237 013c D7F83C32 		ldr	r3, [r7, #572]
+ 238 0140 002B     		cmp	r3, #0
+ 239 0142 9AD0     		beq	.L11
+ 240              	.L10:
+ 161:Generated_Source\PSoC5/Emul_EEPROM.c ****                 }
+ 162:Generated_Source\PSoC5/Emul_EEPROM.c ****             #endif /* (CY_FLASH_NUMBER_ARRAYS > 1) */
+ 163:Generated_Source\PSoC5/Emul_EEPROM.c ****         }
+ 164:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+ 165:Generated_Source\PSoC5/Emul_EEPROM.c ****         /* Flush both Cache and PHUB prefetch buffer */
+ 166:Generated_Source\PSoC5/Emul_EEPROM.c ****         #if (CY_PSOC5)
+ 167:Generated_Source\PSoC5/Emul_EEPROM.c ****             CyFlushCache();
+ 241              		.loc 1 167 0 is_stmt 1
+ 242 0144 FFF7FEFF 		bl	CyFlushCache
+ 243 0148 02E0     		b	.L12
+ 244              	.L4:
+ 168:Generated_Source\PSoC5/Emul_EEPROM.c ****         #elif (CY_PSOC3)
+ 169:Generated_Source\PSoC5/Emul_EEPROM.c ****             CY_FLASH_CONTROL_REG |= 6u;
+ 170:Generated_Source\PSoC5/Emul_EEPROM.c ****         #endif /* (CY_PSOC5) */
+ 171:Generated_Source\PSoC5/Emul_EEPROM.c ****     }
+ 172:Generated_Source\PSoC5/Emul_EEPROM.c ****     else
+ 173:Generated_Source\PSoC5/Emul_EEPROM.c ****     {
+ 174:Generated_Source\PSoC5/Emul_EEPROM.c ****         rc = CYRET_BAD_PARAM;
+ 245              		.loc 1 174 0
+ 246 014a 0123     		movs	r3, #1
+ 247 014c C7F83C32 		str	r3, [r7, #572]
+ 248              	.L12:
+ 175:Generated_Source\PSoC5/Emul_EEPROM.c ****     }
+ 176:Generated_Source\PSoC5/Emul_EEPROM.c **** 
+ 177:Generated_Source\PSoC5/Emul_EEPROM.c ****     /* Mask return codes from flash, if they are not supported */
+ 178:Generated_Source\PSoC5/Emul_EEPROM.c ****     if ((CYRET_SUCCESS != rc) && (CYRET_BAD_PARAM != rc))
+ 249              		.loc 1 178 0
+ 250 0150 D7F83C32 		ldr	r3, [r7, #572]
+ 251 0154 002B     		cmp	r3, #0
+ 252 0156 07D0     		beq	.L13
+ 253              		.loc 1 178 0 is_stmt 0 discriminator 1
+ 254 0158 D7F83C32 		ldr	r3, [r7, #572]
+ 255 015c 012B     		cmp	r3, #1
+ 256 015e 03D0     		beq	.L13
+ 179:Generated_Source\PSoC5/Emul_EEPROM.c ****     {
+ 180:Generated_Source\PSoC5/Emul_EEPROM.c ****         rc = CYRET_UNKNOWN;
+ 257              		.loc 1 180 0 is_stmt 1
+ 258 0160 4FF0FF33 		mov	r3, #-1
+ 259 0164 C7F83C32 		str	r3, [r7, #572]
+ 260              	.L13:
+ 181:Generated_Source\PSoC5/Emul_EEPROM.c ****     }
+ 182:Generated_Source\PSoC5/Emul_EEPROM.c ****     
+ 183:Generated_Source\PSoC5/Emul_EEPROM.c ****     return (rc);
+ 261              		.loc 1 183 0
+ 262 0168 D7F83C32 		ldr	r3, [r7, #572]
+ 184:Generated_Source\PSoC5/Emul_EEPROM.c **** }
+ 263              		.loc 1 184 0
+ 264 016c 1846     		mov	r0, r3
+ 265 016e 07F51477 		add	r7, r7, #592
+ 266              		.cfi_def_cfa_offset 8
+ 267 0172 BD46     		mov	sp, r7
+ 268              		.cfi_def_cfa_register 13
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 9
+
+
+ 269              		@ sp needed
+ 270 0174 80BD     		pop	{r7, pc}
+ 271              		.cfi_endproc
+ 272              	.LFE2:
+ 273              		.size	Emul_EEPROM_Write, .-Emul_EEPROM_Write
+ 274 0176 00BF     		.text
+ 275              	.Letext0:
+ 276              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 277              		.section	.debug_info,"",%progbits
+ 278              	.Ldebug_info0:
+ 279 0000 DC010000 		.4byte	0x1dc
+ 280 0004 0400     		.2byte	0x4
+ 281 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 282 000a 04       		.byte	0x4
+ 283 000b 01       		.uleb128 0x1
+ 284 000c 13000000 		.4byte	.LASF32
+ 285 0010 0C       		.byte	0xc
+ 286 0011 3B010000 		.4byte	.LASF33
+ 287 0015 1A020000 		.4byte	.LASF34
+ 288 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 289 001d 00000000 		.4byte	0
+ 290 0021 00000000 		.4byte	.Ldebug_line0
+ 291 0025 02       		.uleb128 0x2
+ 292 0026 01       		.byte	0x1
+ 293 0027 06       		.byte	0x6
+ 294 0028 F2000000 		.4byte	.LASF0
+ 295 002c 02       		.uleb128 0x2
+ 296 002d 01       		.byte	0x1
+ 297 002e 08       		.byte	0x8
+ 298 002f FE000000 		.4byte	.LASF1
+ 299 0033 02       		.uleb128 0x2
+ 300 0034 02       		.byte	0x2
+ 301 0035 05       		.byte	0x5
+ 302 0036 F5010000 		.4byte	.LASF2
+ 303 003a 02       		.uleb128 0x2
+ 304 003b 02       		.byte	0x2
+ 305 003c 07       		.byte	0x7
+ 306 003d B4000000 		.4byte	.LASF3
+ 307 0041 02       		.uleb128 0x2
+ 308 0042 04       		.byte	0x4
+ 309 0043 05       		.byte	0x5
+ 310 0044 FF010000 		.4byte	.LASF4
+ 311 0048 02       		.uleb128 0x2
+ 312 0049 04       		.byte	0x4
+ 313 004a 07       		.byte	0x7
+ 314 004b 11010000 		.4byte	.LASF5
+ 315 004f 02       		.uleb128 0x2
+ 316 0050 08       		.byte	0x8
+ 317 0051 05       		.byte	0x5
+ 318 0052 D8010000 		.4byte	.LASF6
+ 319 0056 02       		.uleb128 0x2
+ 320 0057 08       		.byte	0x8
+ 321 0058 07       		.byte	0x7
+ 322 0059 8B010000 		.4byte	.LASF7
+ 323 005d 03       		.uleb128 0x3
+ 324 005e 04       		.byte	0x4
+ 325 005f 05       		.byte	0x5
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 10
+
+
+ 326 0060 696E7400 		.ascii	"int\000"
+ 327 0064 02       		.uleb128 0x2
+ 328 0065 04       		.byte	0x4
+ 329 0066 07       		.byte	0x7
+ 330 0067 7E010000 		.4byte	.LASF8
+ 331 006b 04       		.uleb128 0x4
+ 332 006c 23010000 		.4byte	.LASF9
+ 333 0070 02       		.byte	0x2
+ 334 0071 E401     		.2byte	0x1e4
+ 335 0073 2C000000 		.4byte	0x2c
+ 336 0077 04       		.uleb128 0x4
+ 337 0078 70010000 		.4byte	.LASF10
+ 338 007c 02       		.byte	0x2
+ 339 007d E501     		.2byte	0x1e5
+ 340 007f 3A000000 		.4byte	0x3a
+ 341 0083 04       		.uleb128 0x4
+ 342 0084 77010000 		.4byte	.LASF11
+ 343 0088 02       		.byte	0x2
+ 344 0089 E601     		.2byte	0x1e6
+ 345 008b 48000000 		.4byte	0x48
+ 346 008f 02       		.uleb128 0x2
+ 347 0090 04       		.byte	0x4
+ 348 0091 04       		.byte	0x4
+ 349 0092 EC000000 		.4byte	.LASF12
+ 350 0096 02       		.uleb128 0x2
+ 351 0097 08       		.byte	0x8
+ 352 0098 04       		.byte	0x4
+ 353 0099 69010000 		.4byte	.LASF13
+ 354 009d 02       		.uleb128 0x2
+ 355 009e 01       		.byte	0x1
+ 356 009f 08       		.byte	0x8
+ 357 00a0 E6010000 		.4byte	.LASF14
+ 358 00a4 04       		.uleb128 0x4
+ 359 00a5 00000000 		.4byte	.LASF15
+ 360 00a9 02       		.byte	0x2
+ 361 00aa 8602     		.2byte	0x286
+ 362 00ac 48000000 		.4byte	0x48
+ 363 00b0 04       		.uleb128 0x4
+ 364 00b1 0C010000 		.4byte	.LASF16
+ 365 00b5 02       		.byte	0x2
+ 366 00b6 8E02     		.2byte	0x28e
+ 367 00b8 BC000000 		.4byte	0xbc
+ 368 00bc 05       		.uleb128 0x5
+ 369 00bd 6B000000 		.4byte	0x6b
+ 370 00c1 02       		.uleb128 0x2
+ 371 00c2 08       		.byte	0x8
+ 372 00c3 04       		.byte	0x4
+ 373 00c4 BD010000 		.4byte	.LASF17
+ 374 00c8 02       		.uleb128 0x2
+ 375 00c9 04       		.byte	0x4
+ 376 00ca 07       		.byte	0x7
+ 377 00cb CF010000 		.4byte	.LASF18
+ 378 00cf 06       		.uleb128 0x6
+ 379 00d0 A2010000 		.4byte	.LASF19
+ 380 00d4 01       		.byte	0x1
+ 381 00d5 21       		.byte	0x21
+ 382 00d6 00000000 		.4byte	.LFB0
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 11
+
+
+ 383 00da 0C000000 		.4byte	.LFE0-.LFB0
+ 384 00de 01       		.uleb128 0x1
+ 385 00df 9C       		.byte	0x9c
+ 386 00e0 06       		.uleb128 0x6
+ 387 00e1 C7000000 		.4byte	.LASF20
+ 388 00e5 01       		.byte	0x1
+ 389 00e6 36       		.byte	0x36
+ 390 00e7 00000000 		.4byte	.LFB1
+ 391 00eb 0C000000 		.4byte	.LFE1-.LFB1
+ 392 00ef 01       		.uleb128 0x1
+ 393 00f0 9C       		.byte	0x9c
+ 394 00f1 07       		.uleb128 0x7
+ 395 00f2 08020000 		.4byte	.LASF35
+ 396 00f6 01       		.byte	0x1
+ 397 00f7 54       		.byte	0x54
+ 398 00f8 A4000000 		.4byte	0xa4
+ 399 00fc 00000000 		.4byte	.LFB2
+ 400 0100 76010000 		.4byte	.LFE2-.LFB2
+ 401 0104 01       		.uleb128 0x1
+ 402 0105 9C       		.byte	0x9c
+ 403 0106 B7010000 		.4byte	0x1b7
+ 404 010a 08       		.uleb128 0x8
+ 405 010b AD000000 		.4byte	.LASF21
+ 406 010f 01       		.byte	0x1
+ 407 0110 54       		.byte	0x54
+ 408 0111 B7010000 		.4byte	0x1b7
+ 409 0115 03       		.uleb128 0x3
+ 410 0116 91       		.byte	0x91
+ 411 0117 B47B     		.sleb128 -588
+ 412 0119 08       		.uleb128 0x8
+ 413 011a EB010000 		.4byte	.LASF22
+ 414 011e 01       		.byte	0x1
+ 415 011f 54       		.byte	0x54
+ 416 0120 B7010000 		.4byte	0x1b7
+ 417 0124 03       		.uleb128 0x3
+ 418 0125 91       		.byte	0x91
+ 419 0126 B07B     		.sleb128 -592
+ 420 0128 08       		.uleb128 0x8
+ 421 0129 31010000 		.4byte	.LASF23
+ 422 012d 01       		.byte	0x1
+ 423 012e 54       		.byte	0x54
+ 424 012f 83000000 		.4byte	0x83
+ 425 0133 03       		.uleb128 0x3
+ 426 0134 91       		.byte	0x91
+ 427 0135 AC7B     		.sleb128 -596
+ 428 0137 09       		.uleb128 0x9
+ 429 0138 A1000000 		.4byte	.LASF24
+ 430 013c 01       		.byte	0x1
+ 431 013d 57       		.byte	0x57
+ 432 013e C2010000 		.4byte	0x1c2
+ 433 0142 03       		.uleb128 0x3
+ 434 0143 91       		.byte	0x91
+ 435 0144 DC7D     		.sleb128 -292
+ 436 0146 09       		.uleb128 0x9
+ 437 0147 29010000 		.4byte	.LASF25
+ 438 014b 01       		.byte	0x1
+ 439 014c 58       		.byte	0x58
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 12
+
+
+ 440 014d 83000000 		.4byte	0x83
+ 441 0151 02       		.uleb128 0x2
+ 442 0152 91       		.byte	0x91
+ 443 0153 74       		.sleb128 -12
+ 444 0154 09       		.uleb128 0x9
+ 445 0155 C9010000 		.4byte	.LASF26
+ 446 0159 01       		.byte	0x1
+ 447 015a 59       		.byte	0x59
+ 448 015b 83000000 		.4byte	0x83
+ 449 015f 02       		.uleb128 0x2
+ 450 0160 91       		.byte	0x91
+ 451 0161 70       		.sleb128 -16
+ 452 0162 09       		.uleb128 0x9
+ 453 0163 60010000 		.4byte	.LASF27
+ 454 0167 01       		.byte	0x1
+ 455 0168 5A       		.byte	0x5a
+ 456 0169 83000000 		.4byte	0x83
+ 457 016d 02       		.uleb128 0x2
+ 458 016e 91       		.byte	0x91
+ 459 016f 6C       		.sleb128 -20
+ 460 0170 09       		.uleb128 0x9
+ 461 0171 D8000000 		.4byte	.LASF28
+ 462 0175 01       		.byte	0x1
+ 463 0176 5B       		.byte	0x5b
+ 464 0177 83000000 		.4byte	0x83
+ 465 017b 02       		.uleb128 0x2
+ 466 017c 91       		.byte	0x91
+ 467 017d 68       		.sleb128 -24
+ 468 017e 0A       		.uleb128 0xa
+ 469 017f 726300   		.ascii	"rc\000"
+ 470 0182 01       		.byte	0x1
+ 471 0183 5C       		.byte	0x5c
+ 472 0184 A4000000 		.4byte	0xa4
+ 473 0188 02       		.uleb128 0x2
+ 474 0189 91       		.byte	0x91
+ 475 018a 64       		.sleb128 -28
+ 476 018b 09       		.uleb128 0x9
+ 477 018c B4010000 		.4byte	.LASF29
+ 478 0190 01       		.byte	0x1
+ 479 0191 5D       		.byte	0x5d
+ 480 0192 83000000 		.4byte	0x83
+ 481 0196 02       		.uleb128 0x2
+ 482 0197 91       		.byte	0x91
+ 483 0198 5C       		.sleb128 -36
+ 484 0199 09       		.uleb128 0x9
+ 485 019a E1000000 		.4byte	.LASF30
+ 486 019e 01       		.byte	0x1
+ 487 019f 5E       		.byte	0x5e
+ 488 01a0 83000000 		.4byte	0x83
+ 489 01a4 02       		.uleb128 0x2
+ 490 01a5 91       		.byte	0x91
+ 491 01a6 60       		.sleb128 -32
+ 492 01a7 09       		.uleb128 0x9
+ 493 01a8 09000000 		.4byte	.LASF31
+ 494 01ac 01       		.byte	0x1
+ 495 01ad 62       		.byte	0x62
+ 496 01ae D2010000 		.4byte	0x1d2
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 13
+
+
+ 497 01b2 03       		.uleb128 0x3
+ 498 01b3 91       		.byte	0x91
+ 499 01b4 BC7B     		.sleb128 -580
+ 500 01b6 00       		.byte	0
+ 501 01b7 0B       		.uleb128 0xb
+ 502 01b8 04       		.byte	0x4
+ 503 01b9 BD010000 		.4byte	0x1bd
+ 504 01bd 0C       		.uleb128 0xc
+ 505 01be 6B000000 		.4byte	0x6b
+ 506 01c2 0D       		.uleb128 0xd
+ 507 01c3 6B000000 		.4byte	0x6b
+ 508 01c7 D2010000 		.4byte	0x1d2
+ 509 01cb 0E       		.uleb128 0xe
+ 510 01cc C8000000 		.4byte	0xc8
+ 511 01d0 FF       		.byte	0xff
+ 512 01d1 00       		.byte	0
+ 513 01d2 0F       		.uleb128 0xf
+ 514 01d3 6B000000 		.4byte	0x6b
+ 515 01d7 10       		.uleb128 0x10
+ 516 01d8 C8000000 		.4byte	0xc8
+ 517 01dc 1F01     		.2byte	0x11f
+ 518 01de 00       		.byte	0
+ 519 01df 00       		.byte	0
+ 520              		.section	.debug_abbrev,"",%progbits
+ 521              	.Ldebug_abbrev0:
+ 522 0000 01       		.uleb128 0x1
+ 523 0001 11       		.uleb128 0x11
+ 524 0002 01       		.byte	0x1
+ 525 0003 25       		.uleb128 0x25
+ 526 0004 0E       		.uleb128 0xe
+ 527 0005 13       		.uleb128 0x13
+ 528 0006 0B       		.uleb128 0xb
+ 529 0007 03       		.uleb128 0x3
+ 530 0008 0E       		.uleb128 0xe
+ 531 0009 1B       		.uleb128 0x1b
+ 532 000a 0E       		.uleb128 0xe
+ 533 000b 55       		.uleb128 0x55
+ 534 000c 17       		.uleb128 0x17
+ 535 000d 11       		.uleb128 0x11
+ 536 000e 01       		.uleb128 0x1
+ 537 000f 10       		.uleb128 0x10
+ 538 0010 17       		.uleb128 0x17
+ 539 0011 00       		.byte	0
+ 540 0012 00       		.byte	0
+ 541 0013 02       		.uleb128 0x2
+ 542 0014 24       		.uleb128 0x24
+ 543 0015 00       		.byte	0
+ 544 0016 0B       		.uleb128 0xb
+ 545 0017 0B       		.uleb128 0xb
+ 546 0018 3E       		.uleb128 0x3e
+ 547 0019 0B       		.uleb128 0xb
+ 548 001a 03       		.uleb128 0x3
+ 549 001b 0E       		.uleb128 0xe
+ 550 001c 00       		.byte	0
+ 551 001d 00       		.byte	0
+ 552 001e 03       		.uleb128 0x3
+ 553 001f 24       		.uleb128 0x24
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 14
+
+
+ 554 0020 00       		.byte	0
+ 555 0021 0B       		.uleb128 0xb
+ 556 0022 0B       		.uleb128 0xb
+ 557 0023 3E       		.uleb128 0x3e
+ 558 0024 0B       		.uleb128 0xb
+ 559 0025 03       		.uleb128 0x3
+ 560 0026 08       		.uleb128 0x8
+ 561 0027 00       		.byte	0
+ 562 0028 00       		.byte	0
+ 563 0029 04       		.uleb128 0x4
+ 564 002a 16       		.uleb128 0x16
+ 565 002b 00       		.byte	0
+ 566 002c 03       		.uleb128 0x3
+ 567 002d 0E       		.uleb128 0xe
+ 568 002e 3A       		.uleb128 0x3a
+ 569 002f 0B       		.uleb128 0xb
+ 570 0030 3B       		.uleb128 0x3b
+ 571 0031 05       		.uleb128 0x5
+ 572 0032 49       		.uleb128 0x49
+ 573 0033 13       		.uleb128 0x13
+ 574 0034 00       		.byte	0
+ 575 0035 00       		.byte	0
+ 576 0036 05       		.uleb128 0x5
+ 577 0037 35       		.uleb128 0x35
+ 578 0038 00       		.byte	0
+ 579 0039 49       		.uleb128 0x49
+ 580 003a 13       		.uleb128 0x13
+ 581 003b 00       		.byte	0
+ 582 003c 00       		.byte	0
+ 583 003d 06       		.uleb128 0x6
+ 584 003e 2E       		.uleb128 0x2e
+ 585 003f 00       		.byte	0
+ 586 0040 3F       		.uleb128 0x3f
+ 587 0041 19       		.uleb128 0x19
+ 588 0042 03       		.uleb128 0x3
+ 589 0043 0E       		.uleb128 0xe
+ 590 0044 3A       		.uleb128 0x3a
+ 591 0045 0B       		.uleb128 0xb
+ 592 0046 3B       		.uleb128 0x3b
+ 593 0047 0B       		.uleb128 0xb
+ 594 0048 27       		.uleb128 0x27
+ 595 0049 19       		.uleb128 0x19
+ 596 004a 11       		.uleb128 0x11
+ 597 004b 01       		.uleb128 0x1
+ 598 004c 12       		.uleb128 0x12
+ 599 004d 06       		.uleb128 0x6
+ 600 004e 40       		.uleb128 0x40
+ 601 004f 18       		.uleb128 0x18
+ 602 0050 9742     		.uleb128 0x2117
+ 603 0052 19       		.uleb128 0x19
+ 604 0053 00       		.byte	0
+ 605 0054 00       		.byte	0
+ 606 0055 07       		.uleb128 0x7
+ 607 0056 2E       		.uleb128 0x2e
+ 608 0057 01       		.byte	0x1
+ 609 0058 3F       		.uleb128 0x3f
+ 610 0059 19       		.uleb128 0x19
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 15
+
+
+ 611 005a 03       		.uleb128 0x3
+ 612 005b 0E       		.uleb128 0xe
+ 613 005c 3A       		.uleb128 0x3a
+ 614 005d 0B       		.uleb128 0xb
+ 615 005e 3B       		.uleb128 0x3b
+ 616 005f 0B       		.uleb128 0xb
+ 617 0060 27       		.uleb128 0x27
+ 618 0061 19       		.uleb128 0x19
+ 619 0062 49       		.uleb128 0x49
+ 620 0063 13       		.uleb128 0x13
+ 621 0064 11       		.uleb128 0x11
+ 622 0065 01       		.uleb128 0x1
+ 623 0066 12       		.uleb128 0x12
+ 624 0067 06       		.uleb128 0x6
+ 625 0068 40       		.uleb128 0x40
+ 626 0069 18       		.uleb128 0x18
+ 627 006a 9642     		.uleb128 0x2116
+ 628 006c 19       		.uleb128 0x19
+ 629 006d 01       		.uleb128 0x1
+ 630 006e 13       		.uleb128 0x13
+ 631 006f 00       		.byte	0
+ 632 0070 00       		.byte	0
+ 633 0071 08       		.uleb128 0x8
+ 634 0072 05       		.uleb128 0x5
+ 635 0073 00       		.byte	0
+ 636 0074 03       		.uleb128 0x3
+ 637 0075 0E       		.uleb128 0xe
+ 638 0076 3A       		.uleb128 0x3a
+ 639 0077 0B       		.uleb128 0xb
+ 640 0078 3B       		.uleb128 0x3b
+ 641 0079 0B       		.uleb128 0xb
+ 642 007a 49       		.uleb128 0x49
+ 643 007b 13       		.uleb128 0x13
+ 644 007c 02       		.uleb128 0x2
+ 645 007d 18       		.uleb128 0x18
+ 646 007e 00       		.byte	0
+ 647 007f 00       		.byte	0
+ 648 0080 09       		.uleb128 0x9
+ 649 0081 34       		.uleb128 0x34
+ 650 0082 00       		.byte	0
+ 651 0083 03       		.uleb128 0x3
+ 652 0084 0E       		.uleb128 0xe
+ 653 0085 3A       		.uleb128 0x3a
+ 654 0086 0B       		.uleb128 0xb
+ 655 0087 3B       		.uleb128 0x3b
+ 656 0088 0B       		.uleb128 0xb
+ 657 0089 49       		.uleb128 0x49
+ 658 008a 13       		.uleb128 0x13
+ 659 008b 02       		.uleb128 0x2
+ 660 008c 18       		.uleb128 0x18
+ 661 008d 00       		.byte	0
+ 662 008e 00       		.byte	0
+ 663 008f 0A       		.uleb128 0xa
+ 664 0090 34       		.uleb128 0x34
+ 665 0091 00       		.byte	0
+ 666 0092 03       		.uleb128 0x3
+ 667 0093 08       		.uleb128 0x8
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 16
+
+
+ 668 0094 3A       		.uleb128 0x3a
+ 669 0095 0B       		.uleb128 0xb
+ 670 0096 3B       		.uleb128 0x3b
+ 671 0097 0B       		.uleb128 0xb
+ 672 0098 49       		.uleb128 0x49
+ 673 0099 13       		.uleb128 0x13
+ 674 009a 02       		.uleb128 0x2
+ 675 009b 18       		.uleb128 0x18
+ 676 009c 00       		.byte	0
+ 677 009d 00       		.byte	0
+ 678 009e 0B       		.uleb128 0xb
+ 679 009f 0F       		.uleb128 0xf
+ 680 00a0 00       		.byte	0
+ 681 00a1 0B       		.uleb128 0xb
+ 682 00a2 0B       		.uleb128 0xb
+ 683 00a3 49       		.uleb128 0x49
+ 684 00a4 13       		.uleb128 0x13
+ 685 00a5 00       		.byte	0
+ 686 00a6 00       		.byte	0
+ 687 00a7 0C       		.uleb128 0xc
+ 688 00a8 26       		.uleb128 0x26
+ 689 00a9 00       		.byte	0
+ 690 00aa 49       		.uleb128 0x49
+ 691 00ab 13       		.uleb128 0x13
+ 692 00ac 00       		.byte	0
+ 693 00ad 00       		.byte	0
+ 694 00ae 0D       		.uleb128 0xd
+ 695 00af 01       		.uleb128 0x1
+ 696 00b0 01       		.byte	0x1
+ 697 00b1 49       		.uleb128 0x49
+ 698 00b2 13       		.uleb128 0x13
+ 699 00b3 01       		.uleb128 0x1
+ 700 00b4 13       		.uleb128 0x13
+ 701 00b5 00       		.byte	0
+ 702 00b6 00       		.byte	0
+ 703 00b7 0E       		.uleb128 0xe
+ 704 00b8 21       		.uleb128 0x21
+ 705 00b9 00       		.byte	0
+ 706 00ba 49       		.uleb128 0x49
+ 707 00bb 13       		.uleb128 0x13
+ 708 00bc 2F       		.uleb128 0x2f
+ 709 00bd 0B       		.uleb128 0xb
+ 710 00be 00       		.byte	0
+ 711 00bf 00       		.byte	0
+ 712 00c0 0F       		.uleb128 0xf
+ 713 00c1 01       		.uleb128 0x1
+ 714 00c2 01       		.byte	0x1
+ 715 00c3 49       		.uleb128 0x49
+ 716 00c4 13       		.uleb128 0x13
+ 717 00c5 00       		.byte	0
+ 718 00c6 00       		.byte	0
+ 719 00c7 10       		.uleb128 0x10
+ 720 00c8 21       		.uleb128 0x21
+ 721 00c9 00       		.byte	0
+ 722 00ca 49       		.uleb128 0x49
+ 723 00cb 13       		.uleb128 0x13
+ 724 00cc 2F       		.uleb128 0x2f
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 17
+
+
+ 725 00cd 05       		.uleb128 0x5
+ 726 00ce 00       		.byte	0
+ 727 00cf 00       		.byte	0
+ 728 00d0 00       		.byte	0
+ 729              		.section	.debug_aranges,"",%progbits
+ 730 0000 2C000000 		.4byte	0x2c
+ 731 0004 0200     		.2byte	0x2
+ 732 0006 00000000 		.4byte	.Ldebug_info0
+ 733 000a 04       		.byte	0x4
+ 734 000b 00       		.byte	0
+ 735 000c 0000     		.2byte	0
+ 736 000e 0000     		.2byte	0
+ 737 0010 00000000 		.4byte	.LFB0
+ 738 0014 0C000000 		.4byte	.LFE0-.LFB0
+ 739 0018 00000000 		.4byte	.LFB1
+ 740 001c 0C000000 		.4byte	.LFE1-.LFB1
+ 741 0020 00000000 		.4byte	.LFB2
+ 742 0024 76010000 		.4byte	.LFE2-.LFB2
+ 743 0028 00000000 		.4byte	0
+ 744 002c 00000000 		.4byte	0
+ 745              		.section	.debug_ranges,"",%progbits
+ 746              	.Ldebug_ranges0:
+ 747 0000 00000000 		.4byte	.LFB0
+ 748 0004 0C000000 		.4byte	.LFE0
+ 749 0008 00000000 		.4byte	.LFB1
+ 750 000c 0C000000 		.4byte	.LFE1
+ 751 0010 00000000 		.4byte	.LFB2
+ 752 0014 76010000 		.4byte	.LFE2
+ 753 0018 00000000 		.4byte	0
+ 754 001c 00000000 		.4byte	0
+ 755              		.section	.debug_line,"",%progbits
+ 756              	.Ldebug_line0:
+ 757 0000 CB000000 		.section	.debug_str,"MS",%progbits,1
+ 757      02004800 
+ 757      00000201 
+ 757      FB0E0D00 
+ 757      01010101 
+ 758              	.LASF15:
+ 759 0000 63797374 		.ascii	"cystatus\000"
+ 759      61747573 
+ 759      00
+ 760              	.LASF31:
+ 761 0009 726F7742 		.ascii	"rowBuffer\000"
+ 761      75666665 
+ 761      7200
+ 762              	.LASF32:
+ 763 0013 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 763      43313120 
+ 763      352E342E 
+ 763      31203230 
+ 763      31363036 
+ 764 0046 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 764      20726576 
+ 764      6973696F 
+ 764      6E203233 
+ 764      37373135 
+ 765 0079 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 18
+
+
+ 765      66756E63 
+ 765      74696F6E 
+ 765      2D736563 
+ 765      74696F6E 
+ 766              	.LASF24:
+ 767 00a1 77726974 		.ascii	"writeBuffer\000"
+ 767      65427566 
+ 767      66657200 
+ 768              	.LASF21:
+ 769 00ad 73726342 		.ascii	"srcBuf\000"
+ 769      756600
+ 770              	.LASF3:
+ 771 00b4 73686F72 		.ascii	"short unsigned int\000"
+ 771      7420756E 
+ 771      7369676E 
+ 771      65642069 
+ 771      6E7400
+ 772              	.LASF20:
+ 773 00c7 456D756C 		.ascii	"Emul_EEPROM_Stop\000"
+ 773      5F454550 
+ 773      524F4D5F 
+ 773      53746F70 
+ 773      00
+ 774              	.LASF28:
+ 775 00d8 73726349 		.ascii	"srcIndex\000"
+ 775      6E646578 
+ 775      00
+ 776              	.LASF30:
+ 777 00e1 62797465 		.ascii	"byteOffset\000"
+ 777      4F666673 
+ 777      657400
+ 778              	.LASF12:
+ 779 00ec 666C6F61 		.ascii	"float\000"
+ 779      7400
+ 780              	.LASF0:
+ 781 00f2 7369676E 		.ascii	"signed char\000"
+ 781      65642063 
+ 781      68617200 
+ 782              	.LASF1:
+ 783 00fe 756E7369 		.ascii	"unsigned char\000"
+ 783      676E6564 
+ 783      20636861 
+ 783      7200
+ 784              	.LASF16:
+ 785 010c 72656738 		.ascii	"reg8\000"
+ 785      00
+ 786              	.LASF5:
+ 787 0111 6C6F6E67 		.ascii	"long unsigned int\000"
+ 787      20756E73 
+ 787      69676E65 
+ 787      6420696E 
+ 787      7400
+ 788              	.LASF9:
+ 789 0123 75696E74 		.ascii	"uint8\000"
+ 789      3800
+ 790              	.LASF25:
+ 791 0129 61727261 		.ascii	"arrayId\000"
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 19
+
+
+ 791      79496400 
+ 792              	.LASF23:
+ 793 0131 62797465 		.ascii	"byteCount\000"
+ 793      436F756E 
+ 793      7400
+ 794              	.LASF33:
+ 795 013b 47656E65 		.ascii	"Generated_Source\\PSoC5\\Emul_EEPROM.c\000"
+ 795      72617465 
+ 795      645F536F 
+ 795      75726365 
+ 795      5C50536F 
+ 796              	.LASF27:
+ 797 0160 64737449 		.ascii	"dstIndex\000"
+ 797      6E646578 
+ 797      00
+ 798              	.LASF13:
+ 799 0169 646F7562 		.ascii	"double\000"
+ 799      6C6500
+ 800              	.LASF10:
+ 801 0170 75696E74 		.ascii	"uint16\000"
+ 801      313600
+ 802              	.LASF11:
+ 803 0177 75696E74 		.ascii	"uint32\000"
+ 803      333200
+ 804              	.LASF8:
+ 805 017e 756E7369 		.ascii	"unsigned int\000"
+ 805      676E6564 
+ 805      20696E74 
+ 805      00
+ 806              	.LASF7:
+ 807 018b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 807      206C6F6E 
+ 807      6720756E 
+ 807      7369676E 
+ 807      65642069 
+ 808              	.LASF19:
+ 809 01a2 456D756C 		.ascii	"Emul_EEPROM_Start\000"
+ 809      5F454550 
+ 809      524F4D5F 
+ 809      53746172 
+ 809      7400
+ 810              	.LASF29:
+ 811 01b4 65654F66 		.ascii	"eeOffset\000"
+ 811      66736574 
+ 811      00
+ 812              	.LASF17:
+ 813 01bd 6C6F6E67 		.ascii	"long double\000"
+ 813      20646F75 
+ 813      626C6500 
+ 814              	.LASF26:
+ 815 01c9 726F7749 		.ascii	"rowId\000"
+ 815      6400
+ 816              	.LASF18:
+ 817 01cf 73697A65 		.ascii	"sizetype\000"
+ 817      74797065 
+ 817      00
+ 818              	.LASF6:
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccE1mI48.s 			page 20
+
+
+ 819 01d8 6C6F6E67 		.ascii	"long long int\000"
+ 819      206C6F6E 
+ 819      6720696E 
+ 819      7400
+ 820              	.LASF14:
+ 821 01e6 63686172 		.ascii	"char\000"
+ 821      00
+ 822              	.LASF22:
+ 823 01eb 65657072 		.ascii	"eepromPtr\000"
+ 823      6F6D5074 
+ 823      7200
+ 824              	.LASF2:
+ 825 01f5 73686F72 		.ascii	"short int\000"
+ 825      7420696E 
+ 825      7400
+ 826              	.LASF4:
+ 827 01ff 6C6F6E67 		.ascii	"long int\000"
+ 827      20696E74 
+ 827      00
+ 828              	.LASF35:
+ 829 0208 456D756C 		.ascii	"Emul_EEPROM_Write\000"
+ 829      5F454550 
+ 829      524F4D5F 
+ 829      57726974 
+ 829      6500
+ 830              	.LASF34:
+ 831 021a 443A5C4D 		.ascii	"D:\\Masterarbeit - Chemie\\Lamella\\Firmware\\Kompl"
+ 831      61737465 
+ 831      72617262 
+ 831      65697420 
+ 831      2D204368 
+ 832 0249 65747465 		.ascii	"etteSteuerung\\PSOC5_LamellaControlHofmann.cydsn\000"
+ 832      53746575 
+ 832      6572756E 
+ 832      675C5053 
+ 832      4F43355F 
+ 833              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
