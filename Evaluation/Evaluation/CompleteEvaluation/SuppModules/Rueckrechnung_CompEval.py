@@ -44,8 +44,8 @@ def main(
     Endung = MeasurementFile.split(".")[-1]
 #       if DEBUG:
 #           print(Endung)
-    File_Max = open(MeasurementFile.replace("%s" % Endung, "max"))
-    File_Min = open(MeasurementFile.replace("%s" % Endung, "min"))
+    File_Max = open(f"{MeasurementFile}.max")
+    File_Min = open(f"{MeasurementFile}.min")
     Lines_Max = File_Max.readlines()
     Lines_Min = File_Min.readlines()
         

@@ -100,7 +100,7 @@ class Evaluation(GUI.CompEval_GUI.EvaluationGUI):
         try:
             for tmp_file in Green_Data:
                 Ruck.main(
-                    file=tmp_file,
+                    MeasurementFile=tmp_file,
                     Wellenlange_Laser=self.Green_Wavelength,
                     Winkel=self.Angle,
                     Start_Order=self.Start_Order,
@@ -113,7 +113,7 @@ class Evaluation(GUI.CompEval_GUI.EvaluationGUI):
 
             for tmp_file in Red_Data:
                 Ruck.main(
-                    file=tmp_file,
+                    MeasurementFile=tmp_file,
                     Wellenlange_Laser=self.Red_Wavelength,
                     Winkel=self.Angle,
                     Start_Order=self.Start_Order,
@@ -125,7 +125,8 @@ class Evaluation(GUI.CompEval_GUI.EvaluationGUI):
                 bg="green"
             )
 
-        except:
+        except Exception as E:
+            print(E)
             self.b_GetThicknesses.config(
                 bg="blue"
             )
