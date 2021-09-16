@@ -1,0 +1,248 @@
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Analog_Digital_Converter.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Analog_Digital_Converter_Bypass.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Analog_Digital_Converter_Bypass_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Analog_Digital_Converter_IRQ.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Analog_Digital_Converter_theACLK.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/CyDmac.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/CyFlash.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/CyLib.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/CySpc.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Interr_PC.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Interr_TFT.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/LED_Measurement_running.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/LED_Measurement_running_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/LED_slider_val_received.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/LED_slider_val_received_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/LED_slider_val_sent.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/LED_slider_val_sent_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/PGA_Photo.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_ArdControl.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_ArdControl_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_IRLaserEN.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_IRLaserEN_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_LED.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_LED_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_LaserEN1.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_LaserEN1_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_LaserEN2.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_LaserEN2_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_Output1.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_Output1_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_Output2.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_Output2_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_PhotoDiode.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_PhotoDiode_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperCLK.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperCLK_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperDIR.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperDIR_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperEN.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperEN_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperMS1.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperMS1_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperMS2.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperMS2_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperMS3.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperMS3_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperRES.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperRES_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperSLEEP.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperSLEEP_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/TIA_1.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Timer1.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Timer1_Function.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/UART_PC.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/UART_PC_IntClock.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/UART_TFT.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/UART_TFT_IntClock.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cmsis_armcc.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cmsis_compiler.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cmsis_gcc.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/core_cm3.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cyPm.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cydevice.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cydevice_trm.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cydisabledsheets.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cyfitter.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cypins.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cytypes.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_Clock_1.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_SPI0.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_SPI0_CS.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_SPI0_CS_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_SPI0_PVT.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_miso0.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_miso0_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_mosi0.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_mosi0_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_sclk0.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_sclk0_aliases.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/project.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/timer_clock.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/FS.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/FS_ConfDefaults.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/FS_Dev.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/FS_Storage.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/FS_Types.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/Global.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/MMC_X_HW.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/SEGGER.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/emf32nOS/FS_Conf.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/ADC.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/BUTTONS.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/CY_ISR_Nextion.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/CY_ISR_PC.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/CY_ISR_Timer.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/ConfigurationOfMeasurement.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Error.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/FileName.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Finished.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/GlobalVariables.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Init.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Laser.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/LaserSelect.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/MODES.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Measurement.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Nextion.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Nextion_PlotLifetimeData.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Nextion_PlotSetupData.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Output.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/PAGES.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/PCControl.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/ProgramParts.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/SDCard.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/SLIDERS.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/SetupOfMeasurement.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/StepMotor.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Test.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/home.h D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/main.c 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Analog_Digital_Converter.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Analog_Digital_Converter_Bypass.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Analog_Digital_Converter_Bypass_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Analog_Digital_Converter_IRQ.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Analog_Digital_Converter_theACLK.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/CyLib.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/CySpc.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Interr_PC.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Interr_TFT.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/LED_Measurement_running.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/LED_Measurement_running_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/LED_slider_val_received.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/LED_slider_val_received_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/LED_slider_val_sent.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/LED_slider_val_sent_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/PGA_Photo.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_ArdControl.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_ArdControl_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_IRLaserEN.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_IRLaserEN_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_LED.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_LED_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_LaserEN1.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_LaserEN1_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_LaserEN2.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_LaserEN2_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_Output1.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_Output1_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_Output2.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_Output2_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_PhotoDiode.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_PhotoDiode_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperCLK.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperCLK_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperDIR.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperDIR_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperEN.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperEN_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperMS1.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperMS1_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperMS2.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperMS2_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperMS3.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperMS3_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperRES.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperRES_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperSLEEP.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Pin_StepperSLEEP_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/TIA_1.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Timer1.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/Timer1_Function.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/UART_PC.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/UART_PC_IntClock.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/UART_TFT.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/UART_TFT_IntClock.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cmsis_armcc.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cmsis_compiler.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cmsis_gcc.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/core_cm3.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cyPm.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cydevice.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cypins.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/cytypes.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_Clock_1.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_SPI0.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_SPI0_CS.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_SPI0_CS_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_SPI0_PVT.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_miso0.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_miso0_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_mosi0.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_mosi0_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_sclk0.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/emFile_sclk0_aliases.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/project.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Generated_Source/PSoC5/timer_clock.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/FS.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/FS_ConfDefaults.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/FS_Dev.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/FS_Storage.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/FS_Types.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/Global.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/MMC_X_HW.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/SEGGER.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/emFile_V322c/Code/Include/PSoC5/emf32nOS/FS_Conf.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/ADC.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/BUTTONS.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/CY_ISR_Nextion.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/CY_ISR_PC.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/CY_ISR_Timer.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/ConfigurationOfMeasurement.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Error.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/FileName.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Finished.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/GlobalVariables.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Init.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Laser.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/LaserSelect.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/MODES.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Measurement.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Nextion.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Nextion_PlotLifetimeData.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Nextion_PlotSetupData.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Output.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/PAGES.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/PCControl.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/ProgramParts.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/SDCard.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/SLIDERS.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/SetupOfMeasurement.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/StepMotor.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/Test.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/home.h : 
+
+D:/Messdaten/Projekte/lamella-device/LamellaDevice.cydsn/main.c : 
+

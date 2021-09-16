@@ -1,0 +1,63 @@
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccVQYGom.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"M_main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              	.Letext0:
+  20              		.section	.debug_line,"",%progbits
+  21              	.Ldebug_line0:
+  22              		.section	.debug_str,"MS",%progbits,1
+  23              	.LASF0:
+  24 0000 443A5C4D 		.ascii	"D:\\Masterarbeit - Chemie\\Lamella\\Umbau-Lamellena"
+  24      61737465 
+  24      72617262 
+  24      65697420 
+  24      2D204368 
+  25 0030 70706172 		.ascii	"pparatur\\Firmware\\240119\\PSOC5_LamellaControlHof"
+  25      61747572 
+  25      5C466972 
+  25      6D776172 
+  25      655C3234 
+  26 0060 6D616E6E 		.ascii	"mann.cydsn\000"
+  26      2E637964 
+  26      736E00
+  27              	.LASF1:
+  28 006b 4D5F6D61 		.ascii	"M_main.c\000"
+  28      696E2E63 
+  28      00
+  29              	.LASF2:
+  30 0074 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+  30      43313120 
+  30      352E342E 
+  30      31203230 
+  30      31363036 
+  31 00a7 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+  31      20726576 
+  31      6973696F 
+  31      6E203233 
+  31      37373135 
+  32 00da 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+  32      66756E63 
+  32      74696F6E 
+  32      2D736563 
+  32      74696F6E 
+  33              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccVQYGom.s 			page 2
+
+

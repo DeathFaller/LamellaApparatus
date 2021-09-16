@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="55" DocumentName=".\Messroutine.h" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="27" DocumentName=".\Thickness.h" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="168" DocumentName=".\GlobalVariables.h" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="149" DocumentName=".\DataLogging.h" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="104" DocumentName=".\DataLogging.h" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+<CyGuid_67999771-01c6-4f62-90b3-2054bb36a318 type_name="CyDesigner.Framework.CyBookmark" version="1">
+<CyGuid_a1027fc4-3497-43a6-85d7-b91ffa0029b7 type_name="CyDesigner.Framework.CySerializableMarginIndicator" version="1" LineNumber="106" DocumentName=".\DataLogging.h" />
+</CyGuid_67999771-01c6-4f62-90b3-2054bb36a318>
+</indicators>
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\PCControl.h">
+<ExpandedNodeIds>
+<v>PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\TopDesign</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\Pins</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\Analog</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\Clocks</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\Interrupts</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\DMA</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\System</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\Directives</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\Flash Security</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\EEPROM</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\ADC.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\CY_ISR_Nextion.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\CY_ISR_Timer.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\header07.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\Home.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\Laser.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\Nextion.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\PCControl.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\Relais.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\Stepper.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\SwitchActivePage.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Source Files</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Generated_Source\PSoC5</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Generated_Source\PSoC5\emFile_SPI0_CS</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\TopDesign</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\Pins</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\Analog</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\Clocks</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\Interrupts</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\DMA</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\System</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\Directives</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\Flash Security</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.cydwr\EEPROM</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\ADC.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\CY_ISR_Nextion.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\CY_ISR_PCUART.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\CY_ISR_Timer.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\Debug.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\GlobalVariables.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\header07.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\Home.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\Includes.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\Init.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\Laser.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\Nextion.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\PCControl.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\ProgramParts.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\Relais.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\SDCard.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\Stepper.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\SwitchActivePage.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\SwitchInterruptVariables.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Header Files\Tests.h</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Source Files</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Source Files\main.c</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Generated_Source</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSOC5_LamellaControlHofmann">
+<ExpandedNodeIds>
+<v>PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\TopDesign</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\TopDesign\TopDesign.cysch</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\TopDesign\TopDesign_01.cymacro</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\TopDesign</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\TopDesign\TopDesign.cysch</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\TopDesign\TopDesign_01.cymacro</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_Digital_Converter.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_Digital_Converter_Bypass.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_Digital_Converter_INT.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_Digital_Converter_IRQ.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_Digital_Converter_PM.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_Digital_Converter_theACLK.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_Clock_1.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_ConfigMMC_SPI.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_miso0.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_MMC_HW_SPI.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_mosi0.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_PM.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_sclk0.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_SPI0.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_SPI0_CS.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_SPI0_INT.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_SPI0_PM.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Emul_EEPROM.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Interr_PC.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Interr_TFT.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_Measurement_running.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_slider_val_received.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_slider_val_sent.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\PGA_Photo.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\PGA_Photo_PM.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_IRLaserEN.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_LaserEN1.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_LaserEN2.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_LED.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_PhotoDiode.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_Relais1.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_Relais2.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_StepperCLK.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_StepperDIR.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_StepperEN.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_StepperMS1.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_StepperMS2.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_StepperMS3.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_StepperRES.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_StepperSLEEP.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\TIA_1.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\TIA_1_PM.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer1.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer1_Function.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer1_PM.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PC.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PC_BOOT.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PC_INT.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PC_IntClock.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PC_PM.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_TFT.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_TFT_BOOT.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_TFT_INT.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_TFT_IntClock.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_TFT_PM.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\PSOC5_LamellaControlHofmann.elf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\PSOC5_LamellaControlHofmann.hex</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\PSOC5_LamellaControlHofmann.map</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.gpdsc</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann.rpt</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_Digital_Converter.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_Digital_Converter_Bypass.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_Digital_Converter_INT.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_Digital_Converter_IRQ.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_Digital_Converter_PM.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Analog_Digital_Converter_theACLK.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_Clock_1.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_ConfigMMC_SPI.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_miso0.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_MMC_HW_SPI.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_mosi0.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_PM.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_sclk0.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_SPI0.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_SPI0_CS.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_SPI0_INT.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\emFile_SPI0_PM.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Emul_EEPROM.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Interr_PC.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Interr_TFT.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_Measurement_running.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_slider_val_received.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_slider_val_sent.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\PGA_Photo.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\PGA_Photo_PM.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_IRLaserEN.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_LaserEN1.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_LaserEN2.lst</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_LED.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann">
+<ExpandedNodeIds>
+<v>PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSoC 5LP Architecture TRM</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CY8C58LP Family Datasheet</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\System Reference Guides</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\System Reference Guides\cy_boot_v5_80</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\ADC_SAR_v3_10.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\cy_clock_v2_20.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\cy_isr_v1_70</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\cy_pins_v2_20</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\cy_vref_v1_70.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Diode_v1_0</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Diode_v1_0\Diode_v1_0.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Em_EEPROM_v1_20.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\emFile_v1_20.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Gnd_v1_0</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\LED_v1_0.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PGA_v2_0.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\TIA_v2_0.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Timer_v2_80.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\UART_v2_50</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\UART_v2_50\UART_v2_50.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\ZeroTerminal.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PSoC 5LP Architecture TRM</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\CY8C58LP Family Datasheet</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\System Reference Guides</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\System Reference Guides\cy_boot_v5_80</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\ADC_SAR_v3_10.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\cy_clock_v2_20.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\cy_isr_v1_70</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\cy_pins_v2_20</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\cy_vref_v1_70.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Diode_v1_0</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Diode_v1_0\Diode_v1_0.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Em_EEPROM_v1_20.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\emFile_v1_20.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Gnd_v1_0</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\LED_v1_0.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\PGA_v2_0.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\TIA_v2_0.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\Timer_v2_80.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\UART_v2_50</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\UART_v2_50\UART_v2_50.pdf</v>
+<v>PSOC5_LamellaControlHofmann\PSOC5_LamellaControlHofmann\ZeroTerminal.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\main.c" />
+<name v=".\ProgramParts.h" />
+<name v=".\Init.h" />
+<name v=".\Debug.h" />
+<name v=".\SwitchActivePage.h" />
+<name v=".\Includes.h" />
+<name v=".\Relais.h" />
+<name v=".\Home.h" />
+<name v=".\CY_ISR_Nextion.h" />
+<name v=".\PCControl.h" />
+<name v=".\Laser.h" />
+<name v=".\SDCard.h" />
+<name v=".\Stepper.h" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="978, 697" SelectedTabbedMdiWindow="cfac8c66-d6a4-41e4-aaa3-76250784d315"><DocumentWindow Key="D:\Masterarbeit - Chemie\Lamella\Firmware\KompletteSteuerung\PSOC5_LamellaControlHofmann.cydsn\main.c" Guid="c01479e1-7231-4ea0-a6c5-053f6e548e5f" /><DocumentWindow Key="D:\Masterarbeit - Chemie\Lamella\Firmware\KompletteSteuerung\PSOC5_LamellaControlHofmann.cydsn\ProgramParts.h" Guid="7838a59d-9fe4-43e7-ac40-417396a8a4a0" /><DocumentWindow Key="D:\Masterarbeit - Chemie\Lamella\Firmware\KompletteSteuerung\PSOC5_LamellaControlHofmann.cydsn\Init.h" Guid="1a54b9c3-c955-43d4-a62d-8ea65d61ef88" /><DocumentWindow Key="D:\Masterarbeit - Chemie\Lamella\Firmware\KompletteSteuerung\PSOC5_LamellaControlHofmann.cydsn\Debug.h" Guid="d5814ee3-ef21-4049-8598-8d89153f1db3" /><DocumentWindow Key="D:\Masterarbeit - Chemie\Lamella\Firmware\KompletteSteuerung\PSOC5_LamellaControlHofmann.cydsn\SwitchActivePage.h" Guid="cfac8c66-d6a4-41e4-aaa3-76250784d315" /><DocumentWindow Key="D:\Masterarbeit - Chemie\Lamella\Firmware\KompletteSteuerung\PSOC5_LamellaControlHofmann.cydsn\Includes.h" Guid="86dd5407-8c03-4e6f-954e-b22ddb942612" /><DocumentWindow Key="D:\Masterarbeit - Chemie\Lamella\Firmware\KompletteSteuerung\PSOC5_LamellaControlHofmann.cydsn\Relais.h" Guid="079a587b-6233-4025-8b53-5ee65b8c9b2d" /><DocumentWindow Key="D:\Masterarbeit - Chemie\Lamella\Firmware\KompletteSteuerung\PSOC5_LamellaControlHofmann.cydsn\Home.h" Guid="1bb7d9d2-e64d-4af3-9149-da05da1670bb" /><DocumentWindow Key="D:\Masterarbeit - Chemie\Lamella\Firmware\KompletteSteuerung\PSOC5_LamellaControlHofmann.cydsn\CY_ISR_Nextion.h" Guid="a476093e-dc39-4b5f-8f90-601f4a834e13" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="fc9d0c37-21bd-46fb-a283-3c046f7fabe8" /><DocumentWindow Key="D:\Masterarbeit - Chemie\Lamella\Firmware\KompletteSteuerung\PSOC5_LamellaControlHofmann.cydsn\PCControl.h" Guid="176f4afe-f569-434e-a550-f49ca77102c2" /><DocumentWindow Key="D:\Masterarbeit - Chemie\Lamella\Firmware\KompletteSteuerung\PSOC5_LamellaControlHofmann.cydsn\Laser.h" Guid="90cec8ce-d192-4973-aac0-20f7fefec2fe" /><DocumentWindow Key="D:\Masterarbeit - Chemie\Lamella\Firmware\KompletteSteuerung\PSOC5_LamellaControlHofmann.cydsn\SDCard.h" Guid="6ebc33e3-a8a9-4c26-83a7-5aa7d477c9fe" /><DocumentWindow Key="D:\Masterarbeit - Chemie\Lamella\Firmware\KompletteSteuerung\PSOC5_LamellaControlHofmann.cydsn\Stepper.h" Guid="71ac0e98-d3f7-45c1-80a8-0b0dade4bbb8" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

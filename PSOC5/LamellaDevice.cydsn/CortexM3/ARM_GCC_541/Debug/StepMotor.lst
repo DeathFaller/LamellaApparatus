@@ -1,0 +1,2558 @@
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"StepMotor.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	g_NextionInterrupt
+  20              		.data
+  21              		.type	g_NextionInterrupt, %object
+  22              		.size	g_NextionInterrupt, 1
+  23              	g_NextionInterrupt:
+  24 0000 30       		.byte	48
+  25              		.global	g_SliderValueReceiving
+  26              		.bss
+  27              		.type	g_SliderValueReceiving, %object
+  28              		.size	g_SliderValueReceiving, 1
+  29              	g_SliderValueReceiving:
+  30 0000 00       		.space	1
+  31              		.comm	g_SliderValueBuffer,4,4
+  32              		.global	g_Error_Code
+  33 0001 000000   		.align	2
+  34              		.type	g_Error_Code, %object
+  35              		.size	g_Error_Code, 4
+  36              	g_Error_Code:
+  37 0004 00000000 		.space	4
+  38              		.global	g_PCInterrupt
+  39              		.data
+  40              		.type	g_PCInterrupt, %object
+  41              		.size	g_PCInterrupt, 1
+  42              	g_PCInterrupt:
+  43 0001 30       		.byte	48
+  44              		.global	g_ActivePage
+  45              		.type	g_ActivePage, %object
+  46              		.size	g_ActivePage, 1
+  47              	g_ActivePage:
+  48 0002 30       		.byte	48
+  49              		.global	g_NumberOfMeasurements
+  50              		.bss
+  51              		.align	2
+  52              		.type	g_NumberOfMeasurements, %object
+  53              		.size	g_NumberOfMeasurements, 4
+  54              	g_NumberOfMeasurements:
+  55 0008 00000000 		.space	4
+  56              		.global	g_SwitchPeriodOfLaser_ms
+  57              		.align	2
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 2
+
+
+  58              		.type	g_SwitchPeriodOfLaser_ms, %object
+  59              		.size	g_SwitchPeriodOfLaser_ms, 4
+  60              	g_SwitchPeriodOfLaser_ms:
+  61 000c 00000000 		.space	4
+  62              		.global	g_MaxMeasurementTime_min
+  63              		.align	2
+  64              		.type	g_MaxMeasurementTime_min, %object
+  65              		.size	g_MaxMeasurementTime_min, 4
+  66              	g_MaxMeasurementTime_min:
+  67 0010 00000000 		.space	4
+  68              		.global	g_FormationTime_ms
+  69              		.align	2
+  70              		.type	g_FormationTime_ms, %object
+  71              		.size	g_FormationTime_ms, 4
+  72              	g_FormationTime_ms:
+  73 0014 00000000 		.space	4
+  74              		.global	g_RelaxationTime_ms
+  75              		.align	2
+  76              		.type	g_RelaxationTime_ms, %object
+  77              		.size	g_RelaxationTime_ms, 4
+  78              	g_RelaxationTime_ms:
+  79 0018 00000000 		.space	4
+  80              		.global	g_ConfirmationTime_ms
+  81              		.align	2
+  82              		.type	g_ConfirmationTime_ms, %object
+  83              		.size	g_ConfirmationTime_ms, 4
+  84              	g_ConfirmationTime_ms:
+  85 001c 00000000 		.space	4
+  86              		.global	g_ThresholdValue_mV
+  87              		.align	2
+  88              		.type	g_ThresholdValue_mV, %object
+  89              		.size	g_ThresholdValue_mV, 4
+  90              	g_ThresholdValue_mV:
+  91 0020 00000000 		.space	4
+  92              		.global	g_DataLogging
+  93              		.type	g_DataLogging, %object
+  94              		.size	g_DataLogging, 1
+  95              	g_DataLogging:
+  96 0024 00       		.space	1
+  97              		.global	MAXMEASUREMENTSTEPS
+  98              		.section	.rodata
+  99              		.align	2
+ 100              		.type	MAXMEASUREMENTSTEPS, %object
+ 101              		.size	MAXMEASUREMENTSTEPS, 4
+ 102              	MAXMEASUREMENTSTEPS:
+ 103 0000 04000000 		.word	4
+ 104              		.comm	g_measurementLasers,12,4
+ 105              		.global	LaserState1
+ 106              		.bss
+ 107              		.type	LaserState1, %object
+ 108              		.size	LaserState1, 1
+ 109              	LaserState1:
+ 110 0025 00       		.space	1
+ 111              		.global	LaserState2
+ 112              		.type	LaserState2, %object
+ 113              		.size	LaserState2, 1
+ 114              	LaserState2:
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 3
+
+
+ 115 0026 00       		.space	1
+ 116              		.global	LaserState3
+ 117              		.type	LaserState3, %object
+ 118              		.size	LaserState3, 1
+ 119              	LaserState3:
+ 120 0027 00       		.space	1
+ 121              		.global	OutputState1
+ 122              		.type	OutputState1, %object
+ 123              		.size	OutputState1, 1
+ 124              	OutputState1:
+ 125 0028 00       		.space	1
+ 126              		.global	OutputState2
+ 127              		.type	OutputState2, %object
+ 128              		.size	OutputState2, 1
+ 129              	OutputState2:
+ 130 0029 00       		.space	1
+ 131              		.global	v_timer_100ms
+ 132 002a 0000     		.align	2
+ 133              		.type	v_timer_100ms, %object
+ 134              		.size	v_timer_100ms, 4
+ 135              	v_timer_100ms:
+ 136 002c 00000000 		.space	4
+ 137              		.global	v_timerflag_100ms
+ 138              		.type	v_timerflag_100ms, %object
+ 139              		.size	v_timerflag_100ms, 1
+ 140              	v_timerflag_100ms:
+ 141 0030 00       		.space	1
+ 142              		.global	v_timer_waiting
+ 143 0031 000000   		.align	2
+ 144              		.type	v_timer_waiting, %object
+ 145              		.size	v_timer_waiting, 4
+ 146              	v_timer_waiting:
+ 147 0034 00000000 		.space	4
+ 148              		.global	v_timerflag_waiting
+ 149              		.type	v_timerflag_waiting, %object
+ 150              		.size	v_timerflag_waiting, 1
+ 151              	v_timerflag_waiting:
+ 152 0038 00       		.space	1
+ 153              		.global	v_timer_Lifetime_ms
+ 154 0039 00000000 		.align	3
+ 154      000000
+ 155              		.type	v_timer_Lifetime_ms, %object
+ 156              		.size	v_timer_Lifetime_ms, 8
+ 157              	v_timer_Lifetime_ms:
+ 158 0040 00000000 		.space	8
+ 158      00000000 
+ 159              		.global	v_timer_Measurement
+ 160              		.align	2
+ 161              		.type	v_timer_Measurement, %object
+ 162              		.size	v_timer_Measurement, 4
+ 163              	v_timer_Measurement:
+ 164 0048 00000000 		.space	4
+ 165              		.global	v_timerflag_Measurement
+ 166              		.align	2
+ 167              		.type	v_timerflag_Measurement, %object
+ 168              		.size	v_timerflag_Measurement, 4
+ 169              	v_timerflag_Measurement:
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 4
+
+
+ 170 004c 00000000 		.space	4
+ 171              		.global	v_timer_LaserSwitch
+ 172              		.align	2
+ 173              		.type	v_timer_LaserSwitch, %object
+ 174              		.size	v_timer_LaserSwitch, 4
+ 175              	v_timer_LaserSwitch:
+ 176 0050 00000000 		.space	4
+ 177              		.global	v_timerflag_LaserSwitch
+ 178              		.align	2
+ 179              		.type	v_timerflag_LaserSwitch, %object
+ 180              		.size	v_timerflag_LaserSwitch, 4
+ 181              	v_timerflag_LaserSwitch:
+ 182 0054 00000000 		.space	4
+ 183              		.global	v_timer_500ms
+ 184              		.align	2
+ 185              		.type	v_timer_500ms, %object
+ 186              		.size	v_timer_500ms, 4
+ 187              	v_timer_500ms:
+ 188 0058 00000000 		.space	4
+ 189              		.global	v_timerflag_500ms
+ 190              		.align	2
+ 191              		.type	v_timerflag_500ms, %object
+ 192              		.size	v_timerflag_500ms, 4
+ 193              	v_timerflag_500ms:
+ 194 005c 00000000 		.space	4
+ 195              		.global	g_Stepper_MaxFrequency
+ 196              		.data
+ 197 0003 00       		.align	2
+ 198              		.type	g_Stepper_MaxFrequency, %object
+ 199              		.size	g_Stepper_MaxFrequency, 4
+ 200              	g_Stepper_MaxFrequency:
+ 201 0004 BC020000 		.word	700
+ 202              		.global	g_Stepper_SigmoidShift
+ 203              		.align	2
+ 204              		.type	g_Stepper_SigmoidShift, %object
+ 205              		.size	g_Stepper_SigmoidShift, 4
+ 206              	g_Stepper_SigmoidShift:
+ 207 0008 9CFFFFFF 		.word	-100
+ 208              		.global	g_Stepper_SigmoidRaise
+ 209              		.align	2
+ 210              		.type	g_Stepper_SigmoidRaise, %object
+ 211              		.size	g_Stepper_SigmoidRaise, 4
+ 212              	g_Stepper_SigmoidRaise:
+ 213 000c 0A000000 		.word	10
+ 214              		.global	__aeabi_dadd
+ 215              		.global	__aeabi_dcmpeq
+ 216              		.global	__aeabi_d2uiz
+ 217              		.global	__aeabi_i2d
+ 218              		.global	__aeabi_dcmplt
+ 219              		.section	.text.MoveToWithConstSpeed,"ax",%progbits
+ 220              		.align	2
+ 221              		.global	MoveToWithConstSpeed
+ 222              		.thumb
+ 223              		.thumb_func
+ 224              		.type	MoveToWithConstSpeed, %function
+ 225              	MoveToWithConstSpeed:
+ 226              	.LFB63:
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 5
+
+
+ 227              		.file 1 "./StepMotor.h"
+   1:./StepMotor.h **** /* ========================================
+   2:./StepMotor.h ****  *
+   3:./StepMotor.h ****  * Copyright YOUR COMPANY, THE YEAR
+   4:./StepMotor.h ****  * All Rights Reserved
+   5:./StepMotor.h ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:./StepMotor.h ****  *
+   7:./StepMotor.h ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:./StepMotor.h ****  * WHICH IS THE PROPERTY OF your company.
+   9:./StepMotor.h ****  *
+  10:./StepMotor.h ****  * ========================================
+  11:./StepMotor.h **** */
+  12:./StepMotor.h **** 
+  13:./StepMotor.h **** #ifndef STEPMOTOR_H
+  14:./StepMotor.h ****     #define STEPMOTOR_H
+  15:./StepMotor.h ****     
+  16:./StepMotor.h ****     #include <project.h>
+  17:./StepMotor.h ****     #include <math.h>
+  18:./StepMotor.h ****     #include <GlobalVariables.h>
+  19:./StepMotor.h ****     
+  20:./StepMotor.h ****     int g_Stepper_MaxFrequency = 700;
+  21:./StepMotor.h ****     int g_Stepper_SigmoidShift = -100;
+  22:./StepMotor.h ****     int g_Stepper_SigmoidRaise = 10;
+  23:./StepMotor.h ****     #define RIGHT 1
+  24:./StepMotor.h ****     #define LEFT -1
+  25:./StepMotor.h ****     #define Stepper_Diff_HomeSampling 400
+  26:./StepMotor.h ****     #define Stepper_StepsPerStep 4
+  27:./StepMotor.h ****     
+  28:./StepMotor.h ****     void MoveTo (double steps, double dir);
+  29:./StepMotor.h ****     
+  30:./StepMotor.h ****     
+  31:./StepMotor.h ****     void MoveToWithConstSpeed (double steps, double dir)
+  32:./StepMotor.h ****     {
+ 228              		.loc 1 32 0
+ 229              		.cfi_startproc
+ 230              		@ args = 0, pretend = 0, frame = 32
+ 231              		@ frame_needed = 1, uses_anonymous_args = 0
+ 232 0000 90B5     		push	{r4, r7, lr}
+ 233              		.cfi_def_cfa_offset 12
+ 234              		.cfi_offset 4, -12
+ 235              		.cfi_offset 7, -8
+ 236              		.cfi_offset 14, -4
+ 237 0002 89B0     		sub	sp, sp, #36
+ 238              		.cfi_def_cfa_offset 48
+ 239 0004 00AF     		add	r7, sp, #0
+ 240              		.cfi_def_cfa_register 7
+ 241 0006 C7E90201 		strd	r0, [r7, #8]
+ 242 000a C7E90023 		strd	r2, [r7]
+  33:./StepMotor.h ****     	// Übergebene Steps müssen mit 2 Mulipliziert werden, da jeder 
+  34:./StepMotor.h ****     	// Schritt 2 Flankenwechsel beeinhaltet
+  35:./StepMotor.h ****     	steps = steps*2;
+ 243              		.loc 1 35 0
+ 244 000e D7E90201 		ldrd	r0, [r7, #8]
+ 245 0012 0246     		mov	r2, r0
+ 246 0014 0B46     		mov	r3, r1
+ 247 0016 FFF7FEFF 		bl	__aeabi_dadd
+ 248 001a 0346     		mov	r3, r0
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 6
+
+
+ 249 001c 0C46     		mov	r4, r1
+ 250 001e C7E90234 		strd	r3, [r7, #8]
+  36:./StepMotor.h ****     	
+  37:./StepMotor.h ****         // Inkrement der Anzufahrenden Schritte
+  38:./StepMotor.h ****         int i;
+  39:./StepMotor.h ****         // gerundete Dauer des Stepper-Zustands
+  40:./StepMotor.h ****         double t_StepperCLK;       
+  41:./StepMotor.h ****         
+  42:./StepMotor.h ****         // SLEEP -> Motor "aufwecken" -> Leistungsaufnahme
+  43:./StepMotor.h ****         Pin_StepperSLEEP_Write(1);
+ 251              		.loc 1 43 0
+ 252 0022 0120     		movs	r0, #1
+ 253 0024 FFF7FEFF 		bl	Pin_StepperSLEEP_Write
+  44:./StepMotor.h ****         
+  45:./StepMotor.h ****         // Richtung setzen
+  46:./StepMotor.h ****         //
+  47:./StepMotor.h ****         // Rechtsdrehung
+  48:./StepMotor.h ****         if (dir == 1)
+ 254              		.loc 1 48 0
+ 255 0028 4FF00002 		mov	r2, #0
+ 256 002c 204B     		ldr	r3, .L9+8
+ 257 002e D7E90001 		ldrd	r0, [r7]
+ 258 0032 FFF7FEFF 		bl	__aeabi_dcmpeq
+ 259 0036 0346     		mov	r3, r0
+ 260 0038 002B     		cmp	r3, #0
+ 261 003a 03D0     		beq	.L8
+  49:./StepMotor.h ****         {
+  50:./StepMotor.h ****             Pin_StepperDIR_Write(0);
+ 262              		.loc 1 50 0
+ 263 003c 0020     		movs	r0, #0
+ 264 003e FFF7FEFF 		bl	Pin_StepperDIR_Write
+ 265 0042 02E0     		b	.L4
+ 266              	.L8:
+  51:./StepMotor.h ****         }
+  52:./StepMotor.h ****         // Linksdrehung
+  53:./StepMotor.h ****         else
+  54:./StepMotor.h ****         {
+  55:./StepMotor.h ****             Pin_StepperDIR_Write(1);
+ 267              		.loc 1 55 0
+ 268 0044 0120     		movs	r0, #1
+ 269 0046 FFF7FEFF 		bl	Pin_StepperDIR_Write
+ 270              	.L4:
+  56:./StepMotor.h ****         }    
+  57:./StepMotor.h ****         
+  58:./StepMotor.h ****         // Für jeden der Schritte
+  59:./StepMotor.h ****         for (i = 0; i < steps; i = i + 1)
+ 271              		.loc 1 59 0
+ 272 004a 0023     		movs	r3, #0
+ 273 004c FB61     		str	r3, [r7, #28]
+ 274 004e 1BE0     		b	.L5
+ 275              	.L6:
+  60:./StepMotor.h ****         {
+  61:./StepMotor.h ****             // Momentane Ausgabe der LED invertieren
+  62:./StepMotor.h ****             Pin_StepperCLK_Write(!Pin_StepperCLK_Read());
+ 276              		.loc 1 62 0 discriminator 3
+ 277 0050 FFF7FEFF 		bl	Pin_StepperCLK_Read
+ 278 0054 0346     		mov	r3, r0
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 7
+
+
+ 279 0056 002B     		cmp	r3, #0
+ 280 0058 0CBF     		ite	eq
+ 281 005a 0123     		moveq	r3, #1
+ 282 005c 0023     		movne	r3, #0
+ 283 005e DBB2     		uxtb	r3, r3
+ 284 0060 1846     		mov	r0, r3
+ 285 0062 FFF7FEFF 		bl	Pin_StepperCLK_Write
+  63:./StepMotor.h ****             t_StepperCLK = 27500; // [mus]
+ 286              		.loc 1 63 0 discriminator 3
+ 287 0066 10A4     		adr	r4, .L9
+ 288 0068 D4E90034 		ldrd	r3, [r4]
+ 289 006c C7E90434 		strd	r3, [r7, #16]
+  64:./StepMotor.h ****             CyDelayUs((uint16)(t_StepperCLK));     
+ 290              		.loc 1 64 0 discriminator 3
+ 291 0070 D7E90401 		ldrd	r0, [r7, #16]
+ 292 0074 FFF7FEFF 		bl	__aeabi_d2uiz
+ 293 0078 0346     		mov	r3, r0
+ 294 007a 9BB2     		uxth	r3, r3
+ 295 007c 1846     		mov	r0, r3
+ 296 007e FFF7FEFF 		bl	CyDelayUs
+  59:./StepMotor.h ****         {
+ 297              		.loc 1 59 0 discriminator 3
+ 298 0082 FB69     		ldr	r3, [r7, #28]
+ 299 0084 0133     		adds	r3, r3, #1
+ 300 0086 FB61     		str	r3, [r7, #28]
+ 301              	.L5:
+  59:./StepMotor.h ****         {
+ 302              		.loc 1 59 0 is_stmt 0 discriminator 1
+ 303 0088 F869     		ldr	r0, [r7, #28]
+ 304 008a FFF7FEFF 		bl	__aeabi_i2d
+ 305 008e D7E90223 		ldrd	r2, [r7, #8]
+ 306 0092 FFF7FEFF 		bl	__aeabi_dcmplt
+ 307 0096 0346     		mov	r3, r0
+ 308 0098 002B     		cmp	r3, #0
+ 309 009a D9D1     		bne	.L6
+  65:./StepMotor.h ****         }
+  66:./StepMotor.h ****     }
+ 310              		.loc 1 66 0 is_stmt 1
+ 311 009c 00BF     		nop
+ 312 009e 2437     		adds	r7, r7, #36
+ 313              		.cfi_def_cfa_offset 12
+ 314 00a0 BD46     		mov	sp, r7
+ 315              		.cfi_def_cfa_register 13
+ 316              		@ sp needed
+ 317 00a2 90BD     		pop	{r4, r7, pc}
+ 318              	.L10:
+ 319 00a4 AFF30080 		.align	3
+ 320              	.L9:
+ 321 00a8 00000000 		.word	0
+ 322 00ac 00DBDA40 		.word	1088084736
+ 323 00b0 0000F03F 		.word	1072693248
+ 324              		.cfi_endproc
+ 325              	.LFE63:
+ 326              		.size	MoveToWithConstSpeed, .-MoveToWithConstSpeed
+ 327              		.section	.text.MoveOneStepCW,"ax",%progbits
+ 328              		.align	2
+ 329              		.global	MoveOneStepCW
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 8
+
+
+ 330              		.thumb
+ 331              		.thumb_func
+ 332              		.type	MoveOneStepCW, %function
+ 333              	MoveOneStepCW:
+ 334              	.LFB64:
+  67:./StepMotor.h ****     
+  68:./StepMotor.h ****     void MoveOneStepCW()
+  69:./StepMotor.h ****     {
+ 335              		.loc 1 69 0
+ 336              		.cfi_startproc
+ 337              		@ args = 0, pretend = 0, frame = 0
+ 338              		@ frame_needed = 1, uses_anonymous_args = 0
+ 339 0000 80B5     		push	{r7, lr}
+ 340              		.cfi_def_cfa_offset 8
+ 341              		.cfi_offset 7, -8
+ 342              		.cfi_offset 14, -4
+ 343 0002 00AF     		add	r7, sp, #0
+ 344              		.cfi_def_cfa_register 7
+  70:./StepMotor.h ****         MoveToWithConstSpeed(1, RIGHT);
+ 345              		.loc 1 70 0
+ 346 0004 4FF00002 		mov	r2, #0
+ 347 0008 034B     		ldr	r3, .L12
+ 348 000a 4FF00000 		mov	r0, #0
+ 349 000e 0249     		ldr	r1, .L12
+ 350 0010 FFF7FEFF 		bl	MoveToWithConstSpeed
+  71:./StepMotor.h ****     }
+ 351              		.loc 1 71 0
+ 352 0014 00BF     		nop
+ 353 0016 80BD     		pop	{r7, pc}
+ 354              	.L13:
+ 355              		.align	2
+ 356              	.L12:
+ 357 0018 0000F03F 		.word	1072693248
+ 358              		.cfi_endproc
+ 359              	.LFE64:
+ 360              		.size	MoveOneStepCW, .-MoveOneStepCW
+ 361              		.section	.text.MoveOneStepCCW,"ax",%progbits
+ 362              		.align	2
+ 363              		.global	MoveOneStepCCW
+ 364              		.thumb
+ 365              		.thumb_func
+ 366              		.type	MoveOneStepCCW, %function
+ 367              	MoveOneStepCCW:
+ 368              	.LFB65:
+  72:./StepMotor.h ****     
+  73:./StepMotor.h ****     void MoveOneStepCCW()
+  74:./StepMotor.h ****     {
+ 369              		.loc 1 74 0
+ 370              		.cfi_startproc
+ 371              		@ args = 0, pretend = 0, frame = 0
+ 372              		@ frame_needed = 1, uses_anonymous_args = 0
+ 373 0000 80B5     		push	{r7, lr}
+ 374              		.cfi_def_cfa_offset 8
+ 375              		.cfi_offset 7, -8
+ 376              		.cfi_offset 14, -4
+ 377 0002 00AF     		add	r7, sp, #0
+ 378              		.cfi_def_cfa_register 7
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 9
+
+
+  75:./StepMotor.h ****         MoveToWithConstSpeed(1, LEFT);
+ 379              		.loc 1 75 0
+ 380 0004 4FF00002 		mov	r2, #0
+ 381 0008 034B     		ldr	r3, .L15
+ 382 000a 4FF00000 		mov	r0, #0
+ 383 000e 0349     		ldr	r1, .L15+4
+ 384 0010 FFF7FEFF 		bl	MoveToWithConstSpeed
+  76:./StepMotor.h ****     }
+ 385              		.loc 1 76 0
+ 386 0014 00BF     		nop
+ 387 0016 80BD     		pop	{r7, pc}
+ 388              	.L16:
+ 389              		.align	2
+ 390              	.L15:
+ 391 0018 0000F0BF 		.word	-1074790400
+ 392 001c 0000F03F 		.word	1072693248
+ 393              		.cfi_endproc
+ 394              	.LFE65:
+ 395              		.size	MoveOneStepCCW, .-MoveOneStepCCW
+ 396              		.section	.text.Move10DegreeCW,"ax",%progbits
+ 397              		.align	2
+ 398              		.global	Move10DegreeCW
+ 399              		.thumb
+ 400              		.thumb_func
+ 401              		.type	Move10DegreeCW, %function
+ 402              	Move10DegreeCW:
+ 403              	.LFB66:
+  77:./StepMotor.h ****     
+  78:./StepMotor.h ****     void Move10DegreeCW()
+  79:./StepMotor.h ****     {
+ 404              		.loc 1 79 0
+ 405              		.cfi_startproc
+ 406              		@ args = 0, pretend = 0, frame = 8
+ 407              		@ frame_needed = 1, uses_anonymous_args = 0
+ 408 0000 80B5     		push	{r7, lr}
+ 409              		.cfi_def_cfa_offset 8
+ 410              		.cfi_offset 7, -8
+ 411              		.cfi_offset 14, -4
+ 412 0002 82B0     		sub	sp, sp, #8
+ 413              		.cfi_def_cfa_offset 16
+ 414 0004 00AF     		add	r7, sp, #0
+ 415              		.cfi_def_cfa_register 7
+  80:./StepMotor.h ****         int StepsFor10Degree = Stepper_Diff_HomeSampling/90 * 10;
+ 416              		.loc 1 80 0
+ 417 0006 2823     		movs	r3, #40
+ 418 0008 7B60     		str	r3, [r7, #4]
+  81:./StepMotor.h ****         MoveToWithConstSpeed(StepsFor10Degree, RIGHT);
+ 419              		.loc 1 81 0
+ 420 000a 7868     		ldr	r0, [r7, #4]
+ 421 000c FFF7FEFF 		bl	__aeabi_i2d
+ 422 0010 4FF00002 		mov	r2, #0
+ 423 0014 034B     		ldr	r3, .L18
+ 424 0016 FFF7FEFF 		bl	MoveToWithConstSpeed
+  82:./StepMotor.h ****     }
+ 425              		.loc 1 82 0
+ 426 001a 00BF     		nop
+ 427 001c 0837     		adds	r7, r7, #8
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 10
+
+
+ 428              		.cfi_def_cfa_offset 8
+ 429 001e BD46     		mov	sp, r7
+ 430              		.cfi_def_cfa_register 13
+ 431              		@ sp needed
+ 432 0020 80BD     		pop	{r7, pc}
+ 433              	.L19:
+ 434 0022 00BF     		.align	2
+ 435              	.L18:
+ 436 0024 0000F03F 		.word	1072693248
+ 437              		.cfi_endproc
+ 438              	.LFE66:
+ 439              		.size	Move10DegreeCW, .-Move10DegreeCW
+ 440              		.section	.text.Move10DegreeCCW,"ax",%progbits
+ 441              		.align	2
+ 442              		.global	Move10DegreeCCW
+ 443              		.thumb
+ 444              		.thumb_func
+ 445              		.type	Move10DegreeCCW, %function
+ 446              	Move10DegreeCCW:
+ 447              	.LFB67:
+  83:./StepMotor.h ****     
+  84:./StepMotor.h ****     void Move10DegreeCCW()
+  85:./StepMotor.h ****     {
+ 448              		.loc 1 85 0
+ 449              		.cfi_startproc
+ 450              		@ args = 0, pretend = 0, frame = 8
+ 451              		@ frame_needed = 1, uses_anonymous_args = 0
+ 452 0000 80B5     		push	{r7, lr}
+ 453              		.cfi_def_cfa_offset 8
+ 454              		.cfi_offset 7, -8
+ 455              		.cfi_offset 14, -4
+ 456 0002 82B0     		sub	sp, sp, #8
+ 457              		.cfi_def_cfa_offset 16
+ 458 0004 00AF     		add	r7, sp, #0
+ 459              		.cfi_def_cfa_register 7
+  86:./StepMotor.h ****         int StepsFor10Degree = Stepper_Diff_HomeSampling/90 * 10;
+ 460              		.loc 1 86 0
+ 461 0006 2823     		movs	r3, #40
+ 462 0008 7B60     		str	r3, [r7, #4]
+  87:./StepMotor.h ****         MoveToWithConstSpeed(StepsFor10Degree, LEFT);  
+ 463              		.loc 1 87 0
+ 464 000a 7868     		ldr	r0, [r7, #4]
+ 465 000c FFF7FEFF 		bl	__aeabi_i2d
+ 466 0010 4FF00002 		mov	r2, #0
+ 467 0014 034B     		ldr	r3, .L21
+ 468 0016 FFF7FEFF 		bl	MoveToWithConstSpeed
+  88:./StepMotor.h ****     }
+ 469              		.loc 1 88 0
+ 470 001a 00BF     		nop
+ 471 001c 0837     		adds	r7, r7, #8
+ 472              		.cfi_def_cfa_offset 8
+ 473 001e BD46     		mov	sp, r7
+ 474              		.cfi_def_cfa_register 13
+ 475              		@ sp needed
+ 476 0020 80BD     		pop	{r7, pc}
+ 477              	.L22:
+ 478 0022 00BF     		.align	2
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 11
+
+
+ 479              	.L21:
+ 480 0024 0000F0BF 		.word	-1074790400
+ 481              		.cfi_endproc
+ 482              	.LFE67:
+ 483              		.size	Move10DegreeCCW, .-Move10DegreeCCW
+ 484              		.section	.text.Move90DegreeCW,"ax",%progbits
+ 485              		.align	2
+ 486              		.global	Move90DegreeCW
+ 487              		.thumb
+ 488              		.thumb_func
+ 489              		.type	Move90DegreeCW, %function
+ 490              	Move90DegreeCW:
+ 491              	.LFB68:
+  89:./StepMotor.h ****     
+  90:./StepMotor.h ****     void Move90DegreeCW()
+  91:./StepMotor.h ****     { 
+ 492              		.loc 1 91 0
+ 493              		.cfi_startproc
+ 494              		@ args = 0, pretend = 0, frame = 0
+ 495              		@ frame_needed = 1, uses_anonymous_args = 0
+ 496 0000 80B5     		push	{r7, lr}
+ 497              		.cfi_def_cfa_offset 8
+ 498              		.cfi_offset 7, -8
+ 499              		.cfi_offset 14, -4
+ 500 0002 00AF     		add	r7, sp, #0
+ 501              		.cfi_def_cfa_register 7
+  92:./StepMotor.h ****         MoveTo(Stepper_Diff_HomeSampling, RIGHT);
+ 502              		.loc 1 92 0
+ 503 0004 4FF00002 		mov	r2, #0
+ 504 0008 034B     		ldr	r3, .L24
+ 505 000a 4FF00000 		mov	r0, #0
+ 506 000e 0349     		ldr	r1, .L24+4
+ 507 0010 FFF7FEFF 		bl	MoveTo
+  93:./StepMotor.h ****     }
+ 508              		.loc 1 93 0
+ 509 0014 00BF     		nop
+ 510 0016 80BD     		pop	{r7, pc}
+ 511              	.L25:
+ 512              		.align	2
+ 513              	.L24:
+ 514 0018 0000F03F 		.word	1072693248
+ 515 001c 00007940 		.word	1081671680
+ 516              		.cfi_endproc
+ 517              	.LFE68:
+ 518              		.size	Move90DegreeCW, .-Move90DegreeCW
+ 519              		.section	.text.Move90DegreeCCW,"ax",%progbits
+ 520              		.align	2
+ 521              		.global	Move90DegreeCCW
+ 522              		.thumb
+ 523              		.thumb_func
+ 524              		.type	Move90DegreeCCW, %function
+ 525              	Move90DegreeCCW:
+ 526              	.LFB69:
+  94:./StepMotor.h ****     
+  95:./StepMotor.h ****     void Move90DegreeCCW()
+  96:./StepMotor.h ****     {
+ 527              		.loc 1 96 0
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 12
+
+
+ 528              		.cfi_startproc
+ 529              		@ args = 0, pretend = 0, frame = 0
+ 530              		@ frame_needed = 1, uses_anonymous_args = 0
+ 531 0000 80B5     		push	{r7, lr}
+ 532              		.cfi_def_cfa_offset 8
+ 533              		.cfi_offset 7, -8
+ 534              		.cfi_offset 14, -4
+ 535 0002 00AF     		add	r7, sp, #0
+ 536              		.cfi_def_cfa_register 7
+  97:./StepMotor.h ****         MoveTo(Stepper_Diff_HomeSampling, LEFT);
+ 537              		.loc 1 97 0
+ 538 0004 4FF00002 		mov	r2, #0
+ 539 0008 034B     		ldr	r3, .L27
+ 540 000a 4FF00000 		mov	r0, #0
+ 541 000e 0349     		ldr	r1, .L27+4
+ 542 0010 FFF7FEFF 		bl	MoveTo
+  98:./StepMotor.h ****     }
+ 543              		.loc 1 98 0
+ 544 0014 00BF     		nop
+ 545 0016 80BD     		pop	{r7, pc}
+ 546              	.L28:
+ 547              		.align	2
+ 548              	.L27:
+ 549 0018 0000F0BF 		.word	-1074790400
+ 550 001c 00007940 		.word	1081671680
+ 551              		.cfi_endproc
+ 552              	.LFE69:
+ 553              		.size	Move90DegreeCCW, .-Move90DegreeCCW
+ 554              		.section	.text.Init_StepMotor,"ax",%progbits
+ 555              		.align	2
+ 556              		.global	Init_StepMotor
+ 557              		.thumb
+ 558              		.thumb_func
+ 559              		.type	Init_StepMotor, %function
+ 560              	Init_StepMotor:
+ 561              	.LFB70:
+  99:./StepMotor.h ****     
+ 100:./StepMotor.h ****     void Init_StepMotor()
+ 101:./StepMotor.h ****     {
+ 562              		.loc 1 101 0
+ 563              		.cfi_startproc
+ 564              		@ args = 0, pretend = 0, frame = 0
+ 565              		@ frame_needed = 1, uses_anonymous_args = 0
+ 566 0000 80B5     		push	{r7, lr}
+ 567              		.cfi_def_cfa_offset 8
+ 568              		.cfi_offset 7, -8
+ 569              		.cfi_offset 14, -4
+ 570 0002 00AF     		add	r7, sp, #0
+ 571              		.cfi_def_cfa_register 7
+ 102:./StepMotor.h ****         // Betriebsart des Motors festlegen
+ 103:./StepMotor.h ****         Pin_StepperMS1_Write(0); 	                // => 16tel-Schritt
+ 572              		.loc 1 103 0
+ 573 0004 0020     		movs	r0, #0
+ 574 0006 FFF7FEFF 		bl	Pin_StepperMS1_Write
+ 104:./StepMotor.h ****         Pin_StepperMS2_Write(0);    
+ 575              		.loc 1 104 0
+ 576 000a 0020     		movs	r0, #0
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 13
+
+
+ 577 000c FFF7FEFF 		bl	Pin_StepperMS2_Write
+ 105:./StepMotor.h ****         Pin_StepperMS3_Write(1);   
+ 578              		.loc 1 105 0
+ 579 0010 0120     		movs	r0, #1
+ 580 0012 FFF7FEFF 		bl	Pin_StepperMS3_Write
+ 106:./StepMotor.h ****         /*
+ 107:./StepMotor.h ****         MODE0 	MODE1 	MODE2 	Microstepping
+ 108:./StepMotor.h ****         0 	    0 	    0 	    Vollschritt
+ 109:./StepMotor.h ****         1 	    0 	    0 	    Halbschritt
+ 110:./StepMotor.h ****         0 	    1 	    1 	    1/4 Schritt
+ 111:./StepMotor.h ****         1 	    1 	    0 	    1/8 Schritt
+ 112:./StepMotor.h ****         0 	    0 	    1 	    1/16 Schritt        x => momentan ausgewählt 
+ 113:./StepMotor.h ****         1 	    0 	    1 	    1/32 Schritt
+ 114:./StepMotor.h ****         0 	    1 	    1 	    1/32 Schritt
+ 115:./StepMotor.h ****         1 	    1 	    1 	    1/32 Schritt        
+ 116:./StepMotor.h ****         */	
+ 117:./StepMotor.h ****         
+ 118:./StepMotor.h ****         // ENABLE -> Enable Stepper-Motor an
+ 119:./StepMotor.h ****         Pin_StepperEN_Write(0); 
+ 581              		.loc 1 119 0
+ 582 0016 0020     		movs	r0, #0
+ 583 0018 FFF7FEFF 		bl	Pin_StepperEN_Write
+ 120:./StepMotor.h ****         // SLEEP -> Motor in Schlafzustand setzen -> keine Leistungsaufnahme
+ 121:./StepMotor.h ****         Pin_StepperSLEEP_Write(0);
+ 584              		.loc 1 121 0
+ 585 001c 0020     		movs	r0, #0
+ 586 001e FFF7FEFF 		bl	Pin_StepperSLEEP_Write
+ 122:./StepMotor.h ****         // SLEEP -> Motor "aufwecken" -> Leistungsaufnahme
+ 123:./StepMotor.h ****         Pin_StepperSLEEP_Write(1);
+ 587              		.loc 1 123 0
+ 588 0022 0120     		movs	r0, #1
+ 589 0024 FFF7FEFF 		bl	Pin_StepperSLEEP_Write
+ 124:./StepMotor.h ****         // RESET -> nicht(!) resetten
+ 125:./StepMotor.h ****         Pin_StepperRES_Write(1);
+ 590              		.loc 1 125 0
+ 591 0028 0120     		movs	r0, #1
+ 592 002a FFF7FEFF 		bl	Pin_StepperRES_Write
+ 126:./StepMotor.h ****     }
+ 593              		.loc 1 126 0
+ 594 002e 00BF     		nop
+ 595 0030 80BD     		pop	{r7, pc}
+ 596              		.cfi_endproc
+ 597              	.LFE70:
+ 598              		.size	Init_StepMotor, .-Init_StepMotor
+ 599              		.global	__aeabi_ddiv
+ 600              		.global	__aeabi_dsub
+ 601              		.global	__aeabi_dmul
+ 602 0032 00BF     		.section	.text.MoveTo,"ax",%progbits
+ 603              		.align	2
+ 604              		.global	MoveTo
+ 605              		.thumb
+ 606              		.thumb_func
+ 607              		.type	MoveTo, %function
+ 608              	MoveTo:
+ 609              	.LFB71:
+ 610              		.file 2 "StepMotor.c"
+   1:StepMotor.c   **** /* ========================================
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 14
+
+
+   2:StepMotor.c   ****  *
+   3:StepMotor.c   ****  * Copyright YOUR COMPANY, THE YEAR
+   4:StepMotor.c   ****  * All Rights Reserved
+   5:StepMotor.c   ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:StepMotor.c   ****  *
+   7:StepMotor.c   ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:StepMotor.c   ****  * WHICH IS THE PROPERTY OF your company.
+   9:StepMotor.c   ****  *
+  10:StepMotor.c   ****  * ========================================
+  11:StepMotor.c   **** */
+  12:StepMotor.c   **** 
+  13:StepMotor.c   **** #include <StepMotor.h>
+  14:StepMotor.c   **** 
+  15:StepMotor.c   ****     void MoveTo (double steps, double dir)
+  16:StepMotor.c   ****     {
+ 611              		.loc 2 16 0
+ 612              		.cfi_startproc
+ 613              		@ args = 0, pretend = 0, frame = 64
+ 614              		@ frame_needed = 1, uses_anonymous_args = 0
+ 615 0000 2DE9B043 		push	{r4, r5, r7, r8, r9, lr}
+ 616              		.cfi_def_cfa_offset 24
+ 617              		.cfi_offset 4, -24
+ 618              		.cfi_offset 5, -20
+ 619              		.cfi_offset 7, -16
+ 620              		.cfi_offset 8, -12
+ 621              		.cfi_offset 9, -8
+ 622              		.cfi_offset 14, -4
+ 623 0004 90B0     		sub	sp, sp, #64
+ 624              		.cfi_def_cfa_offset 88
+ 625 0006 00AF     		add	r7, sp, #0
+ 626              		.cfi_def_cfa_register 7
+ 627 0008 C7E90201 		strd	r0, [r7, #8]
+ 628 000c C7E90023 		strd	r2, [r7]
+  17:StepMotor.c   ****     	// Übergebene Steps müssen mit 2 Mulipliziert werden, da jeder 
+  18:StepMotor.c   ****     	// Schritt 2 Flankenwechsel beeinhaltet
+  19:StepMotor.c   ****     	steps = steps*2;
+ 629              		.loc 2 19 0
+ 630 0010 D7E90201 		ldrd	r0, [r7, #8]
+ 631 0014 0246     		mov	r2, r0
+ 632 0016 0B46     		mov	r3, r1
+ 633 0018 FFF7FEFF 		bl	__aeabi_dadd
+ 634 001c 0346     		mov	r3, r0
+ 635 001e 0C46     		mov	r4, r1
+ 636 0020 C7E90234 		strd	r3, [r7, #8]
+  20:StepMotor.c   ****     	
+  21:StepMotor.c   ****         // Maximale Frequenz
+  22:StepMotor.c   ****         double f_max;
+  23:StepMotor.c   ****         // Relative Frequenz [0, 1]
+  24:StepMotor.c   ****         double f_rel;
+  25:StepMotor.c   ****         // Inkrement der Anzufahrenden Schritte
+  26:StepMotor.c   ****         int i;
+  27:StepMotor.c   ****         // gerundete Dauer des Stepper-Zustands
+  28:StepMotor.c   ****         double t_StepperCLK;    
+  29:StepMotor.c   ****         // Verschiebung des Sigmoids
+  30:StepMotor.c   ****         double sig_shift;                   // höherere Wert -> höherere Frequenz zu Beginn
+  31:StepMotor.c   ****         // Anstieg des Sigmoids
+  32:StepMotor.c   ****         double sig_raise;                   // höherer Wert -> schnellerer Anstieg
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 15
+
+
+  33:StepMotor.c   ****         
+  34:StepMotor.c   ****         //
+  35:StepMotor.c   ****         // Parameterset für Motorkontrolle aus "MotorRamp.m"
+  36:StepMotor.c   ****         //   
+  37:StepMotor.c   ****         f_max = g_Stepper_MaxFrequency;
+ 637              		.loc 2 37 0
+ 638 0024 A04B     		ldr	r3, .L43+8
+ 639 0026 1B68     		ldr	r3, [r3]
+ 640 0028 1846     		mov	r0, r3
+ 641 002a FFF7FEFF 		bl	__aeabi_i2d
+ 642 002e 0346     		mov	r3, r0
+ 643 0030 0C46     		mov	r4, r1
+ 644 0032 C7E90C34 		strd	r3, [r7, #48]
+  38:StepMotor.c   ****         sig_shift = g_Stepper_SigmoidShift;
+ 645              		.loc 2 38 0
+ 646 0036 9D4B     		ldr	r3, .L43+12
+ 647 0038 1B68     		ldr	r3, [r3]
+ 648 003a 1846     		mov	r0, r3
+ 649 003c FFF7FEFF 		bl	__aeabi_i2d
+ 650 0040 0346     		mov	r3, r0
+ 651 0042 0C46     		mov	r4, r1
+ 652 0044 C7E90A34 		strd	r3, [r7, #40]
+  39:StepMotor.c   ****         sig_raise = g_Stepper_SigmoidRaise;
+ 653              		.loc 2 39 0
+ 654 0048 994B     		ldr	r3, .L43+16
+ 655 004a 1B68     		ldr	r3, [r3]
+ 656 004c 1846     		mov	r0, r3
+ 657 004e FFF7FEFF 		bl	__aeabi_i2d
+ 658 0052 0346     		mov	r3, r0
+ 659 0054 0C46     		mov	r4, r1
+ 660 0056 C7E90834 		strd	r3, [r7, #32]
+  40:StepMotor.c   ****         
+  41:StepMotor.c   ****         
+  42:StepMotor.c   ****         // SLEEP -> Motor "aufwecken" -> Leistungsaufnahme
+  43:StepMotor.c   ****         Pin_StepperSLEEP_Write(1);
+ 661              		.loc 2 43 0
+ 662 005a 0120     		movs	r0, #1
+ 663 005c FFF7FEFF 		bl	Pin_StepperSLEEP_Write
+  44:StepMotor.c   ****         
+  45:StepMotor.c   ****         // Richtung setzen
+  46:StepMotor.c   ****         //
+  47:StepMotor.c   ****         // Rechtsdrehung
+  48:StepMotor.c   ****         if (dir == 1)
+ 664              		.loc 2 48 0
+ 665 0060 4FF00002 		mov	r2, #0
+ 666 0064 934B     		ldr	r3, .L43+20
+ 667 0066 D7E90001 		ldrd	r0, [r7]
+ 668 006a FFF7FEFF 		bl	__aeabi_dcmpeq
+ 669 006e 0346     		mov	r3, r0
+ 670 0070 002B     		cmp	r3, #0
+ 671 0072 03D0     		beq	.L41
+  49:StepMotor.c   ****         {
+  50:StepMotor.c   ****             Pin_StepperDIR_Write(0);
+ 672              		.loc 2 50 0
+ 673 0074 0020     		movs	r0, #0
+ 674 0076 FFF7FEFF 		bl	Pin_StepperDIR_Write
+ 675 007a 02E0     		b	.L33
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 16
+
+
+ 676              	.L41:
+  51:StepMotor.c   ****         }
+  52:StepMotor.c   ****         // Linksdrehung
+  53:StepMotor.c   ****         else
+  54:StepMotor.c   ****         {
+  55:StepMotor.c   ****             Pin_StepperDIR_Write(1);
+ 677              		.loc 2 55 0
+ 678 007c 0120     		movs	r0, #1
+ 679 007e FFF7FEFF 		bl	Pin_StepperDIR_Write
+ 680              	.L33:
+  56:StepMotor.c   ****         }    
+  57:StepMotor.c   ****         
+  58:StepMotor.c   ****         // Für jeden der Schritte
+  59:StepMotor.c   ****         for (i = 0; i < steps; i = i + 1)
+ 681              		.loc 2 59 0
+ 682 0082 0023     		movs	r3, #0
+ 683 0084 FB63     		str	r3, [r7, #60]
+ 684 0086 FAE0     		b	.L34
+ 685              	.L38:
+  60:StepMotor.c   ****         {
+  61:StepMotor.c   ****             // Frequenz für Beschleunigungsteil
+  62:StepMotor.c   ****             if (i < steps/2)
+ 686              		.loc 2 62 0
+ 687 0088 F86B     		ldr	r0, [r7, #60]
+ 688 008a FFF7FEFF 		bl	__aeabi_i2d
+ 689 008e 0446     		mov	r4, r0
+ 690 0090 0D46     		mov	r5, r1
+ 691 0092 4FF00002 		mov	r2, #0
+ 692 0096 4FF08043 		mov	r3, #1073741824
+ 693 009a D7E90201 		ldrd	r0, [r7, #8]
+ 694 009e FFF7FEFF 		bl	__aeabi_ddiv
+ 695 00a2 0246     		mov	r2, r0
+ 696 00a4 0B46     		mov	r3, r1
+ 697 00a6 2046     		mov	r0, r4
+ 698 00a8 2946     		mov	r1, r5
+ 699 00aa FFF7FEFF 		bl	__aeabi_dcmplt
+ 700 00ae 0346     		mov	r3, r0
+ 701 00b0 002B     		cmp	r3, #0
+ 702 00b2 69D0     		beq	.L42
+  63:StepMotor.c   ****             {       
+  64:StepMotor.c   ****                 // Berechnung der Frequenz
+  65:StepMotor.c   ****                 f_rel = 1.0/(1+exp(-1/(steps/sig_raise)*(i-steps/sig_shift))); 
+ 703              		.loc 2 65 0
+ 704 00b4 D7E90823 		ldrd	r2, [r7, #32]
+ 705 00b8 D7E90201 		ldrd	r0, [r7, #8]
+ 706 00bc FFF7FEFF 		bl	__aeabi_ddiv
+ 707 00c0 0346     		mov	r3, r0
+ 708 00c2 0C46     		mov	r4, r1
+ 709 00c4 1A46     		mov	r2, r3
+ 710 00c6 2346     		mov	r3, r4
+ 711 00c8 4FF00000 		mov	r0, #0
+ 712 00cc 7A49     		ldr	r1, .L43+24
+ 713 00ce FFF7FEFF 		bl	__aeabi_ddiv
+ 714 00d2 0346     		mov	r3, r0
+ 715 00d4 0C46     		mov	r4, r1
+ 716 00d6 2546     		mov	r5, r4
+ 717 00d8 1C46     		mov	r4, r3
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 17
+
+
+ 718 00da F86B     		ldr	r0, [r7, #60]
+ 719 00dc FFF7FEFF 		bl	__aeabi_i2d
+ 720 00e0 8046     		mov	r8, r0
+ 721 00e2 8946     		mov	r9, r1
+ 722 00e4 D7E90A23 		ldrd	r2, [r7, #40]
+ 723 00e8 D7E90201 		ldrd	r0, [r7, #8]
+ 724 00ec FFF7FEFF 		bl	__aeabi_ddiv
+ 725 00f0 0246     		mov	r2, r0
+ 726 00f2 0B46     		mov	r3, r1
+ 727 00f4 4046     		mov	r0, r8
+ 728 00f6 4946     		mov	r1, r9
+ 729 00f8 FFF7FEFF 		bl	__aeabi_dsub
+ 730 00fc 0246     		mov	r2, r0
+ 731 00fe 0B46     		mov	r3, r1
+ 732 0100 2046     		mov	r0, r4
+ 733 0102 2946     		mov	r1, r5
+ 734 0104 FFF7FEFF 		bl	__aeabi_dmul
+ 735 0108 0346     		mov	r3, r0
+ 736 010a 0C46     		mov	r4, r1
+ 737 010c 1846     		mov	r0, r3
+ 738 010e 2146     		mov	r1, r4
+ 739 0110 FFF7FEFF 		bl	exp
+ 740 0114 4FF00002 		mov	r2, #0
+ 741 0118 664B     		ldr	r3, .L43+20
+ 742 011a FFF7FEFF 		bl	__aeabi_dadd
+ 743 011e 0346     		mov	r3, r0
+ 744 0120 0C46     		mov	r4, r1
+ 745 0122 1A46     		mov	r2, r3
+ 746 0124 2346     		mov	r3, r4
+ 747 0126 4FF00000 		mov	r0, #0
+ 748 012a 6249     		ldr	r1, .L43+20
+ 749 012c FFF7FEFF 		bl	__aeabi_ddiv
+ 750 0130 0346     		mov	r3, r0
+ 751 0132 0C46     		mov	r4, r1
+ 752 0134 C7E90634 		strd	r3, [r7, #24]
+  66:StepMotor.c   ****                 // Momentane Ausgabe der LED invertieren
+  67:StepMotor.c   ****                 Pin_StepperCLK_Write(!Pin_StepperCLK_Read());
+ 753              		.loc 2 67 0
+ 754 0138 FFF7FEFF 		bl	Pin_StepperCLK_Read
+ 755 013c 0346     		mov	r3, r0
+ 756 013e 002B     		cmp	r3, #0
+ 757 0140 0CBF     		ite	eq
+ 758 0142 0123     		moveq	r3, #1
+ 759 0144 0023     		movne	r3, #0
+ 760 0146 DBB2     		uxtb	r3, r3
+ 761 0148 1846     		mov	r0, r3
+ 762 014a FFF7FEFF 		bl	Pin_StepperCLK_Write
+  68:StepMotor.c   ****                 // Wartezeit in us berechnen
+  69:StepMotor.c   ****                 t_StepperCLK = 1000000.0/(f_max*f_rel);   
+ 763              		.loc 2 69 0
+ 764 014e D7E90623 		ldrd	r2, [r7, #24]
+ 765 0152 D7E90C01 		ldrd	r0, [r7, #48]
+ 766 0156 FFF7FEFF 		bl	__aeabi_dmul
+ 767 015a 0346     		mov	r3, r0
+ 768 015c 0C46     		mov	r4, r1
+ 769 015e 1A46     		mov	r2, r3
+ 770 0160 2346     		mov	r3, r4
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 18
+
+
+ 771 0162 4FA1     		adr	r1, .L43
+ 772 0164 D1E90001 		ldrd	r0, [r1]
+ 773 0168 FFF7FEFF 		bl	__aeabi_ddiv
+ 774 016c 0346     		mov	r3, r0
+ 775 016e 0C46     		mov	r4, r1
+ 776 0170 C7E90434 		strd	r3, [r7, #16]
+  70:StepMotor.c   ****                 CyDelayUs((uint16)(t_StepperCLK));           
+ 777              		.loc 2 70 0
+ 778 0174 D7E90401 		ldrd	r0, [r7, #16]
+ 779 0178 FFF7FEFF 		bl	__aeabi_d2uiz
+ 780 017c 0346     		mov	r3, r0
+ 781 017e 9BB2     		uxth	r3, r3
+ 782 0180 1846     		mov	r0, r3
+ 783 0182 FFF7FEFF 		bl	CyDelayUs
+ 784 0186 77E0     		b	.L37
+ 785              	.L42:
+  71:StepMotor.c   **** 
+  72:StepMotor.c   ****             }        
+  73:StepMotor.c   ****             // Frequenz für Abbremsungsgungsteil
+  74:StepMotor.c   ****             else 
+  75:StepMotor.c   ****             {
+  76:StepMotor.c   ****                 // Berechnung der Frequenz
+  77:StepMotor.c   ****                 f_rel = (1.0 - 1/(1+exp(-1/(steps/sig_raise)*(i-steps+steps/sig_shift)))); 
+ 786              		.loc 2 77 0
+ 787 0188 D7E90823 		ldrd	r2, [r7, #32]
+ 788 018c D7E90201 		ldrd	r0, [r7, #8]
+ 789 0190 FFF7FEFF 		bl	__aeabi_ddiv
+ 790 0194 0346     		mov	r3, r0
+ 791 0196 0C46     		mov	r4, r1
+ 792 0198 1A46     		mov	r2, r3
+ 793 019a 2346     		mov	r3, r4
+ 794 019c 4FF00000 		mov	r0, #0
+ 795 01a0 4549     		ldr	r1, .L43+24
+ 796 01a2 FFF7FEFF 		bl	__aeabi_ddiv
+ 797 01a6 0346     		mov	r3, r0
+ 798 01a8 0C46     		mov	r4, r1
+ 799 01aa 2546     		mov	r5, r4
+ 800 01ac 1C46     		mov	r4, r3
+ 801 01ae F86B     		ldr	r0, [r7, #60]
+ 802 01b0 FFF7FEFF 		bl	__aeabi_i2d
+ 803 01b4 D7E90223 		ldrd	r2, [r7, #8]
+ 804 01b8 FFF7FEFF 		bl	__aeabi_dsub
+ 805 01bc 0246     		mov	r2, r0
+ 806 01be 0B46     		mov	r3, r1
+ 807 01c0 9046     		mov	r8, r2
+ 808 01c2 9946     		mov	r9, r3
+ 809 01c4 D7E90A23 		ldrd	r2, [r7, #40]
+ 810 01c8 D7E90201 		ldrd	r0, [r7, #8]
+ 811 01cc FFF7FEFF 		bl	__aeabi_ddiv
+ 812 01d0 0246     		mov	r2, r0
+ 813 01d2 0B46     		mov	r3, r1
+ 814 01d4 4046     		mov	r0, r8
+ 815 01d6 4946     		mov	r1, r9
+ 816 01d8 FFF7FEFF 		bl	__aeabi_dadd
+ 817 01dc 0246     		mov	r2, r0
+ 818 01de 0B46     		mov	r3, r1
+ 819 01e0 2046     		mov	r0, r4
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 19
+
+
+ 820 01e2 2946     		mov	r1, r5
+ 821 01e4 FFF7FEFF 		bl	__aeabi_dmul
+ 822 01e8 0346     		mov	r3, r0
+ 823 01ea 0C46     		mov	r4, r1
+ 824 01ec 1846     		mov	r0, r3
+ 825 01ee 2146     		mov	r1, r4
+ 826 01f0 FFF7FEFF 		bl	exp
+ 827 01f4 4FF00002 		mov	r2, #0
+ 828 01f8 2E4B     		ldr	r3, .L43+20
+ 829 01fa FFF7FEFF 		bl	__aeabi_dadd
+ 830 01fe 0346     		mov	r3, r0
+ 831 0200 0C46     		mov	r4, r1
+ 832 0202 1A46     		mov	r2, r3
+ 833 0204 2346     		mov	r3, r4
+ 834 0206 4FF00000 		mov	r0, #0
+ 835 020a 2A49     		ldr	r1, .L43+20
+ 836 020c FFF7FEFF 		bl	__aeabi_ddiv
+ 837 0210 0346     		mov	r3, r0
+ 838 0212 0C46     		mov	r4, r1
+ 839 0214 1A46     		mov	r2, r3
+ 840 0216 2346     		mov	r3, r4
+ 841 0218 4FF00000 		mov	r0, #0
+ 842 021c 2549     		ldr	r1, .L43+20
+ 843 021e FFF7FEFF 		bl	__aeabi_dsub
+ 844 0222 0346     		mov	r3, r0
+ 845 0224 0C46     		mov	r4, r1
+ 846 0226 C7E90634 		strd	r3, [r7, #24]
+  78:StepMotor.c   ****                 // Momentane Ausgabe der LED invertieren
+  79:StepMotor.c   ****                 Pin_StepperCLK_Write(!Pin_StepperCLK_Read());
+ 847              		.loc 2 79 0
+ 848 022a FFF7FEFF 		bl	Pin_StepperCLK_Read
+ 849 022e 0346     		mov	r3, r0
+ 850 0230 002B     		cmp	r3, #0
+ 851 0232 0CBF     		ite	eq
+ 852 0234 0123     		moveq	r3, #1
+ 853 0236 0023     		movne	r3, #0
+ 854 0238 DBB2     		uxtb	r3, r3
+ 855 023a 1846     		mov	r0, r3
+ 856 023c FFF7FEFF 		bl	Pin_StepperCLK_Write
+  80:StepMotor.c   **** 
+  81:StepMotor.c   ****                 // Wartezeit in us berechnen
+  82:StepMotor.c   ****                 t_StepperCLK = 1000000.0/(f_max*f_rel);            
+ 857              		.loc 2 82 0
+ 858 0240 D7E90623 		ldrd	r2, [r7, #24]
+ 859 0244 D7E90C01 		ldrd	r0, [r7, #48]
+ 860 0248 FFF7FEFF 		bl	__aeabi_dmul
+ 861 024c 0346     		mov	r3, r0
+ 862 024e 0C46     		mov	r4, r1
+ 863 0250 1A46     		mov	r2, r3
+ 864 0252 2346     		mov	r3, r4
+ 865 0254 12A1     		adr	r1, .L43
+ 866 0256 D1E90001 		ldrd	r0, [r1]
+ 867 025a FFF7FEFF 		bl	__aeabi_ddiv
+ 868 025e 0346     		mov	r3, r0
+ 869 0260 0C46     		mov	r4, r1
+ 870 0262 C7E90434 		strd	r3, [r7, #16]
+  83:StepMotor.c   ****                 CyDelayUs((uint16)(t_StepperCLK));           
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 20
+
+
+ 871              		.loc 2 83 0
+ 872 0266 D7E90401 		ldrd	r0, [r7, #16]
+ 873 026a FFF7FEFF 		bl	__aeabi_d2uiz
+ 874 026e 0346     		mov	r3, r0
+ 875 0270 9BB2     		uxth	r3, r3
+ 876 0272 1846     		mov	r0, r3
+ 877 0274 FFF7FEFF 		bl	CyDelayUs
+ 878              	.L37:
+  59:StepMotor.c   ****         {
+ 879              		.loc 2 59 0 discriminator 2
+ 880 0278 FB6B     		ldr	r3, [r7, #60]
+ 881 027a 0133     		adds	r3, r3, #1
+ 882 027c FB63     		str	r3, [r7, #60]
+ 883              	.L34:
+  59:StepMotor.c   ****         {
+ 884              		.loc 2 59 0 is_stmt 0 discriminator 1
+ 885 027e F86B     		ldr	r0, [r7, #60]
+ 886 0280 FFF7FEFF 		bl	__aeabi_i2d
+ 887 0284 D7E90223 		ldrd	r2, [r7, #8]
+ 888 0288 FFF7FEFF 		bl	__aeabi_dcmplt
+ 889 028c 0346     		mov	r3, r0
+ 890 028e 002B     		cmp	r3, #0
+ 891 0290 7FF4FAAE 		bne	.L38
+  84:StepMotor.c   **** 
+  85:StepMotor.c   ****             }  
+  86:StepMotor.c   ****         }
+  87:StepMotor.c   ****     }
+ 892              		.loc 2 87 0 is_stmt 1
+ 893 0294 00BF     		nop
+ 894 0296 4037     		adds	r7, r7, #64
+ 895              		.cfi_def_cfa_offset 24
+ 896 0298 BD46     		mov	sp, r7
+ 897              		.cfi_def_cfa_register 13
+ 898              		@ sp needed
+ 899 029a BDE8B083 		pop	{r4, r5, r7, r8, r9, pc}
+ 900              	.L44:
+ 901 029e 00BF     		.align	3
+ 902              	.L43:
+ 903 02a0 00000000 		.word	0
+ 904 02a4 80842E41 		.word	1093567616
+ 905 02a8 00000000 		.word	g_Stepper_MaxFrequency
+ 906 02ac 00000000 		.word	g_Stepper_SigmoidShift
+ 907 02b0 00000000 		.word	g_Stepper_SigmoidRaise
+ 908 02b4 0000F03F 		.word	1072693248
+ 909 02b8 0000F0BF 		.word	-1074790400
+ 910              		.cfi_endproc
+ 911              	.LFE71:
+ 912              		.size	MoveTo, .-MoveTo
+ 913              		.text
+ 914              	.Letext0:
+ 915              		.file 3 "d:\\programme\\psoc\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none-e
+ 916              		.file 4 "d:\\programme\\psoc\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none-e
+ 917              		.file 5 "Generated_Source\\PSoC5/cytypes.h"
+ 918              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 919              		.file 7 "./GlobalVariables.h"
+ 920              		.file 8 "./SLIDERS.h"
+ 921              		.section	.debug_info,"",%progbits
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 21
+
+
+ 922              	.Ldebug_info0:
+ 923 0000 BB040000 		.4byte	0x4bb
+ 924 0004 0400     		.2byte	0x4
+ 925 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 926 000a 04       		.byte	0x4
+ 927 000b 01       		.uleb128 0x1
+ 928 000c C5000000 		.4byte	.LASF69
+ 929 0010 0C       		.byte	0xc
+ 930 0011 35040000 		.4byte	.LASF70
+ 931 0015 8E030000 		.4byte	.LASF71
+ 932 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 933 001d 00000000 		.4byte	0
+ 934 0021 00000000 		.4byte	.Ldebug_line0
+ 935 0025 02       		.uleb128 0x2
+ 936 0026 01       		.byte	0x1
+ 937 0027 06       		.byte	0x6
+ 938 0028 C8020000 		.4byte	.LASF0
+ 939 002c 02       		.uleb128 0x2
+ 940 002d 01       		.byte	0x1
+ 941 002e 08       		.byte	0x8
+ 942 002f A6020000 		.4byte	.LASF1
+ 943 0033 02       		.uleb128 0x2
+ 944 0034 02       		.byte	0x2
+ 945 0035 05       		.byte	0x5
+ 946 0036 76000000 		.4byte	.LASF2
+ 947 003a 02       		.uleb128 0x2
+ 948 003b 02       		.byte	0x2
+ 949 003c 07       		.byte	0x7
+ 950 003d 52030000 		.4byte	.LASF3
+ 951 0041 03       		.uleb128 0x3
+ 952 0042 63040000 		.4byte	.LASF9
+ 953 0046 03       		.byte	0x3
+ 954 0047 3F       		.byte	0x3f
+ 955 0048 4C000000 		.4byte	0x4c
+ 956 004c 02       		.uleb128 0x2
+ 957 004d 04       		.byte	0x4
+ 958 004e 05       		.byte	0x5
+ 959 004f E1040000 		.4byte	.LASF4
+ 960 0053 02       		.uleb128 0x2
+ 961 0054 04       		.byte	0x4
+ 962 0055 07       		.byte	0x7
+ 963 0056 0D030000 		.4byte	.LASF5
+ 964 005a 02       		.uleb128 0x2
+ 965 005b 08       		.byte	0x8
+ 966 005c 05       		.byte	0x5
+ 967 005d DC010000 		.4byte	.LASF6
+ 968 0061 02       		.uleb128 0x2
+ 969 0062 08       		.byte	0x8
+ 970 0063 07       		.byte	0x7
+ 971 0064 D4020000 		.4byte	.LASF7
+ 972 0068 04       		.uleb128 0x4
+ 973 0069 04       		.byte	0x4
+ 974 006a 05       		.byte	0x5
+ 975 006b 696E7400 		.ascii	"int\000"
+ 976 006f 02       		.uleb128 0x2
+ 977 0070 04       		.byte	0x4
+ 978 0071 07       		.byte	0x7
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 22
+
+
+ 979 0072 00030000 		.4byte	.LASF8
+ 980 0076 03       		.uleb128 0x3
+ 981 0077 E2030000 		.4byte	.LASF10
+ 982 007b 04       		.byte	0x4
+ 983 007c 2C       		.byte	0x2c
+ 984 007d 41000000 		.4byte	0x41
+ 985 0081 05       		.uleb128 0x5
+ 986 0082 76010000 		.4byte	.LASF11
+ 987 0086 05       		.byte	0x5
+ 988 0087 E501     		.2byte	0x1e5
+ 989 0089 3A000000 		.4byte	0x3a
+ 990 008d 02       		.uleb128 0x2
+ 991 008e 04       		.byte	0x4
+ 992 008f 04       		.byte	0x4
+ 993 0090 C6010000 		.4byte	.LASF12
+ 994 0094 02       		.uleb128 0x2
+ 995 0095 08       		.byte	0x8
+ 996 0096 04       		.byte	0x4
+ 997 0097 1A040000 		.4byte	.LASF13
+ 998 009b 02       		.uleb128 0x2
+ 999 009c 01       		.byte	0x1
+ 1000 009d 08       		.byte	0x8
+ 1001 009e 75030000 		.4byte	.LASF14
+ 1002 00a2 02       		.uleb128 0x2
+ 1003 00a3 08       		.byte	0x8
+ 1004 00a4 04       		.byte	0x4
+ 1005 00a5 93020000 		.4byte	.LASF15
+ 1006 00a9 02       		.uleb128 0x2
+ 1007 00aa 04       		.byte	0x4
+ 1008 00ab 07       		.byte	0x7
+ 1009 00ac 80000000 		.4byte	.LASF16
+ 1010 00b0 06       		.uleb128 0x6
+ 1011 00b1 EB020000 		.4byte	.LASF27
+ 1012 00b5 01       		.byte	0x1
+ 1013 00b6 1F       		.byte	0x1f
+ 1014 00b7 00000000 		.4byte	.LFB63
+ 1015 00bb B4000000 		.4byte	.LFE63-.LFB63
+ 1016 00bf 01       		.uleb128 0x1
+ 1017 00c0 9C       		.byte	0x9c
+ 1018 00c1 FC000000 		.4byte	0xfc
+ 1019 00c5 07       		.uleb128 0x7
+ 1020 00c6 4C030000 		.4byte	.LASF17
+ 1021 00ca 01       		.byte	0x1
+ 1022 00cb 1F       		.byte	0x1f
+ 1023 00cc 94000000 		.4byte	0x94
+ 1024 00d0 02       		.uleb128 0x2
+ 1025 00d1 91       		.byte	0x91
+ 1026 00d2 58       		.sleb128 -40
+ 1027 00d3 08       		.uleb128 0x8
+ 1028 00d4 64697200 		.ascii	"dir\000"
+ 1029 00d8 01       		.byte	0x1
+ 1030 00d9 1F       		.byte	0x1f
+ 1031 00da 94000000 		.4byte	0x94
+ 1032 00de 02       		.uleb128 0x2
+ 1033 00df 91       		.byte	0x91
+ 1034 00e0 50       		.sleb128 -48
+ 1035 00e1 09       		.uleb128 0x9
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 23
+
+
+ 1036 00e2 6900     		.ascii	"i\000"
+ 1037 00e4 01       		.byte	0x1
+ 1038 00e5 26       		.byte	0x26
+ 1039 00e6 68000000 		.4byte	0x68
+ 1040 00ea 02       		.uleb128 0x2
+ 1041 00eb 91       		.byte	0x91
+ 1042 00ec 6C       		.sleb128 -20
+ 1043 00ed 0A       		.uleb128 0xa
+ 1044 00ee 69000000 		.4byte	.LASF18
+ 1045 00f2 01       		.byte	0x1
+ 1046 00f3 28       		.byte	0x28
+ 1047 00f4 94000000 		.4byte	0x94
+ 1048 00f8 02       		.uleb128 0x2
+ 1049 00f9 91       		.byte	0x91
+ 1050 00fa 60       		.sleb128 -32
+ 1051 00fb 00       		.byte	0
+ 1052 00fc 0B       		.uleb128 0xb
+ 1053 00fd D4030000 		.4byte	.LASF19
+ 1054 0101 01       		.byte	0x1
+ 1055 0102 44       		.byte	0x44
+ 1056 0103 00000000 		.4byte	.LFB64
+ 1057 0107 1C000000 		.4byte	.LFE64-.LFB64
+ 1058 010b 01       		.uleb128 0x1
+ 1059 010c 9C       		.byte	0x9c
+ 1060 010d 0B       		.uleb128 0xb
+ 1061 010e 54040000 		.4byte	.LASF20
+ 1062 0112 01       		.byte	0x1
+ 1063 0113 49       		.byte	0x49
+ 1064 0114 00000000 		.4byte	.LFB65
+ 1065 0118 20000000 		.4byte	.LFE65-.LFB65
+ 1066 011c 01       		.uleb128 0x1
+ 1067 011d 9C       		.byte	0x9c
+ 1068 011e 0C       		.uleb128 0xc
+ 1069 011f EA010000 		.4byte	.LASF22
+ 1070 0123 01       		.byte	0x1
+ 1071 0124 4E       		.byte	0x4e
+ 1072 0125 00000000 		.4byte	.LFB66
+ 1073 0129 28000000 		.4byte	.LFE66-.LFB66
+ 1074 012d 01       		.uleb128 0x1
+ 1075 012e 9C       		.byte	0x9c
+ 1076 012f 42010000 		.4byte	0x142
+ 1077 0133 0A       		.uleb128 0xa
+ 1078 0134 F9010000 		.4byte	.LASF21
+ 1079 0138 01       		.byte	0x1
+ 1080 0139 50       		.byte	0x50
+ 1081 013a 68000000 		.4byte	0x68
+ 1082 013e 02       		.uleb128 0x2
+ 1083 013f 91       		.byte	0x91
+ 1084 0140 74       		.sleb128 -12
+ 1085 0141 00       		.byte	0
+ 1086 0142 0C       		.uleb128 0xc
+ 1087 0143 CC010000 		.4byte	.LASF23
+ 1088 0147 01       		.byte	0x1
+ 1089 0148 54       		.byte	0x54
+ 1090 0149 00000000 		.4byte	.LFB67
+ 1091 014d 28000000 		.4byte	.LFE67-.LFB67
+ 1092 0151 01       		.uleb128 0x1
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 24
+
+
+ 1093 0152 9C       		.byte	0x9c
+ 1094 0153 66010000 		.4byte	0x166
+ 1095 0157 0A       		.uleb128 0xa
+ 1096 0158 F9010000 		.4byte	.LASF21
+ 1097 015c 01       		.byte	0x1
+ 1098 015d 56       		.byte	0x56
+ 1099 015e 68000000 		.4byte	0x68
+ 1100 0162 02       		.uleb128 0x2
+ 1101 0163 91       		.byte	0x91
+ 1102 0164 74       		.sleb128 -12
+ 1103 0165 00       		.byte	0
+ 1104 0166 0B       		.uleb128 0xb
+ 1105 0167 4C000000 		.4byte	.LASF24
+ 1106 016b 01       		.byte	0x1
+ 1107 016c 5A       		.byte	0x5a
+ 1108 016d 00000000 		.4byte	.LFB68
+ 1109 0171 20000000 		.4byte	.LFE68-.LFB68
+ 1110 0175 01       		.uleb128 0x1
+ 1111 0176 9C       		.byte	0x9c
+ 1112 0177 0B       		.uleb128 0xb
+ 1113 0178 94010000 		.4byte	.LASF25
+ 1114 017c 01       		.byte	0x1
+ 1115 017d 5F       		.byte	0x5f
+ 1116 017e 00000000 		.4byte	.LFB69
+ 1117 0182 20000000 		.4byte	.LFE69-.LFB69
+ 1118 0186 01       		.uleb128 0x1
+ 1119 0187 9C       		.byte	0x9c
+ 1120 0188 0B       		.uleb128 0xb
+ 1121 0189 53010000 		.4byte	.LASF26
+ 1122 018d 01       		.byte	0x1
+ 1123 018e 64       		.byte	0x64
+ 1124 018f 00000000 		.4byte	.LFB70
+ 1125 0193 32000000 		.4byte	.LFE70-.LFB70
+ 1126 0197 01       		.uleb128 0x1
+ 1127 0198 9C       		.byte	0x9c
+ 1128 0199 06       		.uleb128 0x6
+ 1129 019a 9F020000 		.4byte	.LASF28
+ 1130 019e 02       		.byte	0x2
+ 1131 019f 0F       		.byte	0xf
+ 1132 01a0 00000000 		.4byte	.LFB71
+ 1133 01a4 BC020000 		.4byte	.LFE71-.LFB71
+ 1134 01a8 01       		.uleb128 0x1
+ 1135 01a9 9C       		.byte	0x9c
+ 1136 01aa 20020000 		.4byte	0x220
+ 1137 01ae 07       		.uleb128 0x7
+ 1138 01af 4C030000 		.4byte	.LASF17
+ 1139 01b3 02       		.byte	0x2
+ 1140 01b4 0F       		.byte	0xf
+ 1141 01b5 94000000 		.4byte	0x94
+ 1142 01b9 03       		.uleb128 0x3
+ 1143 01ba 91       		.byte	0x91
+ 1144 01bb B07F     		.sleb128 -80
+ 1145 01bd 08       		.uleb128 0x8
+ 1146 01be 64697200 		.ascii	"dir\000"
+ 1147 01c2 02       		.byte	0x2
+ 1148 01c3 0F       		.byte	0xf
+ 1149 01c4 94000000 		.4byte	0x94
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 25
+
+
+ 1150 01c8 03       		.uleb128 0x3
+ 1151 01c9 91       		.byte	0x91
+ 1152 01ca A87F     		.sleb128 -88
+ 1153 01cc 0A       		.uleb128 0xa
+ 1154 01cd 70010000 		.4byte	.LASF29
+ 1155 01d1 02       		.byte	0x2
+ 1156 01d2 16       		.byte	0x16
+ 1157 01d3 94000000 		.4byte	0x94
+ 1158 01d7 02       		.uleb128 0x2
+ 1159 01d8 91       		.byte	0x91
+ 1160 01d9 58       		.sleb128 -40
+ 1161 01da 0A       		.uleb128 0xa
+ 1162 01db 6F030000 		.4byte	.LASF30
+ 1163 01df 02       		.byte	0x2
+ 1164 01e0 18       		.byte	0x18
+ 1165 01e1 94000000 		.4byte	0x94
+ 1166 01e5 02       		.uleb128 0x2
+ 1167 01e6 91       		.byte	0x91
+ 1168 01e7 40       		.sleb128 -64
+ 1169 01e8 09       		.uleb128 0x9
+ 1170 01e9 6900     		.ascii	"i\000"
+ 1171 01eb 02       		.byte	0x2
+ 1172 01ec 1A       		.byte	0x1a
+ 1173 01ed 68000000 		.4byte	0x68
+ 1174 01f1 02       		.uleb128 0x2
+ 1175 01f2 91       		.byte	0x91
+ 1176 01f3 64       		.sleb128 -28
+ 1177 01f4 0A       		.uleb128 0xa
+ 1178 01f5 69000000 		.4byte	.LASF18
+ 1179 01f9 02       		.byte	0x2
+ 1180 01fa 1C       		.byte	0x1c
+ 1181 01fb 94000000 		.4byte	0x94
+ 1182 01ff 03       		.uleb128 0x3
+ 1183 0200 91       		.byte	0x91
+ 1184 0201 B87F     		.sleb128 -72
+ 1185 0203 0A       		.uleb128 0xa
+ 1186 0204 0A020000 		.4byte	.LASF31
+ 1187 0208 02       		.byte	0x2
+ 1188 0209 1E       		.byte	0x1e
+ 1189 020a 94000000 		.4byte	0x94
+ 1190 020e 02       		.uleb128 0x2
+ 1191 020f 91       		.byte	0x91
+ 1192 0210 50       		.sleb128 -48
+ 1193 0211 0A       		.uleb128 0xa
+ 1194 0212 65030000 		.4byte	.LASF32
+ 1195 0216 02       		.byte	0x2
+ 1196 0217 20       		.byte	0x20
+ 1197 0218 94000000 		.4byte	0x94
+ 1198 021c 02       		.uleb128 0x2
+ 1199 021d 91       		.byte	0x91
+ 1200 021e 48       		.sleb128 -56
+ 1201 021f 00       		.byte	0
+ 1202 0220 0D       		.uleb128 0xd
+ 1203 0221 EA040000 		.4byte	.LASF33
+ 1204 0225 06       		.byte	0x6
+ 1205 0226 1207     		.2byte	0x712
+ 1206 0228 2C020000 		.4byte	0x22c
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 26
+
+
+ 1207 022c 0E       		.uleb128 0xe
+ 1208 022d 76000000 		.4byte	0x76
+ 1209 0231 0F       		.uleb128 0xf
+ 1210 0232 89000000 		.4byte	.LASF34
+ 1211 0236 07       		.byte	0x7
+ 1212 0237 12       		.byte	0x12
+ 1213 0238 9B000000 		.4byte	0x9b
+ 1214 023c 05       		.uleb128 0x5
+ 1215 023d 03       		.byte	0x3
+ 1216 023e 00000000 		.4byte	g_NextionInterrupt
+ 1217 0242 0F       		.uleb128 0xf
+ 1218 0243 21000000 		.4byte	.LASF35
+ 1219 0247 08       		.byte	0x8
+ 1220 0248 10       		.byte	0x10
+ 1221 0249 9B000000 		.4byte	0x9b
+ 1222 024d 05       		.uleb128 0x5
+ 1223 024e 03       		.byte	0x3
+ 1224 024f 00000000 		.4byte	g_SliderValueReceiving
+ 1225 0253 10       		.uleb128 0x10
+ 1226 0254 9B000000 		.4byte	0x9b
+ 1227 0258 63020000 		.4byte	0x263
+ 1228 025c 11       		.uleb128 0x11
+ 1229 025d A9000000 		.4byte	0xa9
+ 1230 0261 03       		.byte	0x3
+ 1231 0262 00       		.byte	0
+ 1232 0263 0F       		.uleb128 0xf
+ 1233 0264 0D000000 		.4byte	.LASF36
+ 1234 0268 08       		.byte	0x8
+ 1235 0269 11       		.byte	0x11
+ 1236 026a 53020000 		.4byte	0x253
+ 1237 026e 05       		.uleb128 0x5
+ 1238 026f 03       		.byte	0x3
+ 1239 0270 00000000 		.4byte	g_SliderValueBuffer
+ 1240 0274 0F       		.uleb128 0xf
+ 1241 0275 00000000 		.4byte	.LASF37
+ 1242 0279 07       		.byte	0x7
+ 1243 027a 1C       		.byte	0x1c
+ 1244 027b 85020000 		.4byte	0x285
+ 1245 027f 05       		.uleb128 0x5
+ 1246 0280 03       		.byte	0x3
+ 1247 0281 00000000 		.4byte	g_Error_Code
+ 1248 0285 0E       		.uleb128 0xe
+ 1249 0286 68000000 		.4byte	0x68
+ 1250 028a 0F       		.uleb128 0xf
+ 1251 028b 5B000000 		.4byte	.LASF38
+ 1252 028f 07       		.byte	0x7
+ 1253 0290 21       		.byte	0x21
+ 1254 0291 9B000000 		.4byte	0x9b
+ 1255 0295 05       		.uleb128 0x5
+ 1256 0296 03       		.byte	0x3
+ 1257 0297 00000000 		.4byte	g_PCInterrupt
+ 1258 029b 0F       		.uleb128 0xf
+ 1259 029c C7030000 		.4byte	.LASF39
+ 1260 02a0 07       		.byte	0x7
+ 1261 02a1 23       		.byte	0x23
+ 1262 02a2 9B000000 		.4byte	0x9b
+ 1263 02a6 05       		.uleb128 0x5
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 27
+
+
+ 1264 02a7 03       		.byte	0x3
+ 1265 02a8 00000000 		.4byte	g_ActivePage
+ 1266 02ac 0F       		.uleb128 0xf
+ 1267 02ad 7D010000 		.4byte	.LASF40
+ 1268 02b1 07       		.byte	0x7
+ 1269 02b2 26       		.byte	0x26
+ 1270 02b3 68000000 		.4byte	0x68
+ 1271 02b7 05       		.uleb128 0x5
+ 1272 02b8 03       		.byte	0x3
+ 1273 02b9 00000000 		.4byte	g_NumberOfMeasurements
+ 1274 02bd 0F       		.uleb128 0xf
+ 1275 02be 7A020000 		.4byte	.LASF41
+ 1276 02c2 07       		.byte	0x7
+ 1277 02c3 27       		.byte	0x27
+ 1278 02c4 68000000 		.4byte	0x68
+ 1279 02c8 05       		.uleb128 0x5
+ 1280 02c9 03       		.byte	0x3
+ 1281 02ca 00000000 		.4byte	g_SwitchPeriodOfLaser_ms
+ 1282 02ce 0F       		.uleb128 0xf
+ 1283 02cf B4040000 		.4byte	.LASF42
+ 1284 02d3 07       		.byte	0x7
+ 1285 02d4 28       		.byte	0x28
+ 1286 02d5 68000000 		.4byte	0x68
+ 1287 02d9 05       		.uleb128 0x5
+ 1288 02da 03       		.byte	0x3
+ 1289 02db 00000000 		.4byte	g_MaxMeasurementTime_min
+ 1290 02df 0F       		.uleb128 0xf
+ 1291 02e0 41040000 		.4byte	.LASF43
+ 1292 02e4 07       		.byte	0x7
+ 1293 02e5 29       		.byte	0x29
+ 1294 02e6 68000000 		.4byte	0x68
+ 1295 02ea 05       		.uleb128 0x5
+ 1296 02eb 03       		.byte	0x3
+ 1297 02ec 00000000 		.4byte	g_FormationTime_ms
+ 1298 02f0 0F       		.uleb128 0xf
+ 1299 02f1 66020000 		.4byte	.LASF44
+ 1300 02f5 07       		.byte	0x7
+ 1301 02f6 2A       		.byte	0x2a
+ 1302 02f7 68000000 		.4byte	0x68
+ 1303 02fb 05       		.uleb128 0x5
+ 1304 02fc 03       		.byte	0x3
+ 1305 02fd 00000000 		.4byte	g_RelaxationTime_ms
+ 1306 0301 0F       		.uleb128 0xf
+ 1307 0302 36030000 		.4byte	.LASF45
+ 1308 0306 07       		.byte	0x7
+ 1309 0307 2B       		.byte	0x2b
+ 1310 0308 68000000 		.4byte	0x68
+ 1311 030c 05       		.uleb128 0x5
+ 1312 030d 03       		.byte	0x3
+ 1313 030e 00000000 		.4byte	g_ConfirmationTime_ms
+ 1314 0312 0F       		.uleb128 0xf
+ 1315 0313 2E020000 		.4byte	.LASF46
+ 1316 0317 07       		.byte	0x7
+ 1317 0318 2C       		.byte	0x2c
+ 1318 0319 68000000 		.4byte	0x68
+ 1319 031d 05       		.uleb128 0x5
+ 1320 031e 03       		.byte	0x3
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 28
+
+
+ 1321 031f 00000000 		.4byte	g_ThresholdValue_mV
+ 1322 0323 0F       		.uleb128 0xf
+ 1323 0324 62010000 		.4byte	.LASF47
+ 1324 0328 07       		.byte	0x7
+ 1325 0329 2E       		.byte	0x2e
+ 1326 032a 9B000000 		.4byte	0x9b
+ 1327 032e 05       		.uleb128 0x5
+ 1328 032f 03       		.byte	0x3
+ 1329 0330 00000000 		.4byte	g_DataLogging
+ 1330 0334 0F       		.uleb128 0xf
+ 1331 0335 7A030000 		.4byte	.LASF48
+ 1332 0339 07       		.byte	0x7
+ 1333 033a 41       		.byte	0x41
+ 1334 033b 45030000 		.4byte	0x345
+ 1335 033f 05       		.uleb128 0x5
+ 1336 0340 03       		.byte	0x3
+ 1337 0341 00000000 		.4byte	MAXMEASUREMENTSTEPS
+ 1338 0345 12       		.uleb128 0x12
+ 1339 0346 68000000 		.4byte	0x68
+ 1340 034a 10       		.uleb128 0x10
+ 1341 034b 9B000000 		.4byte	0x9b
+ 1342 034f 60030000 		.4byte	0x360
+ 1343 0353 11       		.uleb128 0x11
+ 1344 0354 A9000000 		.4byte	0xa9
+ 1345 0358 02       		.byte	0x2
+ 1346 0359 11       		.uleb128 0x11
+ 1347 035a A9000000 		.4byte	0xa9
+ 1348 035e 03       		.byte	0x3
+ 1349 035f 00       		.byte	0
+ 1350 0360 0F       		.uleb128 0xf
+ 1351 0361 B2010000 		.4byte	.LASF49
+ 1352 0365 07       		.byte	0x7
+ 1353 0366 42       		.byte	0x42
+ 1354 0367 4A030000 		.4byte	0x34a
+ 1355 036b 05       		.uleb128 0x5
+ 1356 036c 03       		.byte	0x3
+ 1357 036d 00000000 		.4byte	g_measurementLasers
+ 1358 0371 0F       		.uleb128 0xf
+ 1359 0372 42020000 		.4byte	.LASF50
+ 1360 0376 07       		.byte	0x7
+ 1361 0377 46       		.byte	0x46
+ 1362 0378 9B000000 		.4byte	0x9b
+ 1363 037c 05       		.uleb128 0x5
+ 1364 037d 03       		.byte	0x3
+ 1365 037e 00000000 		.4byte	LaserState1
+ 1366 0382 0F       		.uleb128 0xf
+ 1367 0383 4E020000 		.4byte	.LASF51
+ 1368 0387 07       		.byte	0x7
+ 1369 0388 47       		.byte	0x47
+ 1370 0389 9B000000 		.4byte	0x9b
+ 1371 038d 05       		.uleb128 0x5
+ 1372 038e 03       		.byte	0x3
+ 1373 038f 00000000 		.4byte	LaserState2
+ 1374 0393 0F       		.uleb128 0xf
+ 1375 0394 5A020000 		.4byte	.LASF52
+ 1376 0398 07       		.byte	0x7
+ 1377 0399 48       		.byte	0x48
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 29
+
+
+ 1378 039a 9B000000 		.4byte	0x9b
+ 1379 039e 05       		.uleb128 0x5
+ 1380 039f 03       		.byte	0x3
+ 1381 03a0 00000000 		.4byte	LaserState3
+ 1382 03a4 0F       		.uleb128 0xf
+ 1383 03a5 21020000 		.4byte	.LASF53
+ 1384 03a9 07       		.byte	0x7
+ 1385 03aa 4B       		.byte	0x4b
+ 1386 03ab 9B000000 		.4byte	0x9b
+ 1387 03af 05       		.uleb128 0x5
+ 1388 03b0 03       		.byte	0x3
+ 1389 03b1 00000000 		.4byte	OutputState1
+ 1390 03b5 0F       		.uleb128 0xf
+ 1391 03b6 14020000 		.4byte	.LASF54
+ 1392 03ba 07       		.byte	0x7
+ 1393 03bb 4C       		.byte	0x4c
+ 1394 03bc 9B000000 		.4byte	0x9b
+ 1395 03c0 05       		.uleb128 0x5
+ 1396 03c1 03       		.byte	0x3
+ 1397 03c2 00000000 		.4byte	OutputState2
+ 1398 03c6 0F       		.uleb128 0xf
+ 1399 03c7 A4010000 		.4byte	.LASF55
+ 1400 03cb 07       		.byte	0x7
+ 1401 03cc 4F       		.byte	0x4f
+ 1402 03cd 85020000 		.4byte	0x285
+ 1403 03d1 05       		.uleb128 0x5
+ 1404 03d2 03       		.byte	0x3
+ 1405 03d3 00000000 		.4byte	v_timer_100ms
+ 1406 03d7 0F       		.uleb128 0xf
+ 1407 03d8 F8030000 		.4byte	.LASF56
+ 1408 03dc 07       		.byte	0x7
+ 1409 03dd 50       		.byte	0x50
+ 1410 03de E8030000 		.4byte	0x3e8
+ 1411 03e2 05       		.uleb128 0x5
+ 1412 03e3 03       		.byte	0x3
+ 1413 03e4 00000000 		.4byte	v_timerflag_100ms
+ 1414 03e8 0E       		.uleb128 0xe
+ 1415 03e9 9B000000 		.4byte	0x9b
+ 1416 03ed 0F       		.uleb128 0xf
+ 1417 03ee 0A040000 		.4byte	.LASF57
+ 1418 03f2 07       		.byte	0x7
+ 1419 03f3 52       		.byte	0x52
+ 1420 03f4 85020000 		.4byte	0x285
+ 1421 03f8 05       		.uleb128 0x5
+ 1422 03f9 03       		.byte	0x3
+ 1423 03fa 00000000 		.4byte	v_timer_waiting
+ 1424 03fe 0F       		.uleb128 0xf
+ 1425 03ff CD040000 		.4byte	.LASF58
+ 1426 0403 07       		.byte	0x7
+ 1427 0404 53       		.byte	0x53
+ 1428 0405 E8030000 		.4byte	0x3e8
+ 1429 0409 05       		.uleb128 0x5
+ 1430 040a 03       		.byte	0x3
+ 1431 040b 00000000 		.4byte	v_timerflag_waiting
+ 1432 040f 0F       		.uleb128 0xf
+ 1433 0410 21040000 		.4byte	.LASF59
+ 1434 0414 07       		.byte	0x7
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 30
+
+
+ 1435 0415 55       		.byte	0x55
+ 1436 0416 20040000 		.4byte	0x420
+ 1437 041a 05       		.uleb128 0x5
+ 1438 041b 03       		.byte	0x3
+ 1439 041c 00000000 		.4byte	v_timer_Lifetime_ms
+ 1440 0420 0E       		.uleb128 0xe
+ 1441 0421 94000000 		.4byte	0x94
+ 1442 0425 0F       		.uleb128 0xf
+ 1443 0426 38000000 		.4byte	.LASF60
+ 1444 042a 07       		.byte	0x7
+ 1445 042b 57       		.byte	0x57
+ 1446 042c 85020000 		.4byte	0x285
+ 1447 0430 05       		.uleb128 0x5
+ 1448 0431 03       		.byte	0x3
+ 1449 0432 00000000 		.4byte	v_timer_Measurement
+ 1450 0436 0F       		.uleb128 0xf
+ 1451 0437 9C040000 		.4byte	.LASF61
+ 1452 043b 07       		.byte	0x7
+ 1453 043c 58       		.byte	0x58
+ 1454 043d 85020000 		.4byte	0x285
+ 1455 0441 05       		.uleb128 0x5
+ 1456 0442 03       		.byte	0x3
+ 1457 0443 00000000 		.4byte	v_timerflag_Measurement
+ 1458 0447 0F       		.uleb128 0xf
+ 1459 0448 B4020000 		.4byte	.LASF62
+ 1460 044c 07       		.byte	0x7
+ 1461 044d 5A       		.byte	0x5a
+ 1462 044e 85020000 		.4byte	0x285
+ 1463 0452 05       		.uleb128 0x5
+ 1464 0453 03       		.byte	0x3
+ 1465 0454 00000000 		.4byte	v_timer_LaserSwitch
+ 1466 0458 0F       		.uleb128 0xf
+ 1467 0459 84040000 		.4byte	.LASF63
+ 1468 045d 07       		.byte	0x7
+ 1469 045e 5B       		.byte	0x5b
+ 1470 045f 85020000 		.4byte	0x285
+ 1471 0463 05       		.uleb128 0x5
+ 1472 0464 03       		.byte	0x3
+ 1473 0465 00000000 		.4byte	v_timerflag_LaserSwitch
+ 1474 0469 0F       		.uleb128 0xf
+ 1475 046a EA030000 		.4byte	.LASF64
+ 1476 046e 07       		.byte	0x7
+ 1477 046f 5D       		.byte	0x5d
+ 1478 0470 85020000 		.4byte	0x285
+ 1479 0474 05       		.uleb128 0x5
+ 1480 0475 03       		.byte	0x3
+ 1481 0476 00000000 		.4byte	v_timer_500ms
+ 1482 047a 0F       		.uleb128 0xf
+ 1483 047b 9C000000 		.4byte	.LASF65
+ 1484 047f 07       		.byte	0x7
+ 1485 0480 5E       		.byte	0x5e
+ 1486 0481 85020000 		.4byte	0x285
+ 1487 0485 05       		.uleb128 0x5
+ 1488 0486 03       		.byte	0x3
+ 1489 0487 00000000 		.4byte	v_timerflag_500ms
+ 1490 048b 0F       		.uleb128 0xf
+ 1491 048c AE000000 		.4byte	.LASF66
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 31
+
+
+ 1492 0490 01       		.byte	0x1
+ 1493 0491 14       		.byte	0x14
+ 1494 0492 68000000 		.4byte	0x68
+ 1495 0496 05       		.uleb128 0x5
+ 1496 0497 03       		.byte	0x3
+ 1497 0498 00000000 		.4byte	g_Stepper_MaxFrequency
+ 1498 049c 0F       		.uleb128 0xf
+ 1499 049d 1F030000 		.4byte	.LASF67
+ 1500 04a1 01       		.byte	0x1
+ 1501 04a2 15       		.byte	0x15
+ 1502 04a3 68000000 		.4byte	0x68
+ 1503 04a7 05       		.uleb128 0x5
+ 1504 04a8 03       		.byte	0x3
+ 1505 04a9 00000000 		.4byte	g_Stepper_SigmoidShift
+ 1506 04ad 0F       		.uleb128 0xf
+ 1507 04ae 6D040000 		.4byte	.LASF68
+ 1508 04b2 01       		.byte	0x1
+ 1509 04b3 16       		.byte	0x16
+ 1510 04b4 68000000 		.4byte	0x68
+ 1511 04b8 05       		.uleb128 0x5
+ 1512 04b9 03       		.byte	0x3
+ 1513 04ba 00000000 		.4byte	g_Stepper_SigmoidRaise
+ 1514 04be 00       		.byte	0
+ 1515              		.section	.debug_abbrev,"",%progbits
+ 1516              	.Ldebug_abbrev0:
+ 1517 0000 01       		.uleb128 0x1
+ 1518 0001 11       		.uleb128 0x11
+ 1519 0002 01       		.byte	0x1
+ 1520 0003 25       		.uleb128 0x25
+ 1521 0004 0E       		.uleb128 0xe
+ 1522 0005 13       		.uleb128 0x13
+ 1523 0006 0B       		.uleb128 0xb
+ 1524 0007 03       		.uleb128 0x3
+ 1525 0008 0E       		.uleb128 0xe
+ 1526 0009 1B       		.uleb128 0x1b
+ 1527 000a 0E       		.uleb128 0xe
+ 1528 000b 55       		.uleb128 0x55
+ 1529 000c 17       		.uleb128 0x17
+ 1530 000d 11       		.uleb128 0x11
+ 1531 000e 01       		.uleb128 0x1
+ 1532 000f 10       		.uleb128 0x10
+ 1533 0010 17       		.uleb128 0x17
+ 1534 0011 00       		.byte	0
+ 1535 0012 00       		.byte	0
+ 1536 0013 02       		.uleb128 0x2
+ 1537 0014 24       		.uleb128 0x24
+ 1538 0015 00       		.byte	0
+ 1539 0016 0B       		.uleb128 0xb
+ 1540 0017 0B       		.uleb128 0xb
+ 1541 0018 3E       		.uleb128 0x3e
+ 1542 0019 0B       		.uleb128 0xb
+ 1543 001a 03       		.uleb128 0x3
+ 1544 001b 0E       		.uleb128 0xe
+ 1545 001c 00       		.byte	0
+ 1546 001d 00       		.byte	0
+ 1547 001e 03       		.uleb128 0x3
+ 1548 001f 16       		.uleb128 0x16
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 32
+
+
+ 1549 0020 00       		.byte	0
+ 1550 0021 03       		.uleb128 0x3
+ 1551 0022 0E       		.uleb128 0xe
+ 1552 0023 3A       		.uleb128 0x3a
+ 1553 0024 0B       		.uleb128 0xb
+ 1554 0025 3B       		.uleb128 0x3b
+ 1555 0026 0B       		.uleb128 0xb
+ 1556 0027 49       		.uleb128 0x49
+ 1557 0028 13       		.uleb128 0x13
+ 1558 0029 00       		.byte	0
+ 1559 002a 00       		.byte	0
+ 1560 002b 04       		.uleb128 0x4
+ 1561 002c 24       		.uleb128 0x24
+ 1562 002d 00       		.byte	0
+ 1563 002e 0B       		.uleb128 0xb
+ 1564 002f 0B       		.uleb128 0xb
+ 1565 0030 3E       		.uleb128 0x3e
+ 1566 0031 0B       		.uleb128 0xb
+ 1567 0032 03       		.uleb128 0x3
+ 1568 0033 08       		.uleb128 0x8
+ 1569 0034 00       		.byte	0
+ 1570 0035 00       		.byte	0
+ 1571 0036 05       		.uleb128 0x5
+ 1572 0037 16       		.uleb128 0x16
+ 1573 0038 00       		.byte	0
+ 1574 0039 03       		.uleb128 0x3
+ 1575 003a 0E       		.uleb128 0xe
+ 1576 003b 3A       		.uleb128 0x3a
+ 1577 003c 0B       		.uleb128 0xb
+ 1578 003d 3B       		.uleb128 0x3b
+ 1579 003e 05       		.uleb128 0x5
+ 1580 003f 49       		.uleb128 0x49
+ 1581 0040 13       		.uleb128 0x13
+ 1582 0041 00       		.byte	0
+ 1583 0042 00       		.byte	0
+ 1584 0043 06       		.uleb128 0x6
+ 1585 0044 2E       		.uleb128 0x2e
+ 1586 0045 01       		.byte	0x1
+ 1587 0046 3F       		.uleb128 0x3f
+ 1588 0047 19       		.uleb128 0x19
+ 1589 0048 03       		.uleb128 0x3
+ 1590 0049 0E       		.uleb128 0xe
+ 1591 004a 3A       		.uleb128 0x3a
+ 1592 004b 0B       		.uleb128 0xb
+ 1593 004c 3B       		.uleb128 0x3b
+ 1594 004d 0B       		.uleb128 0xb
+ 1595 004e 27       		.uleb128 0x27
+ 1596 004f 19       		.uleb128 0x19
+ 1597 0050 11       		.uleb128 0x11
+ 1598 0051 01       		.uleb128 0x1
+ 1599 0052 12       		.uleb128 0x12
+ 1600 0053 06       		.uleb128 0x6
+ 1601 0054 40       		.uleb128 0x40
+ 1602 0055 18       		.uleb128 0x18
+ 1603 0056 9642     		.uleb128 0x2116
+ 1604 0058 19       		.uleb128 0x19
+ 1605 0059 01       		.uleb128 0x1
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 33
+
+
+ 1606 005a 13       		.uleb128 0x13
+ 1607 005b 00       		.byte	0
+ 1608 005c 00       		.byte	0
+ 1609 005d 07       		.uleb128 0x7
+ 1610 005e 05       		.uleb128 0x5
+ 1611 005f 00       		.byte	0
+ 1612 0060 03       		.uleb128 0x3
+ 1613 0061 0E       		.uleb128 0xe
+ 1614 0062 3A       		.uleb128 0x3a
+ 1615 0063 0B       		.uleb128 0xb
+ 1616 0064 3B       		.uleb128 0x3b
+ 1617 0065 0B       		.uleb128 0xb
+ 1618 0066 49       		.uleb128 0x49
+ 1619 0067 13       		.uleb128 0x13
+ 1620 0068 02       		.uleb128 0x2
+ 1621 0069 18       		.uleb128 0x18
+ 1622 006a 00       		.byte	0
+ 1623 006b 00       		.byte	0
+ 1624 006c 08       		.uleb128 0x8
+ 1625 006d 05       		.uleb128 0x5
+ 1626 006e 00       		.byte	0
+ 1627 006f 03       		.uleb128 0x3
+ 1628 0070 08       		.uleb128 0x8
+ 1629 0071 3A       		.uleb128 0x3a
+ 1630 0072 0B       		.uleb128 0xb
+ 1631 0073 3B       		.uleb128 0x3b
+ 1632 0074 0B       		.uleb128 0xb
+ 1633 0075 49       		.uleb128 0x49
+ 1634 0076 13       		.uleb128 0x13
+ 1635 0077 02       		.uleb128 0x2
+ 1636 0078 18       		.uleb128 0x18
+ 1637 0079 00       		.byte	0
+ 1638 007a 00       		.byte	0
+ 1639 007b 09       		.uleb128 0x9
+ 1640 007c 34       		.uleb128 0x34
+ 1641 007d 00       		.byte	0
+ 1642 007e 03       		.uleb128 0x3
+ 1643 007f 08       		.uleb128 0x8
+ 1644 0080 3A       		.uleb128 0x3a
+ 1645 0081 0B       		.uleb128 0xb
+ 1646 0082 3B       		.uleb128 0x3b
+ 1647 0083 0B       		.uleb128 0xb
+ 1648 0084 49       		.uleb128 0x49
+ 1649 0085 13       		.uleb128 0x13
+ 1650 0086 02       		.uleb128 0x2
+ 1651 0087 18       		.uleb128 0x18
+ 1652 0088 00       		.byte	0
+ 1653 0089 00       		.byte	0
+ 1654 008a 0A       		.uleb128 0xa
+ 1655 008b 34       		.uleb128 0x34
+ 1656 008c 00       		.byte	0
+ 1657 008d 03       		.uleb128 0x3
+ 1658 008e 0E       		.uleb128 0xe
+ 1659 008f 3A       		.uleb128 0x3a
+ 1660 0090 0B       		.uleb128 0xb
+ 1661 0091 3B       		.uleb128 0x3b
+ 1662 0092 0B       		.uleb128 0xb
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 34
+
+
+ 1663 0093 49       		.uleb128 0x49
+ 1664 0094 13       		.uleb128 0x13
+ 1665 0095 02       		.uleb128 0x2
+ 1666 0096 18       		.uleb128 0x18
+ 1667 0097 00       		.byte	0
+ 1668 0098 00       		.byte	0
+ 1669 0099 0B       		.uleb128 0xb
+ 1670 009a 2E       		.uleb128 0x2e
+ 1671 009b 00       		.byte	0
+ 1672 009c 3F       		.uleb128 0x3f
+ 1673 009d 19       		.uleb128 0x19
+ 1674 009e 03       		.uleb128 0x3
+ 1675 009f 0E       		.uleb128 0xe
+ 1676 00a0 3A       		.uleb128 0x3a
+ 1677 00a1 0B       		.uleb128 0xb
+ 1678 00a2 3B       		.uleb128 0x3b
+ 1679 00a3 0B       		.uleb128 0xb
+ 1680 00a4 11       		.uleb128 0x11
+ 1681 00a5 01       		.uleb128 0x1
+ 1682 00a6 12       		.uleb128 0x12
+ 1683 00a7 06       		.uleb128 0x6
+ 1684 00a8 40       		.uleb128 0x40
+ 1685 00a9 18       		.uleb128 0x18
+ 1686 00aa 9642     		.uleb128 0x2116
+ 1687 00ac 19       		.uleb128 0x19
+ 1688 00ad 00       		.byte	0
+ 1689 00ae 00       		.byte	0
+ 1690 00af 0C       		.uleb128 0xc
+ 1691 00b0 2E       		.uleb128 0x2e
+ 1692 00b1 01       		.byte	0x1
+ 1693 00b2 3F       		.uleb128 0x3f
+ 1694 00b3 19       		.uleb128 0x19
+ 1695 00b4 03       		.uleb128 0x3
+ 1696 00b5 0E       		.uleb128 0xe
+ 1697 00b6 3A       		.uleb128 0x3a
+ 1698 00b7 0B       		.uleb128 0xb
+ 1699 00b8 3B       		.uleb128 0x3b
+ 1700 00b9 0B       		.uleb128 0xb
+ 1701 00ba 11       		.uleb128 0x11
+ 1702 00bb 01       		.uleb128 0x1
+ 1703 00bc 12       		.uleb128 0x12
+ 1704 00bd 06       		.uleb128 0x6
+ 1705 00be 40       		.uleb128 0x40
+ 1706 00bf 18       		.uleb128 0x18
+ 1707 00c0 9642     		.uleb128 0x2116
+ 1708 00c2 19       		.uleb128 0x19
+ 1709 00c3 01       		.uleb128 0x1
+ 1710 00c4 13       		.uleb128 0x13
+ 1711 00c5 00       		.byte	0
+ 1712 00c6 00       		.byte	0
+ 1713 00c7 0D       		.uleb128 0xd
+ 1714 00c8 34       		.uleb128 0x34
+ 1715 00c9 00       		.byte	0
+ 1716 00ca 03       		.uleb128 0x3
+ 1717 00cb 0E       		.uleb128 0xe
+ 1718 00cc 3A       		.uleb128 0x3a
+ 1719 00cd 0B       		.uleb128 0xb
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 35
+
+
+ 1720 00ce 3B       		.uleb128 0x3b
+ 1721 00cf 05       		.uleb128 0x5
+ 1722 00d0 49       		.uleb128 0x49
+ 1723 00d1 13       		.uleb128 0x13
+ 1724 00d2 3F       		.uleb128 0x3f
+ 1725 00d3 19       		.uleb128 0x19
+ 1726 00d4 3C       		.uleb128 0x3c
+ 1727 00d5 19       		.uleb128 0x19
+ 1728 00d6 00       		.byte	0
+ 1729 00d7 00       		.byte	0
+ 1730 00d8 0E       		.uleb128 0xe
+ 1731 00d9 35       		.uleb128 0x35
+ 1732 00da 00       		.byte	0
+ 1733 00db 49       		.uleb128 0x49
+ 1734 00dc 13       		.uleb128 0x13
+ 1735 00dd 00       		.byte	0
+ 1736 00de 00       		.byte	0
+ 1737 00df 0F       		.uleb128 0xf
+ 1738 00e0 34       		.uleb128 0x34
+ 1739 00e1 00       		.byte	0
+ 1740 00e2 03       		.uleb128 0x3
+ 1741 00e3 0E       		.uleb128 0xe
+ 1742 00e4 3A       		.uleb128 0x3a
+ 1743 00e5 0B       		.uleb128 0xb
+ 1744 00e6 3B       		.uleb128 0x3b
+ 1745 00e7 0B       		.uleb128 0xb
+ 1746 00e8 49       		.uleb128 0x49
+ 1747 00e9 13       		.uleb128 0x13
+ 1748 00ea 3F       		.uleb128 0x3f
+ 1749 00eb 19       		.uleb128 0x19
+ 1750 00ec 02       		.uleb128 0x2
+ 1751 00ed 18       		.uleb128 0x18
+ 1752 00ee 00       		.byte	0
+ 1753 00ef 00       		.byte	0
+ 1754 00f0 10       		.uleb128 0x10
+ 1755 00f1 01       		.uleb128 0x1
+ 1756 00f2 01       		.byte	0x1
+ 1757 00f3 49       		.uleb128 0x49
+ 1758 00f4 13       		.uleb128 0x13
+ 1759 00f5 01       		.uleb128 0x1
+ 1760 00f6 13       		.uleb128 0x13
+ 1761 00f7 00       		.byte	0
+ 1762 00f8 00       		.byte	0
+ 1763 00f9 11       		.uleb128 0x11
+ 1764 00fa 21       		.uleb128 0x21
+ 1765 00fb 00       		.byte	0
+ 1766 00fc 49       		.uleb128 0x49
+ 1767 00fd 13       		.uleb128 0x13
+ 1768 00fe 2F       		.uleb128 0x2f
+ 1769 00ff 0B       		.uleb128 0xb
+ 1770 0100 00       		.byte	0
+ 1771 0101 00       		.byte	0
+ 1772 0102 12       		.uleb128 0x12
+ 1773 0103 26       		.uleb128 0x26
+ 1774 0104 00       		.byte	0
+ 1775 0105 49       		.uleb128 0x49
+ 1776 0106 13       		.uleb128 0x13
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 36
+
+
+ 1777 0107 00       		.byte	0
+ 1778 0108 00       		.byte	0
+ 1779 0109 00       		.byte	0
+ 1780              		.section	.debug_aranges,"",%progbits
+ 1781 0000 5C000000 		.4byte	0x5c
+ 1782 0004 0200     		.2byte	0x2
+ 1783 0006 00000000 		.4byte	.Ldebug_info0
+ 1784 000a 04       		.byte	0x4
+ 1785 000b 00       		.byte	0
+ 1786 000c 0000     		.2byte	0
+ 1787 000e 0000     		.2byte	0
+ 1788 0010 00000000 		.4byte	.LFB63
+ 1789 0014 B4000000 		.4byte	.LFE63-.LFB63
+ 1790 0018 00000000 		.4byte	.LFB64
+ 1791 001c 1C000000 		.4byte	.LFE64-.LFB64
+ 1792 0020 00000000 		.4byte	.LFB65
+ 1793 0024 20000000 		.4byte	.LFE65-.LFB65
+ 1794 0028 00000000 		.4byte	.LFB66
+ 1795 002c 28000000 		.4byte	.LFE66-.LFB66
+ 1796 0030 00000000 		.4byte	.LFB67
+ 1797 0034 28000000 		.4byte	.LFE67-.LFB67
+ 1798 0038 00000000 		.4byte	.LFB68
+ 1799 003c 20000000 		.4byte	.LFE68-.LFB68
+ 1800 0040 00000000 		.4byte	.LFB69
+ 1801 0044 20000000 		.4byte	.LFE69-.LFB69
+ 1802 0048 00000000 		.4byte	.LFB70
+ 1803 004c 32000000 		.4byte	.LFE70-.LFB70
+ 1804 0050 00000000 		.4byte	.LFB71
+ 1805 0054 BC020000 		.4byte	.LFE71-.LFB71
+ 1806 0058 00000000 		.4byte	0
+ 1807 005c 00000000 		.4byte	0
+ 1808              		.section	.debug_ranges,"",%progbits
+ 1809              	.Ldebug_ranges0:
+ 1810 0000 00000000 		.4byte	.LFB63
+ 1811 0004 B4000000 		.4byte	.LFE63
+ 1812 0008 00000000 		.4byte	.LFB64
+ 1813 000c 1C000000 		.4byte	.LFE64
+ 1814 0010 00000000 		.4byte	.LFB65
+ 1815 0014 20000000 		.4byte	.LFE65
+ 1816 0018 00000000 		.4byte	.LFB66
+ 1817 001c 28000000 		.4byte	.LFE66
+ 1818 0020 00000000 		.4byte	.LFB67
+ 1819 0024 28000000 		.4byte	.LFE67
+ 1820 0028 00000000 		.4byte	.LFB68
+ 1821 002c 20000000 		.4byte	.LFE68
+ 1822 0030 00000000 		.4byte	.LFB69
+ 1823 0034 20000000 		.4byte	.LFE69
+ 1824 0038 00000000 		.4byte	.LFB70
+ 1825 003c 32000000 		.4byte	.LFE70
+ 1826 0040 00000000 		.4byte	.LFB71
+ 1827 0044 BC020000 		.4byte	.LFE71
+ 1828 0048 00000000 		.4byte	0
+ 1829 004c 00000000 		.4byte	0
+ 1830              		.section	.debug_line,"",%progbits
+ 1831              	.Ldebug_line0:
+ 1832 0000 6A020000 		.section	.debug_str,"MS",%progbits,1
+ 1832      02006E01 
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 37
+
+
+ 1832      00000201 
+ 1832      FB0E0D00 
+ 1832      01010101 
+ 1833              	.LASF37:
+ 1834 0000 675F4572 		.ascii	"g_Error_Code\000"
+ 1834      726F725F 
+ 1834      436F6465 
+ 1834      00
+ 1835              	.LASF36:
+ 1836 000d 675F536C 		.ascii	"g_SliderValueBuffer\000"
+ 1836      69646572 
+ 1836      56616C75 
+ 1836      65427566 
+ 1836      66657200 
+ 1837              	.LASF35:
+ 1838 0021 675F536C 		.ascii	"g_SliderValueReceiving\000"
+ 1838      69646572 
+ 1838      56616C75 
+ 1838      65526563 
+ 1838      65697669 
+ 1839              	.LASF60:
+ 1840 0038 765F7469 		.ascii	"v_timer_Measurement\000"
+ 1840      6D65725F 
+ 1840      4D656173 
+ 1840      7572656D 
+ 1840      656E7400 
+ 1841              	.LASF24:
+ 1842 004c 4D6F7665 		.ascii	"Move90DegreeCW\000"
+ 1842      39304465 
+ 1842      67726565 
+ 1842      435700
+ 1843              	.LASF38:
+ 1844 005b 675F5043 		.ascii	"g_PCInterrupt\000"
+ 1844      496E7465 
+ 1844      72727570 
+ 1844      7400
+ 1845              	.LASF18:
+ 1846 0069 745F5374 		.ascii	"t_StepperCLK\000"
+ 1846      65707065 
+ 1846      72434C4B 
+ 1846      00
+ 1847              	.LASF2:
+ 1848 0076 73686F72 		.ascii	"short int\000"
+ 1848      7420696E 
+ 1848      7400
+ 1849              	.LASF16:
+ 1850 0080 73697A65 		.ascii	"sizetype\000"
+ 1850      74797065 
+ 1850      00
+ 1851              	.LASF34:
+ 1852 0089 675F4E65 		.ascii	"g_NextionInterrupt\000"
+ 1852      7874696F 
+ 1852      6E496E74 
+ 1852      65727275 
+ 1852      707400
+ 1853              	.LASF65:
+ 1854 009c 765F7469 		.ascii	"v_timerflag_500ms\000"
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 38
+
+
+ 1854      6D657266 
+ 1854      6C61675F 
+ 1854      3530306D 
+ 1854      7300
+ 1855              	.LASF66:
+ 1856 00ae 675F5374 		.ascii	"g_Stepper_MaxFrequency\000"
+ 1856      65707065 
+ 1856      725F4D61 
+ 1856      78467265 
+ 1856      7175656E 
+ 1857              	.LASF69:
+ 1858 00c5 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1858      43313120 
+ 1858      352E342E 
+ 1858      31203230 
+ 1858      31363036 
+ 1859 00f8 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1859      20726576 
+ 1859      6973696F 
+ 1859      6E203233 
+ 1859      37373135 
+ 1860 012b 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1860      66756E63 
+ 1860      74696F6E 
+ 1860      2D736563 
+ 1860      74696F6E 
+ 1861              	.LASF26:
+ 1862 0153 496E6974 		.ascii	"Init_StepMotor\000"
+ 1862      5F537465 
+ 1862      704D6F74 
+ 1862      6F7200
+ 1863              	.LASF47:
+ 1864 0162 675F4461 		.ascii	"g_DataLogging\000"
+ 1864      74614C6F 
+ 1864      6767696E 
+ 1864      6700
+ 1865              	.LASF29:
+ 1866 0170 665F6D61 		.ascii	"f_max\000"
+ 1866      7800
+ 1867              	.LASF11:
+ 1868 0176 75696E74 		.ascii	"uint16\000"
+ 1868      313600
+ 1869              	.LASF40:
+ 1870 017d 675F4E75 		.ascii	"g_NumberOfMeasurements\000"
+ 1870      6D626572 
+ 1870      4F664D65 
+ 1870      61737572 
+ 1870      656D656E 
+ 1871              	.LASF25:
+ 1872 0194 4D6F7665 		.ascii	"Move90DegreeCCW\000"
+ 1872      39304465 
+ 1872      67726565 
+ 1872      43435700 
+ 1873              	.LASF55:
+ 1874 01a4 765F7469 		.ascii	"v_timer_100ms\000"
+ 1874      6D65725F 
+ 1874      3130306D 
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 39
+
+
+ 1874      7300
+ 1875              	.LASF49:
+ 1876 01b2 675F6D65 		.ascii	"g_measurementLasers\000"
+ 1876      61737572 
+ 1876      656D656E 
+ 1876      744C6173 
+ 1876      65727300 
+ 1877              	.LASF12:
+ 1878 01c6 666C6F61 		.ascii	"float\000"
+ 1878      7400
+ 1879              	.LASF23:
+ 1880 01cc 4D6F7665 		.ascii	"Move10DegreeCCW\000"
+ 1880      31304465 
+ 1880      67726565 
+ 1880      43435700 
+ 1881              	.LASF6:
+ 1882 01dc 6C6F6E67 		.ascii	"long long int\000"
+ 1882      206C6F6E 
+ 1882      6720696E 
+ 1882      7400
+ 1883              	.LASF22:
+ 1884 01ea 4D6F7665 		.ascii	"Move10DegreeCW\000"
+ 1884      31304465 
+ 1884      67726565 
+ 1884      435700
+ 1885              	.LASF21:
+ 1886 01f9 53746570 		.ascii	"StepsFor10Degree\000"
+ 1886      73466F72 
+ 1886      31304465 
+ 1886      67726565 
+ 1886      00
+ 1887              	.LASF31:
+ 1888 020a 7369675F 		.ascii	"sig_shift\000"
+ 1888      73686966 
+ 1888      7400
+ 1889              	.LASF54:
+ 1890 0214 4F757470 		.ascii	"OutputState2\000"
+ 1890      75745374 
+ 1890      61746532 
+ 1890      00
+ 1891              	.LASF53:
+ 1892 0221 4F757470 		.ascii	"OutputState1\000"
+ 1892      75745374 
+ 1892      61746531 
+ 1892      00
+ 1893              	.LASF46:
+ 1894 022e 675F5468 		.ascii	"g_ThresholdValue_mV\000"
+ 1894      72657368 
+ 1894      6F6C6456 
+ 1894      616C7565 
+ 1894      5F6D5600 
+ 1895              	.LASF50:
+ 1896 0242 4C617365 		.ascii	"LaserState1\000"
+ 1896      72537461 
+ 1896      74653100 
+ 1897              	.LASF51:
+ 1898 024e 4C617365 		.ascii	"LaserState2\000"
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 40
+
+
+ 1898      72537461 
+ 1898      74653200 
+ 1899              	.LASF52:
+ 1900 025a 4C617365 		.ascii	"LaserState3\000"
+ 1900      72537461 
+ 1900      74653300 
+ 1901              	.LASF44:
+ 1902 0266 675F5265 		.ascii	"g_RelaxationTime_ms\000"
+ 1902      6C617861 
+ 1902      74696F6E 
+ 1902      54696D65 
+ 1902      5F6D7300 
+ 1903              	.LASF41:
+ 1904 027a 675F5377 		.ascii	"g_SwitchPeriodOfLaser_ms\000"
+ 1904      69746368 
+ 1904      50657269 
+ 1904      6F644F66 
+ 1904      4C617365 
+ 1905              	.LASF15:
+ 1906 0293 6C6F6E67 		.ascii	"long double\000"
+ 1906      20646F75 
+ 1906      626C6500 
+ 1907              	.LASF28:
+ 1908 029f 4D6F7665 		.ascii	"MoveTo\000"
+ 1908      546F00
+ 1909              	.LASF1:
+ 1910 02a6 756E7369 		.ascii	"unsigned char\000"
+ 1910      676E6564 
+ 1910      20636861 
+ 1910      7200
+ 1911              	.LASF62:
+ 1912 02b4 765F7469 		.ascii	"v_timer_LaserSwitch\000"
+ 1912      6D65725F 
+ 1912      4C617365 
+ 1912      72537769 
+ 1912      74636800 
+ 1913              	.LASF0:
+ 1914 02c8 7369676E 		.ascii	"signed char\000"
+ 1914      65642063 
+ 1914      68617200 
+ 1915              	.LASF7:
+ 1916 02d4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1916      206C6F6E 
+ 1916      6720756E 
+ 1916      7369676E 
+ 1916      65642069 
+ 1917              	.LASF27:
+ 1918 02eb 4D6F7665 		.ascii	"MoveToWithConstSpeed\000"
+ 1918      546F5769 
+ 1918      7468436F 
+ 1918      6E737453 
+ 1918      70656564 
+ 1919              	.LASF8:
+ 1920 0300 756E7369 		.ascii	"unsigned int\000"
+ 1920      676E6564 
+ 1920      20696E74 
+ 1920      00
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 41
+
+
+ 1921              	.LASF5:
+ 1922 030d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1922      20756E73 
+ 1922      69676E65 
+ 1922      6420696E 
+ 1922      7400
+ 1923              	.LASF67:
+ 1924 031f 675F5374 		.ascii	"g_Stepper_SigmoidShift\000"
+ 1924      65707065 
+ 1924      725F5369 
+ 1924      676D6F69 
+ 1924      64536869 
+ 1925              	.LASF45:
+ 1926 0336 675F436F 		.ascii	"g_ConfirmationTime_ms\000"
+ 1926      6E666972 
+ 1926      6D617469 
+ 1926      6F6E5469 
+ 1926      6D655F6D 
+ 1927              	.LASF17:
+ 1928 034c 73746570 		.ascii	"steps\000"
+ 1928      7300
+ 1929              	.LASF3:
+ 1930 0352 73686F72 		.ascii	"short unsigned int\000"
+ 1930      7420756E 
+ 1930      7369676E 
+ 1930      65642069 
+ 1930      6E7400
+ 1931              	.LASF32:
+ 1932 0365 7369675F 		.ascii	"sig_raise\000"
+ 1932      72616973 
+ 1932      6500
+ 1933              	.LASF30:
+ 1934 036f 665F7265 		.ascii	"f_rel\000"
+ 1934      6C00
+ 1935              	.LASF14:
+ 1936 0375 63686172 		.ascii	"char\000"
+ 1936      00
+ 1937              	.LASF48:
+ 1938 037a 4D41584D 		.ascii	"MAXMEASUREMENTSTEPS\000"
+ 1938      45415355 
+ 1938      52454D45 
+ 1938      4E545354 
+ 1938      45505300 
+ 1939              	.LASF71:
+ 1940 038e 443A5C4D 		.ascii	"D:\\Messdaten\\Projekte\\lamella-device\\LamellaDev"
+ 1940      65737364 
+ 1940      6174656E 
+ 1940      5C50726F 
+ 1940      6A656B74 
+ 1941 03bd 6963652E 		.ascii	"ice.cydsn\000"
+ 1941      63796473 
+ 1941      6E00
+ 1942              	.LASF39:
+ 1943 03c7 675F4163 		.ascii	"g_ActivePage\000"
+ 1943      74697665 
+ 1943      50616765 
+ 1943      00
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 42
+
+
+ 1944              	.LASF19:
+ 1945 03d4 4D6F7665 		.ascii	"MoveOneStepCW\000"
+ 1945      4F6E6553 
+ 1945      74657043 
+ 1945      5700
+ 1946              	.LASF10:
+ 1947 03e2 696E7433 		.ascii	"int32_t\000"
+ 1947      325F7400 
+ 1948              	.LASF64:
+ 1949 03ea 765F7469 		.ascii	"v_timer_500ms\000"
+ 1949      6D65725F 
+ 1949      3530306D 
+ 1949      7300
+ 1950              	.LASF56:
+ 1951 03f8 765F7469 		.ascii	"v_timerflag_100ms\000"
+ 1951      6D657266 
+ 1951      6C61675F 
+ 1951      3130306D 
+ 1951      7300
+ 1952              	.LASF57:
+ 1953 040a 765F7469 		.ascii	"v_timer_waiting\000"
+ 1953      6D65725F 
+ 1953      77616974 
+ 1953      696E6700 
+ 1954              	.LASF13:
+ 1955 041a 646F7562 		.ascii	"double\000"
+ 1955      6C6500
+ 1956              	.LASF59:
+ 1957 0421 765F7469 		.ascii	"v_timer_Lifetime_ms\000"
+ 1957      6D65725F 
+ 1957      4C696665 
+ 1957      74696D65 
+ 1957      5F6D7300 
+ 1958              	.LASF70:
+ 1959 0435 53746570 		.ascii	"StepMotor.c\000"
+ 1959      4D6F746F 
+ 1959      722E6300 
+ 1960              	.LASF43:
+ 1961 0441 675F466F 		.ascii	"g_FormationTime_ms\000"
+ 1961      726D6174 
+ 1961      696F6E54 
+ 1961      696D655F 
+ 1961      6D7300
+ 1962              	.LASF20:
+ 1963 0454 4D6F7665 		.ascii	"MoveOneStepCCW\000"
+ 1963      4F6E6553 
+ 1963      74657043 
+ 1963      435700
+ 1964              	.LASF9:
+ 1965 0463 5F5F696E 		.ascii	"__int32_t\000"
+ 1965      7433325F 
+ 1965      7400
+ 1966              	.LASF68:
+ 1967 046d 675F5374 		.ascii	"g_Stepper_SigmoidRaise\000"
+ 1967      65707065 
+ 1967      725F5369 
+ 1967      676D6F69 
+ARM GAS  C:\Users\LOCALA~1\AppData\Local\Temp\ccYJKuih.s 			page 43
+
+
+ 1967      64526169 
+ 1968              	.LASF63:
+ 1969 0484 765F7469 		.ascii	"v_timerflag_LaserSwitch\000"
+ 1969      6D657266 
+ 1969      6C61675F 
+ 1969      4C617365 
+ 1969      72537769 
+ 1970              	.LASF61:
+ 1971 049c 765F7469 		.ascii	"v_timerflag_Measurement\000"
+ 1971      6D657266 
+ 1971      6C61675F 
+ 1971      4D656173 
+ 1971      7572656D 
+ 1972              	.LASF42:
+ 1973 04b4 675F4D61 		.ascii	"g_MaxMeasurementTime_min\000"
+ 1973      784D6561 
+ 1973      73757265 
+ 1973      6D656E74 
+ 1973      54696D65 
+ 1974              	.LASF58:
+ 1975 04cd 765F7469 		.ascii	"v_timerflag_waiting\000"
+ 1975      6D657266 
+ 1975      6C61675F 
+ 1975      77616974 
+ 1975      696E6700 
+ 1976              	.LASF4:
+ 1977 04e1 6C6F6E67 		.ascii	"long int\000"
+ 1977      20696E74 
+ 1977      00
+ 1978              	.LASF33:
+ 1979 04ea 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1979      52784275 
+ 1979      66666572 
+ 1979      00
+ 1980              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

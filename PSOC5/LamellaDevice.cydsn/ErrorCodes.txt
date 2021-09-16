@@ -1,0 +1,23 @@
+    /*
+    *   0   
+    *   1   -   Wrong Interrupt from Nextion received
+    *
+    *
+    *
+    *   100 -   No Laser activated
+    *   101 -   No measurement mode is selected
+    *
+    *
+    *   501 -   Wrong interrupt from PC received.
+    *
+    *
+    *   700 -   Lifetime File could not be opened
+    *   701 -   Write to Lifetime File failed
+    *   702 -   Lifetime File could not be closed
+    *   710 -   File for speedtest logging could not be opened
+    *   711 -   Write of speedtest data failed
+    *   712 -   File for speedtest logging could not be closed
+    *   720 -   File for intensity logging could not be opened
+    *   721 -   Write of intensity value to file failed
+    *   722 -   File for intensity logging could not be closed
+    */

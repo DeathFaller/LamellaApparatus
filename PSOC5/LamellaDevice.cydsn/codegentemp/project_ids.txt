@@ -1,0 +1,6 @@
+D:\Messdaten\Projekte\lamella-device\LamellaDevice.cydsn\LamellaDevice.cyprj|75d175bd-d96d-4349-bcf2-7e0c12217ebc
+D:\Programme\PSoC\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|7776037c-1405-4d7f-8e87-4162bfe48f93
+C:\Users\LocalAdmin\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|4d96f717-e892-43bb-aad8-ea6823d15499
+D:\Programme\PSoC\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|6f897e6f-b784-474c-a15e-76ec9691b5f7
+D:\Programme\PSoC\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c1f97f6d-c20f-4654-9e1f-9e40c8ce21b4
+D:\Programme\PSoC\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|5ac60581-5ad7-4d07-9717-1c2b11d93833

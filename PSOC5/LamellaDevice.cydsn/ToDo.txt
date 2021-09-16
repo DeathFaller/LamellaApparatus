@@ -1,0 +1,10 @@
+    /*
+    *   
+    *   - Erstellung eines neuen Ordners mit Start Messung -> Namen eingeben?
+    *
+    *   - Abspeichern der eingestellten Parameter 
+    *   
+    *   - Messung nicht alle 100 Millisekunden, sondern nur nach Umschalten
+    *   
+    *   
+    */

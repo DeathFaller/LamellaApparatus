@@ -1,6 +1,0 @@
-D:\Masterarbeit - Chemie\Lamella\Firmware\KompletteSteuerung\PSOC5_LamellaControlHofmann.cydsn\PSOC5_LamellaControlHofmann.cyprj|964f2c98-0a12-4ce3-8a4c-64ecbae01eff
-D:\Programme\PSoC\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|cafb56d6-8483-4c14-882a-3432c2a7c9a4
-C:\Users\LocalAdmin\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|4819e7c8-9951-4d36-9687-225f6ee8c529
-D:\Programme\PSoC\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|737c5f77-4c62-4cea-a227-7defa76aef3b
-D:\Programme\PSoC\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|2fa3b75c-ddab-4c55-a704-21ff8cb6aa2f
-D:\Programme\PSoC\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|9e9f8e0d-21af-4f63-82bd-f2e40568530a
