@@ -1,0 +1,396 @@
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/W32TeX)  (format=lualatex 2020.4.28)  29 SEP 2021 08:50
+ restricted system commands enabled.
+**Title.tex
+(./Title.tex
+LaTeX2e <2020-02-02> patch level 5
+Lua module: luaotfload-main 2020-02-02 3.12 luaotfload entry point
+Lua module: luaotfload-init 2020-02-02 3.12 luaotfload submodule / initializatio
+n
+Lua module: lualibs 2020-02-02 2.70 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2020-02-02 2.70 ConTeXt Lua libraries -- extended c
+ollection.
+Lua module: luaotfload-log 2020-02-02 3.12 luaotfload submodule / logging
+Lua module: luaotfload-parsers 2020-02-02 3.12 luaotfload submodule / filelist
+Lua module: luaotfload-configuration 2020-02-02 3.12 luaotfload submodule / conf
+ig file reader
+luaotfload | conf : Root cache directory is C:/texlive/2020/texmf-var/luatex-cac
+he/generic-dev/names.
+luaotfload | init : Loading fontloader “fontloader-2020-01-26.lua” from kpse
+-resolved path “c:/texlive/2020/texmf-dist/tex/luatex/luaotfload/fontloader-20
+20-01-26.lua”.
+Lua-only attribute luaotfload@state = 2
+Lua-only attribute luaotfload@noligature = 3
+Lua-only attribute luaotfload@syllabe = 4
+luaotfload | init : Context OpenType loader version “3.11”
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Lua module: luaotfload-loaders 2020-02-02 3.12 luaotfload submodule / callback h
+andling
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua module: luaotfload-database 2020-02-02 3.12 luaotfload submodule / database
+Lua module: luaotfload-unicode 2020-02-02 3.12 luaotfload submodule / Unicode he
+lpers
+Lua module: luaotfload-colors 2020-02-02 3.12 luaotfload submodule / color
+Lua-only attribute luaotfload_color_attribute = 5
+Lua module: luaotfload-resolvers 2020-02-02 3.12 luaotfload submodule / resolver
+s
+luaotfload | conf : Root cache directory is C:/texlive/2020/texmf-var/luatex-cac
+he/generic-dev/names.
+Lua module: luaotfload-features 2020-02-02 3.12 luaotfload submodule / features
+Lua module: luaotfload-letterspace 2020-02-02 3.12 luaotfload submodule / color
+Lua module: luaotfload-embolden 2020-02-02 3.12 luaotfload submodule / color
+Lua module: luaotfload-notdef 2020-02-02 3.12 luaotfload submodule / color
+Lua module: luaotfload-harf-define 2020-02-02 3.12 luaotfload submodule / databa
+se
+Lua module: luaotfload-script 2020-02-02 3.12 luaotfload submodule / Script help
+ers
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
+Lua module: luaotfload-harf-plug 2020-02-02 3.12 luaotfload submodule / database
+Inserting `Harf pre_output_filter callback' at position 1 in `pre_output_filter'
+.
+Inserting `Harf wrapup_run callback' at position 1 in `wrapup_run'.
+Inserting `Harf finish_pdffile callback' at position 1 in `finish_pdffile'.
+Inserting `Harf glyph_info callback' at position 1 in `glyph_info'.
+Lua module: luaotfload-auxiliary 2020-02-02 3.12 luaotfload submodule / auxiliar
+y functions
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
+t'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
+Lua module: luaotfload-fallback 2020-02-02 3.12 luaotfload submodule / fallback
+Lua module: luaotfload-multiscript 2020-02-02 3.12 luaotfload submodule / multis
+cript
+Lua module: luaotfload-tounicode 2020-02-02 3.12 luaotfload submodule / tounicod
+e
+Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
+. L3 programming layer <2020-04-06>
+(c:/texlive/2020/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(c:/texlive/2020/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from C:/texlive/2020/texmf-var/luat
+ex-cache/generic-dev/names/luaotfload-names.luc)
+\c@part=\count163
+\c@section=\count164
+\c@subsection=\count165
+\c@subsubsection=\count166
+\c@paragraph=\count167
+\c@subparagraph=\count168
+\c@figure=\count169
+\c@table=\count170
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(c:/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (c:/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 112
+.
+
+(c:/texlive/2020/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(c:/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/03/22 3.42 The Babel package
+
+(c:/texlive/2020/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/03/22 3.42 Babel switching mechanism
+)
+(c:/texlive/2020/texmf-dist/tex/generic/babel/luababel.def
+\bbl@readstream=\read2
+\l@dumylang=\language2
+Package babel Info: Non-standard hyphenation setup on input line 117.
+\l@nohyphenation=\language3
+\l@german-x-2019-04-04=\language4
+\l@ngerman-x-2019-04-04=\language5
+\l@afrikaans=\language6
+\l@ancientgreek=\language7
+\l@ibycus=\language8
+\l@arabic=\language9
+\l@armenian=\language10
+\l@basque=\language11
+\l@belarusian=\language12
+\l@bulgarian=\language13
+\l@catalan=\language14
+\l@pinyin=\language15
+\l@churchslavonic=\language16
+\l@coptic=\language17
+\l@croatian=\language18
+\l@czech=\language19
+\l@danish=\language20
+\l@dutch=\language21
+\l@ukenglish=\language22
+\l@usenglishmax=\language23
+\l@esperanto=\language24
+\l@estonian=\language25
+\l@ethiopic=\language26
+\l@farsi=\language27
+\l@finnish=\language28
+\l@french=\language29
+\l@friulan=\language30
+\l@galician=\language31
+\l@georgian=\language32
+\l@german=\language33
+\l@ngerman=\language34
+\l@swissgerman=\language35
+\l@greek=\language36
+\l@monogreek=\language37
+\l@hungarian=\language38
+\l@icelandic=\language39
+\l@assamese=\language40
+\l@bengali=\language41
+\l@gujarati=\language42
+\l@hindi=\language43
+\l@kannada=\language44
+\l@malayalam=\language45
+\l@marathi=\language46
+\l@oriya=\language47
+\l@pali=\language48
+\l@panjabi=\language49
+\l@tamil=\language50
+\l@telugu=\language51
+\l@indonesian=\language52
+\l@interlingua=\language53
+\l@irish=\language54
+\l@italian=\language55
+\l@kurmanji=\language56
+\l@classiclatin=\language57
+\l@latin=\language58
+\l@liturgicallatin=\language59
+\l@latvian=\language60
+\l@lithuanian=\language61
+\l@macedonian=\language62
+\l@mongolian=\language63
+\l@mongolianlmc=\language64
+\l@bokmal=\language65
+\l@nynorsk=\language66
+\l@occitan=\language67
+\l@piedmontese=\language68
+\l@polish=\language69
+\l@portuguese=\language70
+\l@romanian=\language71
+\l@romansh=\language72
+\l@russian=\language73
+\l@sanskrit=\language74
+\l@serbian=\language75
+\l@serbianc=\language76
+\l@slovak=\language77
+\l@slovenian=\language78
+\l@spanish=\language79
+\l@swedish=\language80
+\l@thai=\language81
+\l@turkish=\language82
+\l@turkmen=\language83
+\l@ukrainian=\language84
+\l@uppersorbian=\language85
+\l@welsh=\language86
+)
+(c:/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(c:/texlive/2020/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/03/22 3.42 Babel common definitions
+\babel@savecnt=\count171
+\U@D=\dimen135
+
+(c:/texlive/2020/texmf-dist/tex/generic/babel/luababel.def
+\bbl@attr@locale=\attribute6
+))
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language22) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language22) on input line 108.
+))
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen136
+))
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen137
+)
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count172
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count173
+\leftroot@=\count174
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count175
+\DOTSCASE@=\count176
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen138
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count177
+\c@MaxMatrixCols=\count178
+\dotsspace@=\muskip16
+\c@parentequation=\count179
+\dspbrk@lvl=\count180
+\tag@help=\toks18
+\row@=\count181
+\column@=\count182
+\maxfields@=\count183
+\andhelp@=\toks19
+\eqnshift@=\dimen139
+\alignsep@=\dimen140
+\tagshift@=\dimen141
+\tagwidth@=\dimen142
+\totwidth@=\dimen143
+\lineht@=\dimen144
+\@envbody=\toks20
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 105.
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
+))
+\Gin@req@height=\dimen145
+\Gin@req@width=\dimen146
+)
+(c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count184
+\l__pdf_internal_box=\box47
+)
+(./Title.aux)
+\openout1 = Title.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 10
+.
+ (c:/texlive/2020/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+
+(c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count185
+\scratchdimen=\dimen147
+\scratchbox=\box48
+\nofMPsegments=\count186
+\nofMParguments=\count187
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count188
+\MPscratchDim=\dimen148
+\MPnumerator=\count189
+\makeMPintoPDFobject=\count190
+\everyMPtoPDFconversion=\toks24
+) (c:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
+5.
+
+(c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+
+))
+<PictureOfApparatus.jpg, id=1, 963.6pt x 722.7pt>
+File: PictureOfApparatus.jpg Graphic file (type jpg)
+<use PictureOfApparatus.jpg>
+Package luatex.def Info: PictureOfApparatus.jpg  used on input line 30.
+(luatex.def)             Requested size: 195.0pt x 146.24669pt.
+ [1
+
+{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<./PictureOfAppara
+tus.jpg>] (./Title.aux))
+
+Here is how much of LuaTeX's memory you used:
+ 3417 strings out of 480991
+ 100000,383344 words of node,token memory allocated
+ 485 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 9 attribute, 51 glue_spec,
+ 6 attribute_list, 1 write nodes
+   avail lists: 2:167,3:19,4:6,5:36,6:8,7:190,8:1,9:31,10:5,11:8
+ 20806 multiletter control sequences out of 65536+600000
+ 32 fonts using 3327979 bytes
+ 30i,4n,27p,212b,225s stack positions out of 5000i,500n,10000p,200000b,100000s
+{c:/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2020/texmf-
+dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pu
+blic/lm/lmr17.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
+Output written on Title.pdf (1 page, 149422 bytes).
+
+PDF statistics: 22 PDF objects out of 1000 (max. 8388607)
+ 14 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+
